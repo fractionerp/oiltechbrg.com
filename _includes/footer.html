@@ -1,0 +1,62 @@
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Services</h4>
+              <ul>
+                {% for item in site.data.navigation.footer_services %}
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Engineered Products</h4>
+              <ul>
+                {% for item in site.data.navigation.footer_products %}
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Company</h4>
+              <ul>
+                {% for item in site.data.navigation.footer_company %}
+                <li><i class="bx bx-chevron-right"></i> <a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-info">
+              <h3>{{ site.title }}</h3>
+              <p>Unit 3 Browns Park<br>
+              Brunswick Industrial Estate<br>
+              Newcastle Upon Tyne</p>
+              NE13 7GD, United Kingdom <br><br>
+              {{ site.company.phone }}<br><br>
+              <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+              <div class="social-links mt-3">
+                <a href="{{ site.social.linkedin }}" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="{{ site.social.instagram }}" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="{{ site.social.facebook }}" class="facebook"><i class="bx bxl-facebook"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>{{ site.company.name }}</span></strong>. All Rights Reserved
+    </div>
+  </div>
+</footer><!-- End Footer -->

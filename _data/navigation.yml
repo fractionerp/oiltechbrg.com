@@ -1,0 +1,61 @@
+main:
+  - title: Home
+    url: /
+  - title: Manufacturing
+    url: /bearing-manufacturing
+  - title: Repair
+    url: /whitemetal-bearing-repair
+  - title: Technical Support
+    url: /technical-support
+    dropdown:
+      - title: Technical Services
+        url: /technical-services
+      - title: Whitemetal Alloys
+        url: /whitemetal-alloys
+      - title: Failure Modes
+        url: /bearing-failure-modes
+  - title: Engineered Products
+    url: /engineered-bearings
+    dropdown:
+      - title: Re-Engineering
+        url: /re-engineering
+      - title: Design and Analysis
+        url: /bearing-design-analysis
+      - title: Product Ranges
+        url: /babbitt-bearing-product-ranges
+      - title: Aluminium Tin Alloys
+        url: /aluminium-tin-bearing-alloys
+  - title: About Us
+    url: /about
+  - title: Contact
+    url: /contact
+
+footer_services:
+  - title: Manufacturing
+    url: /bearing-manufacturing
+  - title: Repair
+    url: /whitemetal-bearing-repair
+  - title: Technical Support
+    url: /technical-support
+
+footer_products:
+  - title: Design and Analysis
+    url: /bearing-design-analysis
+  - title: Re-Engineering
+    url: /re-engineering
+  - title: Product Ranges
+    url: /babbitt-bearing-product-ranges
+  - title: Aluminium Tin Alloys
+    url: /aluminium-tin-bearing-alloys
+
+footer_company:
+  - title: Contact
+    url: /contact
+  - title: About Us
+    url: /about
+  - title: Documentation
+    url: /documentation
+  - title: Privacy Policy
+    url: /privacy
+  - title: Sustainability
+    url: /sustainability

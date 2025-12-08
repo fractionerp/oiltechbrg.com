@@ -1,0 +1,29 @@
+- title: Manufacturing
+  url: /bearing-manufacturing
+  icon: ri-settings-5-line
+  description: "Make to print manufacturing services for all types of whitemetal bearings, tilt pad bearing assemblies and seals."
+
+- title: Repair
+  url: /whitemetal-bearing-repair
+  icon: ri-tools-fill
+  description: "Responsive, high quality repairs to support planned and emergency outages on turbines, compressors, pumps, gearboxes and turbomachinery."
+
+- title: Re-Engineering
+  url: /re-engineering
+  icon: ri-ruler-2-line
+  description: "Spare part solutions for rotating equipment. Cost effective and quick turnaround to replace difficult to source bearings."
+
+- title: Design
+  url: /engineered-bearings
+  icon: ri-pencil-ruler-2-line
+  description: "Mechanical design and FEA verification of oil film performance for new applications and upgrades to bearing performance."
+
+- title: Technical Support
+  url: /technical-support
+  icon: ri-customer-service-2-fill
+  description: "Field support for troubleshooting bearings and specific application problems. Failure mode analysis and consultancy for bearings."
+
+- title: Product Ranges
+  url: /babbitt-bearing-product-ranges
+  icon: ri-function-line
+  description: "Standard product ranges include journal bearings, tilt pad bearings, thrust bearings and equalising thrust bearings."

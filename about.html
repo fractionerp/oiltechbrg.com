@@ -1,0 +1,59 @@
+---
+layout: page
+title: "About Us"
+description: "About Oiltech Bearings - Our story and our team"
+keywords: "whitemetal bearings, turbomachinery, oil film bearings"
+---
+
+<!-- ======= About Section ======= -->
+<section id="services" class="services">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h3><span>About Us</span></h3>
+      <p>Oiltech was founded in 2018 by a team with over 70 years working in the industry. Despite being a small team, we have a unique combination of expertise in machining, metallurgy and bearing design/analysis. Our range of skills and experience ensure Oiltech Bearing can perform at high level.</p>
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Our Team</h2>
+    </div>
+
+    <div class="row">
+      {% for member in site.data.team %}
+      <div class="col-lg-4{% if forloop.index > 1 %} mt-4 mt-lg-0{% endif %}">
+        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="{{ forloop.index | times: 100 }}">
+          <div class="pic"><img src="{{ member.image | relative_url }}" class="img-fluid" alt="{{ member.name }}"></div>
+          <div class="member-info">
+            <h4>{{ member.name }}</h4>
+            <span>{{ member.title }}</span>
+            <p>{{ member.bio }}</p>
+            <div class="social">
+              <a href="{{ member.linkedin }}" target="new"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- End Team Section -->
+
+<!-- ======= Join Team Section ======= -->
+<section id="services" class="services">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h3><span>Join our Team</span></h3>
+      <p>We are a young and dynamic company, continually investing in our production facilities to expand our product range and capabilities. We are keen to hire people at all levels with industry specific knowledge. We are flexible in finding solutions and exploring ways to expand our business.<br>
+        <br>
+        If you are interested in working for us, please contact us by email: 
+        <a href="mailto:{{ site.company.recruitment_email }}">{{ site.company.recruitment_email }}</a>.
+        <br><br><br><br>
+      </p>
+    </div>
+  </div>
+</section>

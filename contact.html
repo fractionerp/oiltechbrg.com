@@ -1,0 +1,70 @@
+---
+layout: page
+title: "Contact"
+description: "Get in touch with Oiltech Bearings"
+---
+
+<!-- ======= Contact Section ======= -->
+<section id="services" class="services">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h3><span>Contact us</span></h3>
+    </div>
+  </div>
+
+  <div class="container text-center">
+    <div class="info">
+      <div class="address">
+        <p><i class="bi bi-geo-alt"></i>
+          {{ site.company.address_short }}</p>
+      </div>
+
+      <div class="email">
+        <p><i class="bi bi-envelope"></i>
+          <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></p>
+      </div>
+
+      <div class="phone">
+        <p><i class="bi bi-phone"></i>
+          {{ site.company.phone }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="mt-5 text-center">Send us a Message</h3>
+    <p class="text-center">We normally reply within 24 hours</p>
+  </div>
+
+  <div class="container col-lg-4 col-md-6 mb-4">
+    <form action="https://formspree.io/f/{{ site.formspree.contact }}" method="POST">
+      <input type="hidden" name="_next" value="{{ site.url }}/success">
+      <div class="form-group mb-4">
+        <label for="name">Name</label>
+        <input type="text" name="Name" class="form-control" id="name" placeholder="">
+      </div>
+      <div class="form-group mb-4">
+        <label for="emailaddress">Email address</label>
+        <input type="email" name="Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group mb-4">
+        <label for="company">Company</label>
+        <input type="text" name="Company" class="form-control" id="company" placeholder="">
+      </div>
+      <div class="form-group mb-4">
+        <label for="telephone">Telephone</label>
+        <input type="tel" name="Telephone" class="form-control" id="telephone" placeholder="">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" name="message" placeholder="" rows="3"></textarea><br>
+      </div>
+      <div>
+        <p class="small">By submitting this form you are accepting the terms of our <a href="{{ '/privacy' | relative_url }}">privacy policy.</a></p>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- End Contact Section -->

@@ -1,0 +1,41 @@
+- id: a-series
+  title: A SERIES
+  url: /plain-journal-bearings-a-series
+  image: /assets/img/a-series.png
+  alt: whitemetal bearing manufacturing
+  description: "Fixed profile journal bearing. Cyclindrical, elliptical, offset, 3 lobed or 4 lobed bore profile."
+
+- id: b-series
+  title: B SERIES
+  url: /plain-sleeve-bearing-b-series
+  image: /assets/img/b-series.png
+  alt: babbitt bearing
+  description: "Fixed profile journal bearing with flanges. Cyclindrical, elliptical, offset, 3 lobed or 4 lobed bore profile."
+
+- id: c-series
+  title: C SERIES
+  url: /location-journal-bearings-c-series
+  image: /assets/img/c-series.png
+  alt: hydrodynamic bearing
+  description: "Fixed profile journal bearing with single or double location faces. Plain or tapered location faces."
+
+- id: j-series
+  title: J SERIES
+  url: /j-series-equalising-thrust-bearings
+  image: /assets/img/j-series.png
+  alt: oil film thrust bearing
+  description: "Equalising 6 pad thrust bearings. Hardened spherical pivots with steel, bronze or CCZ backing."
+
+- id: m-series
+  title: M SERIES
+  url: /m-series-modular-thrust-bearings
+  image: /assets/img/m-series.png
+  alt: modular thrust pad bearing
+  description: "Modular thrust bearings. Flooded or direct lubrication."
+
+- id: t-series
+  title: T SERIES
+  url: /t-series-tilt-pad-journal-bearings
+  image: /assets/img/t-series.png
+  alt: t series tilt pad journal bearings
+  description: "Tilt pad journal bearings. Flooded or direct lubrication. Center or offset pivot journal pads."

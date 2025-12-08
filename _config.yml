@@ -1,0 +1,38 @@
+# Site settings
+title: Oiltech Bearings
+description: "Manufacturing, repair, re-engineering and design services for whitemetal lined bearings for steam turbines, pumps, compressors, gearboxes."
+url: "https://oiltechbrg.com"
+baseurl: ""
+
+# Company info
+company:
+  name: "Oiltech Bearings Ltd"
+  address: "Unit 3 Browns Park, Brunswick Industrial Estate, Newcastle Upon Tyne, NE13 7GD, United Kingdom"
+  address_short: "Unit 3 Browns Park, Newcastle, NE13 7GD, United Kingdom"
+  phone: "+44 (0)191 236 8041"
+  email: "sales@oiltechbrg.com"
+  recruitment_email: "recruitment@oiltechbrg.com"
+
+# Social links
+social:
+  linkedin: "https://www.linkedin.com/company/18874504"
+  instagram: "https://www.instagram.com/oiltech_bearings"
+  facebook: "https://www.facebook.com/oiltechbrg/"
+
+# Analytics
+google_analytics: "UA-174666346-1"
+google_tag_manager: "GTM-WNTSLR8"
+
+# Formspree
+formspree:
+  contact: "mknkdwgo"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
