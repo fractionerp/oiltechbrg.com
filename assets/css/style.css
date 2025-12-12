@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: #272c30;
   left: 0;
   right: 0; }
   #header > .container-fluid {
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: space-between; }
   #header.header-scrolled, #header.header-inner-pages {
-    background: rgba(23, 26, 29, 0.8); }
+    background: #272c30; }
   #header .logo {
     font-size: 30px;
     margin: 0;
@@ -628,19 +628,21 @@ section {
 .cta2 {
   background: linear-gradient(rgba(12, 13, 14, 0.7), rgba(12, 13, 14, 0.8)), url("../img/cta-bg2.jpg") fixed center center;
   background-size: cover;
-  padding: 120px 0; }
-  .cta2 .text-center {
-    max-width: 800px;
-    margin: 0 auto; }
+  padding: 120px 0;
+  text-align: center; }
   .cta2 h3 {
     color: #fff;
     font-size: 28px;
     font-weight: 700;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    text-align: center; }
   .cta2 p {
     color: #fff;
     font-size: 16px;
-    line-height: 1.8; }
+    line-height: 1.8;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 15px auto; }
   .cta2 .cta2-btn {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
@@ -1160,7 +1162,8 @@ section {
     #footer .footer-top .footer-row {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -15px; }
+      margin: 0 -15px;
+      padding-left: 30px; }
     #footer .footer-top .footer-col {
       flex: 0 0 25%;
       max-width: 25%;
