@@ -6,9 +6,14 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="true" data-bs-interval="5000">
 
-    <div class="carousel-indicators" id="hero-carousel-indicators"></div>
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
 
     <div class="carousel-inner" role="listbox">
 
@@ -18,7 +23,7 @@ description: "Manufacturing, repair, re-engineering and design services for whit
           <div class="container">
             <h2 class="animated fadeInDown">Welcome to <span>Oiltech Bearings</span></h2>
             <p class="animated fadeInUp">Oiltech is an independent company serving clients around the world with solutions for hydrodynamic bearings.</p>
-            <a href="{{ '/contact' | relative_url }}" class="btn-get-started animated fadeInUp">Contact Us</a>
+            <a href="{{ '/contact.html' | relative_url }}" class="btn-get-started animated fadeInUp">Contact Us</a>
           </div>
         </div>
       </div>
@@ -58,12 +63,14 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
     </div>
 
-    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-    </a>
+      <span class="visually-hidden">Next</span>
+    </button>
 
   </div>
 </section><!-- End Hero -->
@@ -107,19 +114,11 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
   <!-- ======= Industries Section ======= -->
   <section id="cta2" class="cta2">
-    <div class="container">
-
-      <div class="text-center">
-
-        <h3>Industries</h3>
-        <p>We serve clients around the world in many different industries with all types of applications.<br><br>
-
-          Oil and Gas | Thermal Power Generation | Hydro Power Generation | Petrochemical | Mining and Cement | Industrial Processing | Marine | Steel Mills <br><br>
-
-          Gas Turbines | Steam Turbines | Generators | Compressors | Fans and Blowers | Hydro Turbines | Pumps | Electric Motors | Gearboxes
-
-      </div>
-
+    <div class="container text-center">
+      <h3>Industries</h3>
+      <p>We serve clients around the world in many different industries with all types of applications.</p>
+      <p>Oil and Gas | Thermal Power Generation | Hydro Power Generation | Petrochemical | Mining and Cement | Industrial Processing | Marine | Steel Mills</p>
+      <p>Gas Turbines | Steam Turbines | Generators | Compressors | Fans and Blowers | Hydro Turbines | Pumps | Electric Motors | Gearboxes</p>
     </div>
   </section><!-- End Industries Section -->
 
