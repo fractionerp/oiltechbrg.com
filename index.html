@@ -6,9 +6,9 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+    <div class="carousel-indicators" id="hero-carousel-indicators"></div>
 
     <div class="carousel-inner" role="listbox">
 
@@ -166,27 +166,26 @@ description: "Manufacturing, repair, re-engineering and design services for whit
   </section><!-- End CTA Section -->
 
   <!-- ======= Gallery Section ======= -->
-  <section id="services" class="services">
-    <div class="container-fluid">
-
-      <div class="section-title">
-        <br>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly">
-            <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals">
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly">
-            <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads">
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings">
-            <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing">
-          </div>
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" alt="j series equalising thrust bearing assembly">
+        </div>
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" alt="modular thrust bearing assembly">
+        </div>
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" alt="re-engineering steam turbine bearings">
+        </div>
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" alt="lead lined seals">
+        </div>
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" alt="ccz tilt pads">
+        </div>
+        <div class="gallery-item">
+          <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" alt="tilt pad journal bearing">
         </div>
       </div>
     </div>
