@@ -125,28 +125,25 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="section-title">
         <h3><span>Services</span></h3>
         <p>Comprehensive range of services to support OEMs, service centres and end users of rotating equipment.</p>
-        <br><br>
       </div>
 
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="row">
-            {% for service in site.data.services %}
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="{{ service.icon }}"></i></div>
-              <h4 class="title"><a href="{{ service.url | relative_url }}">{{ service.title }}</a></h4>
-              <p class="description">{{ service.description }}</p>
-            </div>
-            {% endfor %}
+      <div class="row">
+        {% for service in site.data.services %}
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="icon-box">
+            <div class="icon"><i class="{{ service.icon }}"></i></div>
+            <h4 class="title"><a href="{{ service.url | relative_url }}">{{ service.title }}</a></h4>
+            <p class="description">{{ service.description }}</p>
           </div>
         </div>
+        {% endfor %}
       </div>
-      <br><br><br>
+
     </div>
   </section><!-- End Services Section -->
 

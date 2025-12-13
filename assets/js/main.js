@@ -149,16 +149,15 @@
   });
 
   /**
-   * Hero carousel indicators
+   * Hero carousel initialization
    */
-  let heroCarouselIndicators = select("#hero-carousel-indicators")
-  let heroCarouselItems = select('#heroCarousel .carousel-item', true)
-
-  if (heroCarouselIndicators && heroCarouselItems) {
-    heroCarouselItems.forEach((item, index) => {
-      (index === 0) ?
-      heroCarouselIndicators.innerHTML += "<button type='button' data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active' aria-current='true'></button>":
-        heroCarouselIndicators.innerHTML += "<button type='button' data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></button>"
+  let heroCarouselEl = select('#heroCarousel')
+  if (heroCarouselEl) {
+    new bootstrap.Carousel(heroCarouselEl, {
+      interval: 5000,
+      ride: 'carousel',
+      wrap: true,
+      pause: 'hover'
     });
   }
 
