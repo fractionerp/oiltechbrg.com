@@ -1,19 +1,14 @@
 ---
 layout: home
-title: "Home"
+title: "Oiltech Bearings: Home"
 description: "Manufacturing, repair, re-engineering and design services for whitemetal lined bearings for steam turbines, pumps, compressors, gearboxes."
 ---
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="true" data-bs-interval="5000">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
+    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
 
     <div class="carousel-inner" role="listbox">
 
@@ -23,7 +18,7 @@ description: "Manufacturing, repair, re-engineering and design services for whit
           <div class="container">
             <h2 class="animated fadeInDown">Welcome to <span>Oiltech Bearings</span></h2>
             <p class="animated fadeInUp">Oiltech is an independent company serving clients around the world with solutions for hydrodynamic bearings.</p>
-            <a href="{{ '/contact.html' | relative_url }}" class="btn-get-started animated fadeInUp">Contact Us</a>
+            <a href="{{ '/contact' | relative_url }}" class="btn-get-started animated fadeInUp">Contact Us</a>
           </div>
         </div>
       </div>
@@ -63,14 +58,12 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
       <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    </a>
 
   </div>
 </section><!-- End Hero -->
@@ -79,14 +72,13 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
   <!-- ======= About Section ======= -->
   <section id="about" class="about">
-    <div class="container">
+    <div class="container-fluid">
 
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <img src="{{ '/assets/img/about.jpg' | relative_url }}" class="img-fluid rounded" alt="Oiltech Bearings">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
         </div>
 
-        <div class="col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+        <div class="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
           <h4>We pride ourselves on our responsive service, providing technical support and solving problems.</h4>
 
           <div class="icon-box">
@@ -113,41 +105,74 @@ description: "Manufacturing, repair, re-engineering and design services for whit
     </div>
   </section><!-- End About Section -->
 
-  <!-- ======= Industries Section ======= -->
+  <!-- ======= Cta2 Section ======= -->
   <section id="cta2" class="cta2">
-    <div class="container text-center">
-      <h3>Industries</h3>
-      <p>We serve clients around the world in many different industries with all types of applications.</p>
-      <p>Oil and Gas | Thermal Power Generation | Hydro Power Generation | Petrochemical | Mining and Cement | Industrial Processing | Marine | Steel Mills</p>
-      <p>Gas Turbines | Steam Turbines | Generators | Compressors | Fans and Blowers | Hydro Turbines | Pumps | Electric Motors | Gearboxes</p>
+    <div class="container">
+
+      <div class="text-center">
+        <h3>Industries</h3>
+        <p>We serve clients around the world in many different industries with all types of applications.<br><br>
+
+          Oil and Gas | Thermal Power Generation | Hydro Power Generation | Petrochemical | Mining and Cement | Industrial Processing | Marine | Steel Mills <br><br>
+
+          Gas Turbines | Steam Turbines | Generators | Compressors | Fans and Blowers | Hydro Turbines | Pumps | Electric Motors | Gearboxes
+        </p>
+      </div>
+
     </div>
-  </section><!-- End Industries Section -->
+  </section><!-- End Cta2 Section -->
 
   <!-- ======= Services Section ======= -->
   <section id="services" class="services">
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="section-title">
         <h3><span>Services</span></h3>
         <p>Comprehensive range of services to support OEMs, service centres and end users of rotating equipment.</p>
+        <br><br>
       </div>
 
-      <div class="row">
-        {% for service in site.data.services %}
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="icon-box">
-            <div class="icon"><i class="{{ service.icon }}"></i></div>
-            <h4 class="title"><a href="{{ service.url | relative_url }}">{{ service.title }}</a></h4>
-            <p class="description">{{ service.description }}</p>
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-settings-5-line"></i></div>
+              <h4 class="title"><a href="{{ '/bearing-manufacturing' | relative_url }}">Manufacturing</a></h4>
+              <p class="description">Make to print manufacturing services for all types of whitemetal bearings, tilt pad bearing assemblies and seals.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-tools-fill"></i></div>
+              <h4 class="title"><a href="{{ '/whitemetal-bearing-repair' | relative_url }}">Repair</a></h4>
+              <p class="description">Responsive, high quality repairs to support planned and emergency outages on turbines, compressors, pumps, gearboxes and turbomachinery.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-ruler-2-line"></i></div>
+              <h4 class="title"><a href="{{ '/re-engineering' | relative_url }}">Re-Engineering</a></h4>
+              <p class="description">Spare part solutions for rotating equipment. Cost effective and quick turnaround to replace difficult to source bearings.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-pencil-ruler-2-line"></i></div>
+              <h4 class="title"><a href="{{ '/engineered-bearings' | relative_url }}">Design</a></h4>
+              <p class="description">Mechanical design and FEA verification of oil film performance for new applications and upgrades to bearing performance.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-customer-service-2-fill"></i></div>
+              <h4 class="title"><a href="{{ '/technical-support' | relative_url }}">Technical Support</a></h4>
+              <p class="description">Field support for troubleshooting bearings and specific application problems. Failure mode analysis and consultancy for bearings.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 icon-box">
+              <div class="icon"><i class="ri-function-line"></i></div>
+              <h4 class="title"><a href="{{ '/babbitt-bearing-product-ranges' | relative_url }}">Product Ranges</a></h4>
+              <p class="description">Standard product ranges include journal bearings, tilt pad bearings, thrust bearings and equalising thrust bearings.</p>
+            </div>
           </div>
         </div>
-        {% endfor %}
       </div>
-
+      <br><br><br>
     </div>
   </section><!-- End Services Section -->
 
-  <!-- ======= CTA Section ======= -->
+  <!-- ======= Cta Section ======= -->
   <section id="cta" class="cta">
     <div class="container">
 
@@ -160,32 +185,33 @@ description: "Manufacturing, repair, re-engineering and design services for whit
       </div>
 
     </div>
-  </section><!-- End CTA Section -->
+  </section><!-- End Cta Section -->
 
   <!-- ======= Gallery Section ======= -->
-  <section id="gallery" class="gallery">
-    <div class="container">
-      <div class="gallery-grid">
-        <div class="gallery-item portrait">
-          <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" alt="j series equalising thrust bearing assembly">
-        </div>
-        <div class="gallery-item portrait">
-          <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" alt="modular thrust bearing assembly">
-        </div>
-        <div class="gallery-item portrait">
-          <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" alt="re-engineering steam turbine bearings">
-        </div>
-        <div class="gallery-item landscape">
-          <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" alt="lead lined seals">
-        </div>
-        <div class="gallery-item landscape">
-          <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" alt="ccz tilt pads">
-        </div>
-        <div class="gallery-item landscape">
-          <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" alt="tilt pad journal bearing">
+  <section id="services" class="services">
+    <div class="container-fluid">
+
+      <div class="section-title">
+        <br>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly">
+            <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals">
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly">
+            <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads">
+          </div>
+
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings">
+            <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing">
+          </div>
         </div>
       </div>
     </div>
   </section><!-- End Gallery Section -->
 
-</main>
+</main><!-- End #main -->

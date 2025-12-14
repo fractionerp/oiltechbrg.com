@@ -20,27 +20,53 @@ keywords: "whitemetal bearings, turbomachinery, oil film bearings"
 <section id="team" class="team section-bg">
   <div class="container">
     <div class="section-title">
-      <h3><span>Our Team</span></h3>
+      <h2>Our Team</h2>
     </div>
 
-    <div class="row justify-content-center">
-      {% for member in site.data.team %}
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card member-card">
-          <div class="card-img-wrapper">
-            <img src="{{ member.image | relative_url }}" class="card-img-top" alt="{{ member.name }}">
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">{{ member.name }}</h4>
-            <span class="member-title">{{ member.title }}</span>
-            <p class="card-text">{{ member.bio }}</p>
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="{{ '/assets/img/team/patrick.jpg' | relative_url }}" class="img-fluid" alt="Patrick Chester"></div>
+          <div class="member-info">
+            <h4>Patrick Chester</h4>
+            <span>Managing Director</span>
+            <p>Over 15 years in operations, design and global technical sales. Set up and ran facilities in the UAE and completed a technology transfer contract in Malaysia.</p>
             <div class="social">
-              <a href="{{ member.linkedin }}" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.linkedin.com/in/patrick-chester-7284b840/" target="_blank"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
       </div>
-      {% endfor %}
+
+      <div class="col-lg-4 mt-4 mt-lg-0">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="{{ '/assets/img/team/harry.jpg' | relative_url }}" class="img-fluid" alt="Paul Harris"></div>
+          <div class="member-info">
+            <h4>Paul Harris</h4>
+            <span>Production Director</span>
+            <p>Sadly, Paul Harris passed away in 2023. He has been a key to the success of Oiltech Bearings and leaves a legacy for the team at Oiltech Bearings to continue.</p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/paul-harris-52508a7b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-lg-0 mt-4">
+        <div class="member d-flex align-items-start">
+          <div class="pic"><img src="{{ '/assets/img/team/keith.jpg' | relative_url }}" class="img-fluid" alt="Keith Chester"></div>
+          <div class="member-info">
+            <h4>Dr. Keith Chester</h4>
+            <span>Technical Director</span>
+            <p>Decades of experience in bearing design, manufacturing and repair. An expert in metallurgy, NDT and a true innovator in product and process development.</p>
+            <div class="social">
+              <a href="https://www.linkedin.com/in/keith-chester-150b8422/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section><!-- End Team Section -->
@@ -53,7 +79,7 @@ keywords: "whitemetal bearings, turbomachinery, oil film bearings"
       <p>We are a young and dynamic company, continually investing in our production facilities to expand our product range and capabilities. We are keen to hire people at all levels with industry specific knowledge. We are flexible in finding solutions and exploring ways to expand our business.<br>
         <br>
         If you are interested in working for us, please contact us by email: 
-        <a href="mailto:{{ site.company.recruitment_email }}">{{ site.company.recruitment_email }}</a>.
+        <a href="mailto:recruitment@oiltechbrg.com">recruitment@oiltechbrg.com</a>.
         <br><br><br><br>
       </p>
     </div>
