@@ -1,6 +1,10 @@
 <!-- ======= Header ======= -->
+{% if page.layout == "home" %}
+<header id="header" class="fixed-top">
+{% else %}
 <header id="header" class="fixed-top header-inner-pages">
-  <div class="container-fluid">
+{% endif %}
+  <div class="container d-flex align-items-center justify-content-between">
 
     <a href="{{ '/' | relative_url }}" class="logo"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }}" class="img-fluid"></a>
 
