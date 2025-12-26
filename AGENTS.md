@@ -39,21 +39,36 @@ git add -A && git commit -m "prefix: description" && git push
 # Oiltech Bearings Site - Jekyll
 
 ## Overview
-Website for Oiltech Bearings Ltd - whitemetal bearing manufacturing, repair, and re-engineering services.
+Website for Oiltech Bearings Ltd - whitemetal bearing manufacturing, repair, and re-engineering services. Built with Jekyll, deployed to GitHub Pages.
 
 ## Access
 - **Production**: https://oiltechbrg.com
-- **Local Dev**: http://localhost:8080/oiltech
+- **Local Dev**: https://tenx.fraction.app/oiltechbrg.com/
+- **Build Output**: `/home/dev/tenx/apps/websites/oiltechbrg.com/_site/`
 
-## Build Commands
+## Important: Two Configuration Files
+
+### `_config.yml` (Production) - DO NOT modify for local dev
+- `url: "https://oiltechbrg.com"`
+- `baseurl: ""`
+
+### `_config_dev.yml` (Development) - Use for local dev
+- `url: "https://tenx.fraction.app"`
+- `baseurl: "/oiltechbrg.com"`
+
+## Building the Site
+
+**IMPORTANT: After making ANY changes, you MUST rebuild:**
+
 ```bash
-# Build for local development
-docker compose exec jekyll jekyll build --config _config.yml,_config_dev.yml
+# Build with dev config for local testing
+docker exec websites_jekyll bash -c "cd /srv/oiltechbrg.com && jekyll build --config _config.yml,_config_dev.yml"
 
-# Watch mode
-docker compose exec jekyll jekyll build --config _config.yml,_config_dev.yml --watch
+# Verify build
+curl -I https://tenx.fraction.app/oiltechbrg.com/
 ```
 
 ## Key Info
 - Contact form: Formspree
 - Analytics: Google Analytics + Tag Manager
+- Use `{{ site.baseurl }}/assets/...` for all asset paths

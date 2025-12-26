@@ -1,2 +1,3 @@
 # Development overrides - use with: jekyll build --config _config.yml,_config_dev.yml
-baseurl: "/oiltech"
+url: "https://tenx.fraction.app"
+baseurl: "/oiltechbrg.com"
