@@ -299,22 +299,19 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     bottom: 0;
     background-color: rgba(12, 13, 14, 0.7); }
-  #hero .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  #hero .carousel-caption {
     position: absolute;
     bottom: 0;
-    top: 70px;
-    left: 50px;
-    right: 50px;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; }
-  #hero .carousel-item.active .carousel-container {
-    opacity: 1; }
-  #hero .container {
-    text-align: center; }
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 50px 50px 50px;
+    z-index: 2; }
   #hero h2 {
     color: #fff;
     margin-bottom: 20px;

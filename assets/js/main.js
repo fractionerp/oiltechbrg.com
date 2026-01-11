@@ -149,17 +149,8 @@
   });
 
   /**
-   * Hero carousel initialization
+   * Hero carousel - initialized inline in index.html
    */
-  let heroCarouselEl = select('#heroCarousel')
-  if (heroCarouselEl) {
-    new bootstrap.Carousel(heroCarouselEl, {
-      interval: 5000,
-      ride: 'carousel',
-      wrap: true,
-      pause: 'hover'
-    });
-  }
 
   /**
    * Initiate glightbox
