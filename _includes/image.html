@@ -1,0 +1,10 @@
+{% comment %}
+  Responsive image include with WebP support
+  Usage: {% include image.html src="/assets/img/photo.jpg" alt="Description" class="img-fluid" %}
+{% endcomment %}
+{% assign img_path = include.src | relative_url %}
+{% assign webp_path = include.src | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.JPG', '.webp' | replace: '.JPEG', '.webp' | replace: '.png', '.webp' | replace: '.PNG', '.webp' | relative_url %}
+<picture>
+  <source srcset="{{ webp_path }}" type="image/webp">
+  <img src="{{ img_path }}" alt="{{ include.alt }}"{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.loading %} loading="{{ include.loading }}"{% endif %}>
+</picture>

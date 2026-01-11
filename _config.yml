@@ -31,8 +31,17 @@ formspree:
 markdown: kramdown
 permalink: pretty
 
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 # Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - CLAUDE.md
+  - AGENTS.md
+  - node_modules
+  - vendor

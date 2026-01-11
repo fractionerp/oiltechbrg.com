@@ -8,7 +8,12 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 <section id="hero">
   <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+    <ol class="carousel-indicators" id="hero-carousel-indicators">
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="3"></li>
+    </ol>
 
     <div class="carousel-inner" role="listbox">
 
@@ -58,12 +63,14 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
     </div>
 
-    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-    </a>
+      <span class="visually-hidden">Next</span>
+    </button>
 
   </div>
 </section><!-- End Hero -->
@@ -196,18 +203,36 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
         <div class="row">
           <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly">
-            <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals">
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/j-series.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly" loading="lazy">
+            </picture>
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/lead-lined-seal.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals" loading="lazy">
+            </picture>
           </div>
 
           <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly">
-            <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads">
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/m-series.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly" loading="lazy">
+            </picture>
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/ccz-tilt-pads.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads" loading="lazy">
+            </picture>
           </div>
 
           <div class="col-lg-4 mb-4 mb-lg-0">
-            <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings">
-            <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing">
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/re-engineering.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings" loading="lazy">
+            </picture>
+            <picture>
+              <source srcset="{{ '/assets/img/gallery/tilt-pad-journal.webp' | relative_url }}" type="image/webp">
+              <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing" loading="lazy">
+            </picture>
           </div>
         </div>
       </div>

@@ -1,46 +1,162 @@
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
-<!-- End Google Tag Manager -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.google_analytics }}');
-</script>
-
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Primary Meta Tags -->
 <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta content="{{ page.description | default: site.description }}" name="description">
-<meta content="{{ page.keywords | default: '' }}" name="keywords">
-{% if page.noindex %}
-<meta name="robots" content="noindex, nofollow">
-{% endif %}
+<meta name="title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="description" content="{{ page.description | default: site.description }}">
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+<meta name="author" content="{{ site.company.name }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace: '/index.html', '/' }}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<meta name="twitter:image" content="{{ site.url }}/assets/img/og-image.jpg">
+
+<!-- Geo Tags for Local SEO -->
+<meta name="geo.region" content="GB-TWR">
+<meta name="geo.placename" content="Newcastle Upon Tyne">
+<meta name="geo.position" content="55.0077;-1.6578">
+<meta name="ICBM" content="55.0077, -1.6578">
 
 <!-- Favicons -->
-<link href="{{ '/assets/img/oiltech.ico' | relative_url }}" rel="icon">
+<link rel="icon" type="image/x-icon" href="{{ '/assets/img/oiltech.ico' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/oiltech.ico' | relative_url }}">
 
-<!-- Fontawesome -->
-<script src="https://kit.fontawesome.com/ce2cdb0f36.js" crossorigin="anonymous"></script>
+<!-- Preconnect to external resources for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://kit.fontawesome.com">
 
-<!-- Vendor CSS Files -->
-<link href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" rel="stylesheet">
+<!-- Critical CSS - Bootstrap core -->
+<link rel="preload" href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}" as="style">
 <link href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}" rel="stylesheet">
+
+<!-- Google Fonts - with display swap for better performance -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Vendor CSS Files - loaded normally as they're needed for layout -->
 <link href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}" rel="stylesheet">
 <link href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet">
 <link href="{{ '/assets/vendor/remixicon/remixicon.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' | relative_url }}" rel="stylesheet">
+
+<!-- Non-critical CSS - loaded async -->
+<link rel="preload" href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" rel="stylesheet"></noscript>
+
+<link rel="preload" href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ '/assets/vendor/glightbox/css/glightbox.min.css' | relative_url }}" rel="stylesheet"></noscript>
+
+<link rel="preload" href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ '/assets/vendor/swiper/swiper-bundle.min.css' | relative_url }}" rel="stylesheet"></noscript>
 
 <!-- Template Main CSS File -->
 <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+
+<!-- FontAwesome - loaded async for performance -->
+<script defer src="https://kit.fontawesome.com/ce2cdb0f36.js" crossorigin="anonymous"></script>
+
+<!-- Structured Data - Local Business Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/#organization",
+  "name": "{{ site.company.name }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}/assets/img/logo.png",
+  "image": "{{ site.url }}/assets/img/og-image.jpg",
+  "telephone": "{{ site.company.phone }}",
+  "email": "{{ site.company.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Unit 3 Browns Park, Brunswick Industrial Estate",
+    "addressLocality": "Newcastle Upon Tyne",
+    "postalCode": "NE13 7GD",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 55.0077,
+    "longitude": -1.6578
+  },
+  "openingHours": "Mo-Fr 08:00-17:00",
+  "sameAs": [
+    "{{ site.social.linkedin }}",
+    "{{ site.social.facebook }}",
+    "{{ site.social.instagram }}"
+  ],
+  "priceRange": "$$",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Worldwide"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Bearing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Whitemetal Bearing Manufacturing"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bearing Repair Services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bearing Re-Engineering"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Google Tag Manager - moved after critical content -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','{{ site.google_tag_manager }}');
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '{{ site.google_analytics }}');
+</script>

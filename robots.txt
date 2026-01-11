@@ -1,0 +1,27 @@
+# Robots.txt for Oiltech Bearings
+# https://oiltechbrg.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://oiltechbrg.com/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /assets/pdf/
+Disallow: /*.pdf$
+
+# Allow search engines to crawl all main content
+Allow: /bearing-manufacturing
+Allow: /whitemetal-bearing-repair
+Allow: /technical-support
+Allow: /technical-services
+Allow: /engineered-bearings
+Allow: /re-engineering
+Allow: /bearing-design-analysis
+Allow: /babbitt-bearing-product-ranges
+Allow: /about
+Allow: /contact
+
+# Crawl delay (optional, be nice to servers)
+Crawl-delay: 1
