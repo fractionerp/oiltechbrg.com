@@ -272,32 +272,40 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
+  height: 100vh;
   overflow: hidden;
   position: relative; }
   #hero .carousel,
   #hero .carousel-inner,
   #hero .carousel-item {
     height: 100vh; }
+  #hero .carousel-item {
+    position: relative; }
   #hero .carousel-item img {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     object-fit: cover; }
-  #hero .carousel-item::before {
+  #hero .carousel-item::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(12, 13, 14, 0.7);
+    background-color: rgba(12, 13, 14, 0.6);
     z-index: 1; }
   #hero .carousel-caption {
+    position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   #hero h2 {
     color: #fff;
     margin-bottom: 20px;
@@ -1106,6 +1114,51 @@ section {
 --------------------------------------------------------------*/
 .team {
   padding: 60px 0; }
+  .team .member {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; }
+    .team .member .pic {
+      width: 120px;
+      min-width: 120px;
+      margin-right: 20px; }
+      .team .member .pic img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px; }
+    .team .member .member-info h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #394047;
+      margin-bottom: 5px; }
+    .team .member .member-info span {
+      display: block;
+      font-size: 14px;
+      color: #428bca;
+      font-weight: 500;
+      margin-bottom: 10px; }
+    .team .member .member-info p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 10px; }
+    .team .member .social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #0077b5;
+      border-radius: 50%;
+      color: #fff; }
+      .team .member .social a:hover {
+        background: #005582; }
+      .team .member .social a i {
+        font-size: 16px;
+        color: #fff; }
   .team .member-card {
     border: none;
     border-radius: 8px;
@@ -1514,24 +1567,31 @@ section {
     color: #fff; }
 
 /* Footer icon fixes */
-#footer .footer-links ul li i.bx {
-  color: #5697d0;
-  font-size: 14px;
+#footer .footer-top .footer-links ul li i.bx,
+#footer .footer-top .footer-links ul li i {
+  color: #5697d0 !important;
+  font-size: 14px !important;
   margin-right: 8px;
   display: inline-block;
+  line-height: 1;
 }
 
-#footer .social-links a {
+#footer .footer-top .social-links a {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background: #394047;
   margin-right: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#footer .social-links a i.bx {
-  color: #fff;
-  font-size: 20px;
+#footer .footer-top .social-links a i.bx,
+#footer .social-links a i {
+  color: #fff !important;
+  font-size: 20px !important;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
