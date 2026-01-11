@@ -1376,18 +1376,24 @@ section {
       flex-wrap: wrap;
       margin: 0 -15px;
       padding-left: 60px; }
-    #footer .footer-top .footer-col {
+    #footer .footer-top .footer-col,
+    #footer .footer-top .footer-links,
+    #footer .footer-top .footer-info {
       flex: 0 0 25%;
       max-width: 25%;
       padding: 0 15px;
       box-sizing: border-box; }
-    @media (max-width: 992px) {
-      #footer .footer-top .footer-col {
+    @media (max-width: 767px) {
+      #footer .footer-top .footer-col,
+      #footer .footer-top .footer-links,
+      #footer .footer-top .footer-info {
         flex: 0 0 50%;
         max-width: 50%;
         margin-bottom: 30px; } }
-    @media (max-width: 576px) {
-      #footer .footer-top .footer-col {
+    @media (max-width: 480px) {
+      #footer .footer-top .footer-col,
+      #footer .footer-top .footer-links,
+      #footer .footer-top .footer-info {
         flex: 0 0 100%;
         max-width: 100%; } }
     #footer .footer-top .footer-info {
