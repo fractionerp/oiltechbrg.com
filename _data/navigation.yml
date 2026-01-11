@@ -23,6 +23,8 @@ main:
         url: /bearing-design-analysis
       - title: Product Ranges
         url: /babbitt-bearing-product-ranges
+  - title: Industries
+    url: /industries
   - title: About Us
     url: /about
   - title: Contact
@@ -49,9 +51,9 @@ footer_company:
     url: /contact
   - title: About Us
     url: /about
-  - title: Documentation
-    url: /documentation
+  - title: Industries
+    url: /industries
+  - title: FAQ
+    url: /faq
   - title: Privacy Policy
     url: /privacy
-  - title: Sustainability
-    url: /sustainability
