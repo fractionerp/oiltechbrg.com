@@ -916,6 +916,49 @@ section {
     .info-rows .info-item h3 {
       font-size: 20px; } }
 
+/* Industry Cards */
+.industry-card {
+  padding: 30px 0;
+  border-bottom: 1px solid #e0e0e0; }
+  .industry-card:first-of-type {
+    border-top: 1px solid #e0e0e0; }
+  .industry-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #394047;
+    margin-bottom: 15px; }
+    .industry-card h3 i {
+      font-size: 28px; }
+  .industry-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7; }
+  .industry-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; }
+
+.industry-list {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0; }
+  .industry-list li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center; }
+    .industry-list li i {
+      color: #428bca;
+      font-size: 18px;
+      margin-right: 10px;
+      flex-shrink: 0; }
+
+@media (max-width: 991px) {
+  .industry-card h3 {
+    font-size: 20px;
+    margin-top: 10px; } }
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/

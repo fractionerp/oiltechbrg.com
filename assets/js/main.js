@@ -162,33 +162,38 @@
   }
 
   /**
-   * Initiate glightbox 
+   * Initiate glightbox
    */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  }
 
   /**
    * Skills animation
    */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
+  if (typeof Waypoint !== 'undefined') {
+    let skilsContent = select('.skills-content');
+    if (skilsContent) {
+      new Waypoint({
+        element: skilsContent,
+        offset: '80%',
+        handler: function(direction) {
+          let progress = select('.progress .progress-bar', true);
+          progress.forEach((el) => {
+            el.style.width = el.getAttribute('aria-valuenow') + '%'
+          });
+        }
+      })
+    }
   }
 
   /**
    * Porfolio isotope and filter
    */
   window.addEventListener('load', () => {
+    if (typeof Isotope === 'undefined') return;
     let portfolioContainer = select('.portfolio-container');
     if (portfolioContainer) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
@@ -213,32 +218,38 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    const portfolioLightbox = GLightbox({
+      selector: '.portfolio-lightbox'
+    });
+  }
 
   /**
    * Portfolio details slider
    */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  if (typeof Swiper !== 'undefined') {
+    new Swiper('.portfolio-details-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      }
+    });
+  }
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
 
 })()
