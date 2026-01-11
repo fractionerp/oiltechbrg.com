@@ -71,40 +71,65 @@ description: "Manufacturing, repair, re-engineering and design services for whit
   </div>
 </section><!-- End Hero -->
 
+<script>
+// Initialize carousel after page loads
+window.addEventListener('load', function() {
+  var carousel = document.getElementById('heroCarousel');
+  if (carousel && typeof bootstrap !== 'undefined') {
+    var bsCarousel = new bootstrap.Carousel(carousel, {
+      interval: 5000,
+      wrap: true,
+      pause: 'hover'
+    });
+    bsCarousel.cycle();
+  }
+});
+</script>
+
 <main id="main">
 
   <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container-fluid">
-
-      <div class="row justify-content-center">
-        <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+  <section id="about" class="about py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <img src="{{ '/assets/img/about.jpg' | relative_url }}" class="img-fluid rounded shadow" alt="Oiltech Bearings Workshop">
         </div>
+        <div class="col-lg-7">
+          <h2 class="mb-4">We pride ourselves on our responsive service, providing technical support and solving problems.</h2>
 
-        <div class="col-xl-5 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-          <h4>We pride ourselves on our responsive service, providing technical support and solving problems.</h4>
-
-          <div class="icon-box">
-            <div class="icon"><i class="fa-solid fa-reply-all"></i></div>
-            <h4 class="title"><a href="{{ '/contact' | relative_url }}">Responsive</a></h4>
-            <p class="description">Our facilities and management team are responsive to customer demand, urgent requests and finding ways to support clients.</p>
+          <div class="d-flex mb-4">
+            <div class="icon-circle me-3">
+              <i class="ri-reply-all-line"></i>
+            </div>
+            <div>
+              <h4><a href="{{ '/contact' | relative_url }}">Responsive</a></h4>
+              <p>Our facilities and management team are responsive to customer demand, urgent requests and finding ways to support clients.</p>
+            </div>
           </div>
 
-          <div class="icon-box">
-            <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-            <h4 class="title"><a href="{{ '/technical-support' | relative_url }}">Technical Expertise</a></h4>
-            <p class="description">Our team has over 70 combined years of expertise in bearing design, metallurgy, manufacturing and rotating equipment applications.</p>
+          <div class="d-flex mb-4">
+            <div class="icon-circle me-3">
+              <i class="ri-lightbulb-flash-line"></i>
+            </div>
+            <div>
+              <h4><a href="{{ '/technical-support' | relative_url }}">Technical Expertise</a></h4>
+              <p>Our team has over 70 combined years of expertise in bearing design, metallurgy, manufacturing and rotating equipment applications.</p>
+            </div>
           </div>
 
-          <div class="icon-box">
-            <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
-            <h4 class="title"><a href="{{ '/engineered-bearings' | relative_url }}">Problem Solving</a></h4>
-            <p class="description">Whitemetal bearings are our core business, but more exotic bearing designs and materials are catered for such as pure lead linings, polymers, tri-metal bearings and self lubricating materials.</p>
+          <div class="d-flex mb-4">
+            <div class="icon-circle me-3">
+              <i class="ri-settings-3-line"></i>
+            </div>
+            <div>
+              <h4><a href="{{ '/engineered-bearings' | relative_url }}">Problem Solving</a></h4>
+              <p>Whitemetal bearings are our core business, but more exotic bearing designs and materials are catered for such as pure lead linings, polymers, tri-metal bearings and self lubricating materials.</p>
+            </div>
           </div>
 
         </div>
       </div>
-
     </div>
   </section><!-- End About Section -->
 
@@ -120,6 +145,7 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
           Gas Turbines | Steam Turbines | Generators | Compressors | Fans and Blowers | Hydro Turbines | Pumps | Electric Motors | Gearboxes
         </p>
+        <a href="{{ '/industries' | relative_url }}" class="cta-btn mt-3">See More</a>
       </div>
 
     </div>
@@ -191,45 +217,46 @@ description: "Manufacturing, repair, re-engineering and design services for whit
   </section><!-- End Cta Section -->
 
   <!-- ======= Gallery Section ======= -->
-  <section id="services" class="services">
-    <div class="container-fluid">
-
-      <div class="section-title">
-        <br>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/j-series.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly" loading="lazy">
-            </picture>
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/lead-lined-seal.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals" loading="lazy">
-            </picture>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/m-series.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly" loading="lazy">
-            </picture>
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/ccz-tilt-pads.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads" loading="lazy">
-            </picture>
-          </div>
-
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/re-engineering.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings" loading="lazy">
-            </picture>
-            <picture>
-              <source srcset="{{ '/assets/img/gallery/tilt-pad-journal.webp' | relative_url }}" type="image/webp">
-              <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing" loading="lazy">
-            </picture>
-          </div>
+  <section id="gallery" class="gallery py-5">
+    <div class="container">
+      <div class="gallery-grid">
+        <!-- Row 1: 2 portrait + 1 landscape -->
+        <div class="gallery-item portrait">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/m-series.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" alt="modular thrust bearing assembly" loading="lazy">
+          </picture>
+        </div>
+        <div class="gallery-item portrait">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/lead-lined-seal.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" alt="lead lined seals" loading="lazy">
+          </picture>
+        </div>
+        <div class="gallery-item landscape">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/j-series.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" alt="j series equalising thrust bearing assembly" loading="lazy">
+          </picture>
+        </div>
+        <!-- Row 2: 2 landscape + 1 portrait -->
+        <div class="gallery-item landscape">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/ccz-tilt-pads.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" alt="ccz tilt pads" loading="lazy">
+          </picture>
+        </div>
+        <div class="gallery-item landscape">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/re-engineering.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" alt="re-engineering steam turbine bearings" loading="lazy">
+          </picture>
+        </div>
+        <div class="gallery-item portrait">
+          <picture>
+            <source srcset="{{ '/assets/img/gallery/tilt-pad-journal.webp' | relative_url }}" type="image/webp">
+            <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" alt="tilt pad journal bearing" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
