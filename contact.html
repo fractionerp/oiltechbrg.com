@@ -5,46 +5,70 @@ description: "Get in touch with Oiltech Bearings for whitemetal bearing manufact
 ---
 
 <!-- ======= Contact Section ======= -->
-<section class="contact py-5">
+<section class="contact">
   <div class="container">
     <div class="section-title text-center mb-5">
       <h2>Contact Us</h2>
       <p>Get in touch with our team for enquiries, quotes, or technical support.</p>
     </div>
 
-    <div class="row justify-content-center">
-      <!-- Contact Info -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="info-box text-center p-4 bg-light rounded h-100">
-          <i class="bi bi-geo-alt fs-1 text-primary mb-3 d-block"></i>
-          <h4>Address</h4>
-          <p>Unit 3 Browns Park<br>Brunswick Industrial Estate<br>Newcastle Upon Tyne<br>NE13 7GD, United Kingdom</p>
+    <div class="row">
+      <!-- Left Column: Contact Details -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p class="mb-4">We're here to help with your bearing requirements. Contact us for quotes, technical support, or general enquiries.</p>
+
+          <div class="info-item d-flex mb-4">
+            <div class="icon-box me-3">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <div>
+              <h5>Address</h5>
+              <p>Unit 3 Browns Park<br>
+              Brunswick Industrial Estate<br>
+              Newcastle Upon Tyne<br>
+              NE13 7GD, United Kingdom</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex mb-4">
+            <div class="icon-box me-3">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div>
+              <h5>Phone</h5>
+              <p>+44 (0)191 236 8041</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex mb-4">
+            <div class="icon-box me-3">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <p><a href="mailto:sales@oiltechbrg.com">sales@oiltechbrg.com</a></p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex mb-4">
+            <div class="icon-box me-3">
+              <i class="bi bi-clock"></i>
+            </div>
+            <div>
+              <h5>Business Hours</h5>
+              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="info-box text-center p-4 bg-light rounded h-100">
-          <i class="bi bi-envelope fs-1 text-primary mb-3 d-block"></i>
-          <h4>Email</h4>
-          <p><a href="mailto:sales@oiltechbrg.com">sales@oiltechbrg.com</a></p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="info-box text-center p-4 bg-light rounded h-100">
-          <i class="bi bi-telephone fs-1 text-primary mb-3 d-block"></i>
-          <h4>Phone</h4>
-          <p>+44 (0)191 236 8041</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Form -->
-    <div class="row justify-content-center mt-4">
-      <div class="col-lg-8">
-        <div class="bg-light p-4 p-md-5 rounded">
-          <h3 class="text-center mb-2">Send us a Message</h3>
-          <p class="text-center text-muted mb-4">We normally reply within 24 hours</p>
+      <!-- Right Column: Contact Form -->
+      <div class="col-lg-7">
+        <div class="contact-form-box">
+          <h3>Send us a Message</h3>
+          <p class="text-muted mb-4">We normally reply within 24 hours</p>
 
           <form action="https://formspree.io/f/mknkdwgo" method="POST">
             <div class="row">
@@ -74,13 +98,11 @@ description: "Get in touch with Oiltech Bearings for whitemetal bearing manufact
               <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
             </div>
 
-            <div class="mb-3">
+            <div class="mb-4">
               <small class="text-muted">By submitting this form you are accepting the terms of our <a href="{{ '/privacy' | relative_url }}">privacy policy</a>.</small>
             </div>
 
-            <div class="text-center">
-              <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
-            </div>
+            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
           </form>
         </div>
       </div>
