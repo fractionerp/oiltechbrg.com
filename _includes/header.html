@@ -8,14 +8,14 @@
 
     <a href="{{ '/' | relative_url }}" class="logo"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }}" class="img-fluid"></a>
 
-    <i class="bi bi-list mobile-nav-toggle"></i>
+    <i class="bx bx-menu mobile-nav-toggle"></i>
 
     <nav id="navbar" class="navbar ms-auto">
       <ul>
         {% for item in site.data.navigation.main %}
         {% if item.dropdown %}
         <li class="dropdown">
-          <a href="{{ item.url | relative_url }}"><span>{{ item.title }}</span> <i class="bi bi-chevron-down"></i></a>
+          <a href="{{ item.url | relative_url }}"><span>{{ item.title }}</span> <i class="bx bx-chevron-down"></i></a>
           <ul>
             {% for subitem in item.dropdown %}
             <li><a href="{{ subitem.url | relative_url }}">{{ subitem.title }}</a></li>

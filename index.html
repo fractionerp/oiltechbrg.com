@@ -6,85 +6,72 @@ description: "Manufacturing, repair, re-engineering and design services for whit
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+  <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-    </div>
+    <ol class="carousel-indicators">
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="2"></li>
+      <li data-bs-target="#heroCarousel" data-bs-slide-to="3"></li>
+    </ol>
 
-    <div class="carousel-inner">
+    <div class="carousel-inner" role="listbox">
 
       <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <img src="{{ '/assets/img/slide/j-series.JPG' | relative_url }}" class="d-block w-100" alt="Oiltech Bearings">
-        <div class="carousel-caption">
-          <h2>Welcome to <span>Oiltech Bearings</span></h2>
-          <p>Oiltech is an independent company serving clients around the world with solutions for hydrodynamic bearings.</p>
-          <div><a href="{{ '/contact' | relative_url }}" class="btn-get-started">Contact Us</a></div>
+      <div class="carousel-item active" style="background-image: url('{{ '/assets/img/slide/j-series.JPG' | relative_url }}')">
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Oiltech Bearings</span></h2>
+            <p class="animate__animated animate__fadeInUp">Oiltech is an independent company serving clients around the world with solutions for hydrodynamic bearings.</p>
+            <a href="{{ '/contact' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">Contact Us</a>
+          </div>
         </div>
       </div>
 
       <!-- Slide 2 -->
-      <div class="carousel-item">
-        <img src="{{ '/assets/img/slide/leg-journal.jpg' | relative_url }}" class="d-block w-100" alt="Bearing Manufacturing">
-        <div class="carousel-caption">
-          <h2>Hydrodynamic Bearing Manufacturing</h2>
-          <p>Manufacturing service for journal, tilt pad and thrust pad bearings.</p>
-          <div><a href="{{ '/bearing-manufacturing' | relative_url }}" class="btn-get-started">Manufacturing</a></div>
+      <div class="carousel-item" style="background-image: url('{{ '/assets/img/slide/leg-journal.jpg' | relative_url }}')">
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animate__animated animate__fadeInDown">Hydrodynamic Bearing Manufacturing</h2>
+            <p class="animate__animated animate__fadeInUp">Manufacturing service for journal, tilt pad and thrust pad bearings.</p>
+            <a href="{{ '/bearing-manufacturing' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">Manufacturing</a>
+          </div>
         </div>
       </div>
 
       <!-- Slide 3 -->
-      <div class="carousel-item">
-        <img src="{{ '/assets/img/slide/repair.jpeg' | relative_url }}" class="d-block w-100" alt="Bearing Repair">
-        <div class="carousel-caption">
-          <h2>Responsive Repair Services</h2>
-          <p>Repair services for any type of bearing during routine or unscheduled outages of your critical rotating equipment.</p>
-          <div><a href="{{ '/whitemetal-bearing-repair' | relative_url }}" class="btn-get-started">Repair</a></div>
+      <div class="carousel-item" style="background-image: url('{{ '/assets/img/slide/repair.jpeg' | relative_url }}')">
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animate__animated animate__fadeInDown">Responsive Repair Services</h2>
+            <p class="animate__animated animate__fadeInUp">Repair services for any type of bearing during routine or unscheduled outages of your critical rotating equipment.</p>
+            <a href="{{ '/whitemetal-bearing-repair' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">Repair</a>
+          </div>
         </div>
       </div>
 
       <!-- Slide 4 -->
-      <div class="carousel-item">
-        <img src="{{ '/assets/img/slide/steam-turbine.jpg' | relative_url }}" class="d-block w-100" alt="Technical Support">
-        <div class="carousel-caption">
-          <h2>Design and Engineering Support</h2>
-          <p>Expertise in mechanical design, FEA analysis of oil film performance and application support for turbo machinery.</p>
-          <div><a href="{{ '/technical-support' | relative_url }}" class="btn-get-started">Technical Support</a></div>
+      <div class="carousel-item" style="background-image: url('{{ '/assets/img/slide/steam-turbine.jpg' | relative_url }}')">
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animate__animated animate__fadeInDown">Design and Engineering Support</h2>
+            <p class="animate__animated animate__fadeInUp">Expertise in mechanical design, FEA analysis of oil film performance and application support for turbo machinery.</p>
+            <a href="{{ '/technical-support' | relative_url }}" class="btn-get-started animate__animated animate__fadeInUp">Technical Support</a>
+          </div>
         </div>
       </div>
 
     </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+    </a>
 
   </div>
 </section><!-- End Hero -->
-
-<script>
-// Initialize carousel after page loads
-window.addEventListener('load', function() {
-  var carousel = document.getElementById('heroCarousel');
-  if (carousel && typeof bootstrap !== 'undefined') {
-    var bsCarousel = new bootstrap.Carousel(carousel, {
-      interval: 5000,
-      wrap: true,
-      pause: 'hover'
-    });
-    bsCarousel.cycle();
-  }
-});
-</script>
 
 <main id="main">
 
@@ -94,8 +81,8 @@ window.addEventListener('load', function() {
       <div class="section-title">
         <h2>We pride ourselves on our responsive service, providing technical support and solving problems.</h2>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-4 col-md-4">
           <div class="icon-box">
             <div class="icon"><i class="ri-reply-all-line"></i></div>
             <h4><a href="{{ '/contact' | relative_url }}">Responsive</a></h4>
@@ -103,7 +90,7 @@ window.addEventListener('load', function() {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-4 col-md-4">
           <div class="icon-box">
             <div class="icon"><i class="ri-lightbulb-flash-line"></i></div>
             <h4><a href="{{ '/technical-support' | relative_url }}">Technical Expertise</a></h4>
@@ -111,7 +98,7 @@ window.addEventListener('load', function() {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <div class="col-lg-4 col-md-4">
           <div class="icon-box">
             <div class="icon"><i class="ri-settings-3-line"></i></div>
             <h4><a href="{{ '/engineered-bearings' | relative_url }}">Problem Solving</a></h4>
@@ -152,36 +139,48 @@ window.addEventListener('load', function() {
 
       <div class="row justify-content-center">
         <div class="col-xl-10">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-settings-5-line"></i></div>
-              <h4 class="title"><a href="{{ '/bearing-manufacturing' | relative_url }}">Manufacturing</a></h4>
-              <p class="description">Make to print manufacturing services for all types of whitemetal bearings, tilt pad bearing assemblies and seals.</p>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-settings-5-line"></i></div>
+                <h4 class="title"><a href="{{ '/bearing-manufacturing' | relative_url }}">Manufacturing</a></h4>
+                <p class="description">Make to print manufacturing services for all types of whitemetal bearings, tilt pad bearing assemblies and seals.</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-tools-fill"></i></div>
-              <h4 class="title"><a href="{{ '/whitemetal-bearing-repair' | relative_url }}">Repair</a></h4>
-              <p class="description">Responsive, high quality repairs to support planned and emergency outages on turbines, compressors, pumps, gearboxes and turbomachinery.</p>
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-tools-fill"></i></div>
+                <h4 class="title"><a href="{{ '/whitemetal-bearing-repair' | relative_url }}">Repair</a></h4>
+                <p class="description">Responsive, high quality repairs to support planned and emergency outages on turbines, compressors, pumps, gearboxes and turbomachinery.</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-ruler-2-line"></i></div>
-              <h4 class="title"><a href="{{ '/re-engineering' | relative_url }}">Re-Engineering</a></h4>
-              <p class="description">Spare part solutions for rotating equipment. Cost effective and quick turnaround to replace difficult to source bearings.</p>
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-ruler-2-line"></i></div>
+                <h4 class="title"><a href="{{ '/re-engineering' | relative_url }}">Re-Engineering</a></h4>
+                <p class="description">Spare part solutions for rotating equipment. Cost effective and quick turnaround to replace difficult to source bearings.</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-pencil-ruler-2-line"></i></div>
-              <h4 class="title"><a href="{{ '/engineered-bearings' | relative_url }}">Design</a></h4>
-              <p class="description">Mechanical design and FEA verification of oil film performance for new applications and upgrades to bearing performance.</p>
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-pencil-ruler-2-line"></i></div>
+                <h4 class="title"><a href="{{ '/engineered-bearings' | relative_url }}">Design</a></h4>
+                <p class="description">Mechanical design and FEA verification of oil film performance for new applications and upgrades to bearing performance.</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-customer-service-2-fill"></i></div>
-              <h4 class="title"><a href="{{ '/technical-support' | relative_url }}">Technical Support</a></h4>
-              <p class="description">Field support for troubleshooting bearings and specific application problems. Failure mode analysis and consultancy for bearings.</p>
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-customer-service-2-fill"></i></div>
+                <h4 class="title"><a href="{{ '/technical-support' | relative_url }}">Technical Support</a></h4>
+                <p class="description">Field support for troubleshooting bearings and specific application problems. Failure mode analysis and consultancy for bearings.</p>
+              </div>
             </div>
-            <div class="col-lg-4 col-md-6 icon-box">
-              <div class="icon"><i class="ri-function-line"></i></div>
-              <h4 class="title"><a href="{{ '/babbitt-bearing-product-ranges' | relative_url }}">Product Ranges</a></h4>
-              <p class="description">Standard product ranges include journal bearings, tilt pad bearings, thrust bearings and equalising thrust bearings.</p>
+            <div class="col-lg-4 col-md-4">
+              <div class="icon-box">
+                <div class="icon"><i class="ri-function-line"></i></div>
+                <h4 class="title"><a href="{{ '/babbitt-bearing-product-ranges' | relative_url }}">Product Ranges</a></h4>
+                <p class="description">Standard product ranges include journal bearings, tilt pad bearings, thrust bearings and equalising thrust bearings.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -208,42 +207,18 @@ window.addEventListener('load', function() {
   <!-- ======= Gallery Section ======= -->
   <section id="gallery" class="gallery">
     <div class="container">
-      <div class="row g-3">
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/j-series.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="img-fluid" alt="j series equalising thrust bearing assembly" loading="lazy">
-          </picture>
+      <div class="row">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="{{ '/assets/img/gallery/j-series.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="j series equalising thrust bearing assembly" loading="lazy">
+          <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="lead lined seals" loading="lazy">
         </div>
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/lead-lined-seal.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/lead-lined-seal.jpeg' | relative_url }}" class="img-fluid" alt="lead lined seals" loading="lazy">
-          </picture>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="modular thrust bearing assembly" loading="lazy">
+          <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="ccz tilt pads" loading="lazy">
         </div>
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/m-series.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/m-series.jpg' | relative_url }}" class="img-fluid" alt="modular thrust bearing assembly" loading="lazy">
-          </picture>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/ccz-tilt-pads.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/ccz-tilt-pads.jpeg' | relative_url }}" class="img-fluid" alt="ccz tilt pads" loading="lazy">
-          </picture>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/re-engineering.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="img-fluid" alt="re-engineering steam turbine bearings" loading="lazy">
-          </picture>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <picture>
-            <source srcset="{{ '/assets/img/gallery/tilt-pad-journal.webp' | relative_url }}" type="image/webp">
-            <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="img-fluid" alt="tilt pad journal bearing" loading="lazy">
-          </picture>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <img src="{{ '/assets/img/gallery/re-engineering.JPG' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="re-engineering steam turbine bearings" loading="lazy">
+          <img src="{{ '/assets/img/gallery/tilt-pad-journal.jpeg' | relative_url }}" class="w-100 shadow-1-strong rounded mb-4" alt="tilt pad journal bearing" loading="lazy">
         </div>
       </div>
     </div>
