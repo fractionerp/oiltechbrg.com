@@ -5,108 +5,75 @@ description: "Get in touch with Oiltech Bearings for whitemetal bearing manufact
 ---
 
 <!-- ======= Contact Section ======= -->
-<section class="contact">
-  <div class="container">
-    <div class="section-title text-center mb-5">
-      <h2>Contact Us</h2>
-      <p>Get in touch with our team for enquiries, quotes, or technical support.</p>
+<section id="contact" class="contact">
+  <div class="container-fluid">
+    <div class="section-title">
+      <h3><span>Contact Us</span></h3>
     </div>
+  </div>
 
-    <div class="row">
-      <!-- Left Column: Contact Details -->
-      <div class="col-lg-5 mb-4 mb-lg-0">
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
-          <p class="mb-4">We're here to help with your bearing requirements. Contact us for quotes, technical support, or general enquiries.</p>
-
-          <div class="info-item d-flex mb-4">
-            <div class="icon-box me-3">
-              <i class="bx bx-map"></i>
-            </div>
-            <div>
-              <h5>Address</h5>
-              <p>Unit 3 Browns Park<br>
-              Brunswick Industrial Estate<br>
-              Newcastle Upon Tyne<br>
-              NE13 7GD, United Kingdom</p>
-            </div>
-          </div>
-
-          <div class="info-item d-flex mb-4">
-            <div class="icon-box me-3">
-              <i class="bx bx-phone"></i>
-            </div>
-            <div>
-              <h5>Phone</h5>
-              <p>+44 (0)191 236 8041</p>
-            </div>
-          </div>
-
-          <div class="info-item d-flex mb-4">
-            <div class="icon-box me-3">
-              <i class="bx bx-envelope"></i>
-            </div>
-            <div>
-              <h5>Email</h5>
-              <p><a href="mailto:sales@oiltechbrg.com">sales@oiltechbrg.com</a></p>
-            </div>
-          </div>
-
-          <div class="info-item d-flex mb-4">
-            <div class="icon-box me-3">
-              <i class="bx bx-time"></i>
-            </div>
-            <div>
-              <h5>Business Hours</h5>
-              <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-            </div>
-          </div>
-        </div>
+  <div class="container text-center">
+    <div class="info">
+      <div class="address mb-3">
+        <p><i class="bi bi-geo-alt"></i> Unit 3 Browns Park, Newcastle, NE13 7GD, United Kingdom</p>
       </div>
 
-      <!-- Right Column: Contact Form -->
-      <div class="col-lg-7">
-        <div class="contact-form-box">
-          <h3>Send us a Message</h3>
-          <p class="text-muted mb-4">We normally reply within 24 hours</p>
+      <div class="email mb-3">
+        <p><i class="bi bi-envelope"></i> <a href="mailto:sales@oiltechbrg.com">sales@oiltechbrg.com</a></p>
+      </div>
 
+      <div class="phone mb-3">
+        <p><i class="bi bi-phone"></i> +44 191 236 8041</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="mt-5 text-center">Send us a Message</h3>
+    <p class="text-center">We normally reply within 24 hours</p>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="contact-form-box p-4">
           <form action="https://formspree.io/f/mknkdwgo" method="POST">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="name" class="form-label">Name *</label>
-                <input type="text" name="Name" class="form-control" id="name" required>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">Email *</label>
-                <input type="email" name="Email" class="form-control" id="email" required>
-              </div>
+            <div class="form-group mb-4">
+              <label for="name">Name *</label>
+              <input type="text" name="Name" class="form-control" id="name" required>
             </div>
 
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="company" class="form-label">Company</label>
-                <input type="text" name="Company" class="form-control" id="company">
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="telephone" class="form-label">Telephone</label>
-                <input type="tel" name="Telephone" class="form-control" id="telephone">
-              </div>
+            <div class="form-group mb-4">
+              <label for="email">Email address *</label>
+              <input type="email" name="Email" class="form-control" id="email" required>
+              <small class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
-            <div class="mb-3">
-              <label for="message" class="form-label">Message *</label>
-              <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+            <div class="form-group mb-4">
+              <label for="company">Company</label>
+              <input type="text" name="Company" class="form-control" id="company">
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="telephone">Telephone</label>
+              <input type="tel" name="Telephone" class="form-control" id="telephone">
+            </div>
+
+            <div class="form-group mb-4">
+              <label for="message">Message *</label>
+              <textarea class="form-control" id="message" name="Message" rows="4" required></textarea>
             </div>
 
             <div class="mb-4">
-              <small class="text-muted">By submitting this form you are accepting the terms of our <a href="{{ '/privacy' | relative_url }}">privacy policy</a>.</small>
+              <p class="small">By submitting this form you are accepting the terms of our <a href="{{ '/privacy' | relative_url }}">privacy policy</a>.</p>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+            </div>
           </form>
         </div>
       </div>
     </div>
-
   </div>
 </section>
