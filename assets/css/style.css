@@ -296,31 +296,32 @@ h1, h2, h3, h4, h5, h6 {
   #hero .carousel-item {
     height: 100vh; }
   #hero .carousel-item {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
-  #hero .carousel-item::before {
+    position: relative; }
+  #hero .carousel-item img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover; }
+  #hero .carousel-item::after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    background: rgba(12, 13, 14, 0.6); }
-  #hero .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: rgba(12, 13, 14, 0.6);
+    z-index: 1; }
+  #hero .carousel-caption {
     position: absolute;
-    bottom: 0;
     top: 0;
+    bottom: 0;
     left: 0;
-    right: 0; }
-  #hero .carousel-container .container {
+    right: 0;
+    z-index: 2;
     text-align: center;
-    position: relative;
-    z-index: 2; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
   #hero h2 {
     color: #fff;
     margin-bottom: 20px;
@@ -347,12 +348,11 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s; }
   #hero .carousel-control-prev-icon,
   #hero .carousel-control-next-icon {
-    background-image: none; }
-  #hero .carousel-control-prev-icon.bx,
-  #hero .carousel-control-next-icon.bx {
-    font-size: 28px;
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1; }
+    background-size: 50%;
+    width: 54px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%; }
   #hero .carousel-control-prev:hover .carousel-control-prev-icon,
   #hero .carousel-control-next:hover .carousel-control-next-icon {
     background: rgba(255, 255, 255, 0.4); }
@@ -363,10 +363,8 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(-50%);
     z-index: 10;
     margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex; }
-  #hero .carousel-indicators li {
+    padding: 0; }
+  #hero .carousel-indicators button {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.6);
     border: 0;
@@ -376,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 5px;
     opacity: 1;
     transition: 0.3s; }
-  #hero .carousel-indicators li.active {
+  #hero .carousel-indicators button.active {
     background: #428bca; }
   #hero .btn-get-started {
     font-family: "Raleway", sans-serif;
