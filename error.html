@@ -1,26 +1,45 @@
 ---
-layout: page
-title: "Error"
-description: "Something went wrong"
+layout: default
+title: "404 - Page Not Found"
+description: "Page not found"
 noindex: true
+permalink: /404.html
+sitemap: false
 ---
 
-<!-- ======= Error Section ======= -->
-<section id="services" class="services">
-  <div class="container-fluid">
-    <div class="section-title">
-      <h3><span>Oops!</span></h3>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-inner-pages">
+  <div class="container-fluid d-flex align-items-center justify-content-between">
+    <a href="{{ '/' | relative_url }}" class="logo"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="{{ site.title }}" class="img-fluid"></a>
+    <nav id="navbar" class="navbar ms-auto">
+      <ul>
+        <li><a class="nav-link" href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a class="nav-link" href="{{ '/contact' | relative_url }}">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" style="margin-top: 70px;">
+  <section style="padding: 100px 0; text-align: center;">
+    <div class="container">
+      <div style="font-size: 120px; color: #428bca; margin-bottom: 20px;">
+        <i class="ri-settings-3-line" style="display: inline-block; animation: spin 4s linear infinite;"></i>
+      </div>
+      <h1 style="font-size: 72px; font-weight: 700; color: #272c30; margin-bottom: 10px;">404</h1>
+      <h2 style="font-size: 24px; font-weight: 600; color: #555; margin-bottom: 20px;">Looks like this bearing has seized up.</h2>
+      <p style="font-size: 16px; color: #888; max-width: 500px; margin: 0 auto 30px auto;">The page you're looking for has either been re-engineered, removed, or was never manufactured in the first place.</p>
+      <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+        <a href="{{ '/' | relative_url }}" style="font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 32px; border-radius: 4px; background: #428bca; color: #fff; text-decoration: none; transition: 0.4s; border: 2px solid #428bca;">Back to Home</a>
+        <a href="{{ '/contact' | relative_url }}" style="font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 15px; padding: 14px 32px; border-radius: 4px; background: transparent; color: #428bca; text-decoration: none; transition: 0.4s; border: 2px solid #428bca;">Contact Us</a>
+      </div>
     </div>
-  </div>
+  </section>
+</main>
 
-  <div class="container">
-    <h1 class="display-5 text-center"><i class="far fa-frown"></i><br></h1>
-  </div>
-
-  <div class="container text-center my-5">
-    <h5>
-      Something went wrong. Please try again or contact us directly at <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>. <br>
-    </h5>
-  </div>
-</section>
-<!-- End Error Section -->
+<style>
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</style>
