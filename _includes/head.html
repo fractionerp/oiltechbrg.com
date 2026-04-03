@@ -56,12 +56,16 @@
 <!-- Google Fonts - with display swap for better performance -->
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Vendor CSS Files - loaded normally as they're needed for layout -->
+<!-- Bootstrap Icons - loaded normally (used in back-to-top button) -->
 <link href="{{ '/assets/vendor/bootstrap-icons/bootstrap-icons.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" rel="stylesheet">
-<link href="{{ '/assets/vendor/remixicon/remixicon.css' | relative_url }}" rel="stylesheet">
 
 <!-- Non-critical CSS - loaded async -->
+<link rel="preload" href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ '/assets/vendor/boxicons/css/boxicons.min.css' | relative_url }}" rel="stylesheet"></noscript>
+
+<link rel="preload" href="{{ '/assets/vendor/remixicon/remixicon.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="{{ '/assets/vendor/remixicon/remixicon.css' | relative_url }}" rel="stylesheet"></noscript>
+
 <link rel="preload" href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="{{ '/assets/vendor/animate.css/animate.min.css' | relative_url }}" rel="stylesheet"></noscript>
 
