@@ -15,7 +15,7 @@ main:
       - title: Failure Modes
         url: /bearing-failure-modes
   - title: Engineered Products
-    url: /engineered-bearings
+    url: /bearing-design-analysis
     dropdown:
       - title: Re-Engineering
         url: /re-engineering

@@ -818,10 +818,12 @@ section {
       align-items: center; }
     .info-rows .info-item img {
       width: 100%;
+      max-width: 100%;
       height: 200px;
       object-fit: cover;
       border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: block; }
     .info-rows .info-item h3 {
       font-size: 22px;
       font-weight: 700;
