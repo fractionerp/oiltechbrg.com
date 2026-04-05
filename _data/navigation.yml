@@ -58,6 +58,13 @@ main:
         url: /industries/marine-offshore
       - title: General Industry
         url: /industries/general-industry
+  - title: Case Studies
+    url: /case-studies/howden-fan-bearing-upgrade
+    dropdown:
+      - title: Howden Fan Bearing Upgrade
+        url: /case-studies/howden-fan-bearing-upgrade
+      - title: LEG Journal Bearing Re-Engineering
+        url: /case-studies/leg-journal-bearing
   - title: Quality
     url: /quality-assurance
   - title: About Us
