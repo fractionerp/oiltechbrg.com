@@ -1,50 +1,85 @@
 main:
   - title: Home
     url: /
-  - title: Manufacturing
-    url: /bearing-manufacturing
-  - title: Repair
-    url: /whitemetal-bearing-repair
-  - title: Technical Support
-    url: /technical-support
+  - title: Products
+    url: /babbitt-bearing-product-ranges
     dropdown:
-      - title: Technical Services
-        url: /technical-services
-      - title: Whitemetal Alloys
+      - title: Journal Bearings
+        url: /plain-journal-bearings-a-series
+      - title: Tilt Pad Bearings
+        url: /t-series-tilt-pad-journal-bearings
+      - title: Thrust Bearings
+        url: /j-series-equalising-thrust-bearings
+      - title: White Metal Bearings
         url: /whitemetal-alloys
-      - title: Failure Modes
-        url: /bearing-failure-modes
-  - title: Engineered Products
+  - title: Services
+    url: /whitemetal-bearing-repair
+    dropdown:
+      - title: Bearing Repair
+        url: /whitemetal-bearing-repair
+      - title: Emergency Repair
+        url: /contact
+      - title: Reverse Engineering
+        url: /re-engineering
+  - title: Engineering
     url: /bearing-design-analysis
     dropdown:
-      - title: Re-Engineering
-        url: /re-engineering
-      - title: Design and Analysis
+      - title: Design
         url: /bearing-design-analysis
-      - title: Product Ranges
-        url: /babbitt-bearing-product-ranges
+      - title: FEA
+        url: /technical-services
+      - title: Failure Analysis
+        url: /bearing-failure-modes
+  - title: Regions
+    url: /regions/europe
+    dropdown:
+      - title: UK & Europe
+        url: /regions/europe
+      - title: Germany
+        url: /regions/germany
+      - title: USA
+        url: /regions/usa
+      - title: Middle East & Africa
+        url: /regions/middle-east-africa
+      - title: Asia
+        url: /regions/asia
   - title: Industries
     url: /industries
+    dropdown:
+      - title: Oil & Gas
+        url: /industries/oil-gas
+      - title: Power Generation
+        url: /industries/power-generation
+      - title: Mining & Heavy Industry
+        url: /industries/mining-heavy-industry
+      - title: Petrochemical & Process
+        url: /industries/petrochemical
+      - title: Marine & Offshore
+        url: /industries/marine-offshore
+      - title: General Industry
+        url: /industries/general-industry
   - title: About Us
     url: /about
   - title: Contact
     url: /contact
 
 footer_services:
-  - title: Manufacturing
-    url: /bearing-manufacturing
-  - title: Repair
+  - title: Bearing Repair
     url: /whitemetal-bearing-repair
-  - title: Technical Support
-    url: /technical-support
+  - title: Emergency Repair
+    url: /contact
+  - title: Reverse Engineering
+    url: /re-engineering
 
 footer_products:
-  - title: Design and Analysis
-    url: /bearing-design-analysis
-  - title: Re-Engineering
-    url: /re-engineering
-  - title: Product Ranges
-    url: /babbitt-bearing-product-ranges
+  - title: Journal Bearings
+    url: /plain-journal-bearings-a-series
+  - title: Tilt Pad Bearings
+    url: /t-series-tilt-pad-journal-bearings
+  - title: Thrust Bearings
+    url: /j-series-equalising-thrust-bearings
+  - title: White Metal Bearings
+    url: /whitemetal-alloys
 
 footer_company:
   - title: Contact
