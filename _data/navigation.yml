@@ -5,7 +5,7 @@ main:
     url: /babbitt-bearing-product-ranges
     dropdown:
       - title: Journal Bearings
-        url: /plain-journal-bearings-a-series
+        url: /journal-bearings
       - title: Tilt Pad Bearings
         url: /t-series-tilt-pad-journal-bearings
       - title: Thrust Bearings
@@ -31,14 +31,14 @@ main:
       - title: Failure Analysis
         url: /bearing-failure-modes
   - title: Regions
-    url: /regions/europe
+    url: /oem-bearing-supply-usa
     dropdown:
-      - title: UK & Europe
-        url: /regions/europe
-      - title: Germany
-        url: /regions/germany
       - title: USA
-        url: /regions/usa
+        url: /oem-bearing-supply-usa
+      - title: Germany & Europe
+        url: /oem-bearing-supply-germany-europe
+      - title: Japan
+        url: /oem-bearing-supply-japan
       - title: Middle East & Africa
         url: /regions/middle-east-africa
       - title: Asia
@@ -58,6 +58,8 @@ main:
         url: /industries/marine-offshore
       - title: General Industry
         url: /industries/general-industry
+  - title: Quality
+    url: /quality-assurance
   - title: About Us
     url: /about
   - title: Contact
@@ -73,7 +75,7 @@ footer_services:
 
 footer_products:
   - title: Journal Bearings
-    url: /plain-journal-bearings-a-series
+    url: /journal-bearings
   - title: Tilt Pad Bearings
     url: /t-series-tilt-pad-journal-bearings
   - title: Thrust Bearings
