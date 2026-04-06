@@ -430,11 +430,12 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 58px; } }
   @media (max-width: 768px) {
     #hero.page-hero {
-      min-height: 350px; }
+      min-height: 350px;
+      margin-top: 56px; }
     #hero.page-hero h1 {
       font-size: 24px; }
     #hero.page-hero .hero-content {
-      padding: 50px 20px; } }
+      padding: 80px 20px 50px 20px; } }
 
 /*--------------------------------------------------------------
 # Who We Support
