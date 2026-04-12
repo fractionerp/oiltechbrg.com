@@ -1,0 +1,68 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign pages = site.pages | where_exp: "p", "p.sitemap != false" | where_exp: "p", "p.url" -%}
+{%- for page in pages -%}
+{%- assign ext = page.path | split: "." | last | downcase -%}
+{%- unless ext == "html" or ext == "htm" or ext == "md" or ext == "pdf" -%}{%- continue -%}{%- endunless -%}
+{%- if page.url contains "/assets/" and ext != "pdf" -%}{%- continue -%}{%- endif -%}
+{%- assign url = page.url -%}
+{%- if url == "/" -%}
+  {%- assign priority = "1.0" -%}
+  {%- assign changefreq = "weekly" -%}
+{%- elsif url contains "/case-studies/" -%}
+  {%- assign priority = "0.8" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "/industries/" -%}
+  {%- assign priority = "0.8" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "/regions/" -%}
+  {%- assign priority = "0.7" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "oem-bearing-supply" -%}
+  {%- assign priority = "0.8" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "journal-bearings" or url contains "thrust-bearings" or url contains "product-ranges" or url contains "whitemetal-alloys" -%}
+  {%- assign priority = "0.9" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "quality-assurance" or url contains "re-engineering" or url contains "technical-services" or url contains "whitemetal-bearing-repair" or url contains "bearing-design-analysis" or url contains "bearing-failure-modes" -%}
+  {%- assign priority = "0.9" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "/about" or url contains "/contact" or url contains "/faq" or url contains "/documentation" or url contains "/sustainability" -%}
+  {%- assign priority = "0.7" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "/privacy" -%}
+  {%- assign priority = "0.3" -%}
+  {%- assign changefreq = "yearly" -%}
+{%- else -%}
+  {%- assign priority = "0.5" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- endif -%}
+  <url>
+    <loc>{{ page.url | replace: "index.html", "" | absolute_url | xml_escape }}</loc>
+    {%- if page.date %}
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {%- elsif page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {%- endif %}
+    <changefreq>{{ changefreq }}</changefreq>
+    <priority>{{ priority }}</priority>
+  </url>
+{%- endfor -%}
+{%- for file in site.static_files -%}
+{%- assign ext = file.extname | replace: ".", "" | downcase -%}
+{%- if ext == "pdf" -%}
+  <url>
+    <loc>{{ file.path | absolute_url | xml_escape }}</loc>
+    <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+{%- endif -%}
+{%- endfor %}
+</urlset>
