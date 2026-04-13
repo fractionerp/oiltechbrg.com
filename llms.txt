@@ -1,0 +1,66 @@
+---
+layout: null
+sitemap: false
+permalink: /llms.txt
+---
+# Oiltech Bearings
+
+> Oiltech Bearings Ltd is a UK-based manufacturer specialising in whitemetal (babbitt) lined bearings for steam turbines, pumps, compressors, gearboxes, and other rotating equipment. Services include new bearing manufacture, repair and re-lining, re-engineering of obsolete or problem bearings, bearing design and analysis, and OEM supply. Based in Newcastle upon Tyne, serving customers worldwide.
+
+## Company
+
+- [About Oiltech Bearings](https://oiltechbrg.com/about/): Company history, capabilities, and engineering heritage
+- [Contact](https://oiltechbrg.com/contact/): Enquiry form, phone, email, and address for Newcastle upon Tyne HQ
+- [Quality Assurance](https://oiltechbrg.com/quality-assurance/): ISO 9001 certification, inspection methods, and quality control processes
+- [Sustainability](https://oiltechbrg.com/sustainability/): Environmental policy and sustainable manufacturing commitments
+- [FAQ](https://oiltechbrg.com/faq/): Answers to common questions about bearing manufacture, repair, and re-engineering
+- [Documentation](https://oiltechbrg.com/documentation/): Policy documents, certifications, and technical PDFs
+
+## Services
+
+- [Whitemetal Bearing Repair](https://oiltechbrg.com/whitemetal-bearing-repair/): Stripping, re-lining, and refurbishment of worn or damaged whitemetal bearings
+- [Re-Engineering](https://oiltechbrg.com/re-engineering/): Redesign of obsolete, underperforming, or failure-prone bearings using modern materials and analysis
+- [Bearing Design and Analysis](https://oiltechbrg.com/bearing-design-analysis/): Thermo-hydrodynamic (THD) analysis, rotor-dynamic studies, and bespoke bearing design
+- [Technical Services](https://oiltechbrg.com/technical-services/): Engineering support, site investigation, and troubleshooting for bearing problems
+- [Bearing Failure Modes](https://oiltechbrg.com/bearing-failure-modes/): Reference guide to common whitemetal bearing failure types and root-cause analysis
+
+## Product Ranges
+
+- [Babbitt Bearing Product Ranges](https://oiltechbrg.com/babbitt-bearing-product-ranges/): Overview of standard bearing series offered
+- [Journal Bearings](https://oiltechbrg.com/journal-bearings/): Plain, sleeve, and location journal bearing series (A, B, C)
+- [J-Series Equalising Thrust Bearings](https://oiltechbrg.com/j-series-equalising-thrust-bearings/): Self-equalising tilting pad thrust bearings
+- [M-Series Modular Thrust Bearings](https://oiltechbrg.com/m-series-modular-thrust-bearings/): Modular thrust bearing range
+- [T-Series Tilt Pad Journal Bearings](https://oiltechbrg.com/t-series-tilt-pad-journal-bearings/): High-speed tilting-pad journal bearings
+- [Whitemetal Alloys](https://oiltechbrg.com/whitemetal-alloys/): Tin-based and lead-based babbitt alloy specifications
+
+## OEM Supply
+
+- [OEM Bearing Supply](https://oiltechbrg.com/oem-bearing-supply/): Direct-replacement bearing supply for OEM equipment
+- [OEM Supply - Germany and Europe](https://oiltechbrg.com/oem-bearing-supply-germany-europe/): Replacement bearings for German and European OEMs
+- [OEM Supply - Japan](https://oiltechbrg.com/oem-bearing-supply-japan/): Replacement bearings for Japanese OEMs
+- [OEM Supply - USA](https://oiltechbrg.com/oem-bearing-supply-usa/): Replacement bearings for US OEMs
+
+## Industries
+
+- [Industries Overview](https://oiltechbrg.com/industries/): All served industries
+- [Oil and Gas](https://oiltechbrg.com/industries/oil-gas/): Bearings for upstream, midstream, and downstream oil and gas
+- [Petrochemical](https://oiltechbrg.com/industries/petrochemical/): Bearings for petrochemical plant rotating equipment
+- [Power Generation](https://oiltechbrg.com/industries/power-generation/): Steam turbine, gas turbine, and generator bearings
+- [Marine and Offshore](https://oiltechbrg.com/industries/marine-offshore/): Propulsion, auxiliary, and offshore platform bearings
+- [Mining and Heavy Industry](https://oiltechbrg.com/industries/mining-heavy-industry/): Bearings for mills, crushers, and heavy rotating plant
+- [General Industry](https://oiltechbrg.com/industries/general-industry/): Bearings for pumps, compressors, gearboxes, and general rotating equipment
+
+## Regions
+
+- [Asia](https://oiltechbrg.com/regions/asia/): Service coverage across Asia
+- [Middle East and Africa](https://oiltechbrg.com/regions/middle-east-africa/): Service coverage across MEA
+
+## Case Studies
+
+- [Turbine Wreckage to Certified Rebuild](https://oiltechbrg.com/case-studies/turbine-wreckage-to-certified-rebuild/): Full recovery and certified rebuild of severely damaged turbine bearings
+- [LEG Journal Bearing](https://oiltechbrg.com/case-studies/leg-journal-bearing/): Leading-edge groove (LEG) journal bearing application and performance improvement
+- [Howden Fan Bearing Upgrade](https://oiltechbrg.com/case-studies/howden-fan-bearing-upgrade/): Upgrade of industrial fan bearings for improved reliability
+
+## Optional
+
+- [Privacy Policy](https://oiltechbrg.com/privacy/): Privacy and data handling policy
