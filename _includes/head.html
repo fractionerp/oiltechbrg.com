@@ -1,32 +1,46 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% assign canonical_url = page.url | replace: '/index.html', '/' | absolute_url %}
+{% assign meta_title = page.title | default: site.title %}
+{% if page.title %}
+  {% assign meta_title = page.title | append: ' | ' | append: site.title %}
+{% endif %}
+{% assign meta_description = page.description | default: site.description %}
+{% assign og_image = page.image | default: '/assets/img/og-image.jpg' | absolute_url %}
+{% assign logo_image = '/assets/img/logo.png' | absolute_url %}
 
 <!-- Primary Meta Tags -->
 <title>{% if page.title %}{{ page.title }} | {{ site.title }} | {{ site.company.phone }}{% else %}{{ site.title }} | Whitemetal Bearings | {{ site.company.phone }}{% endif %}</title>
-<meta name="title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | Whitemetal Bearing Specialists{% endif %}">
-<meta name="description" content="{{ page.description | default: site.description }}">
+<meta name="title" content="{{ meta_title | escape }}">
+<meta name="description" content="{{ meta_description | escape }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
 <meta name="author" content="{{ site.company.name }}">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="{{ site.url }}{{ page.url | replace: '/index.html', '/' }}">
+<link rel="canonical" href="{{ canonical_url }}">
 
-<!-- Open Graph / Facebook -->
+<!-- Open Graph / LinkedIn -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-<meta property="og:description" content="{{ page.description | default: site.description }}">
-<meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
+<meta property="og:url" content="{{ canonical_url }}">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:secure_url" content="{{ og_image }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ site.title }} - precision whitemetal bearing engineering">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="en_GB">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="twitter:description" content="{{ page.description | default: site.description }}">
-<meta name="twitter:image" content="{{ site.url }}/assets/img/og-image.jpg">
+<meta name="twitter:url" content="{{ canonical_url }}">
+<meta name="twitter:title" content="{{ meta_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ og_image }}">
+<meta name="twitter:image:alt" content="{{ site.title }} - precision whitemetal bearing engineering">
 
 <!-- Geo Tags for Local SEO -->
 <meta name="geo.region" content="GB-TWR">
@@ -83,12 +97,12 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "{{ site.url }}/#organization",
+  "@id": "{{ '/' | absolute_url }}#organization",
   "name": "{{ site.company.name }}",
   "description": "{{ site.description }}",
-  "url": "{{ site.url }}",
-  "logo": "{{ site.url }}/assets/img/logo.png",
-  "image": "{{ site.url }}/assets/img/og-image.jpg",
+  "url": "{{ '/' | absolute_url }}",
+  "logo": "{{ logo_image }}",
+  "image": "{{ og_image }}",
   "telephone": "{{ site.company.phone }}",
   "email": "{{ site.company.email }}",
   "address": {
@@ -154,13 +168,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "{{ site.url }}"
+      "item": "{{ '/' | absolute_url }}"
     }{% if page.url != "/" and page.url != "/index.html" %},
     {
       "@type": "ListItem",
       "position": 2,
       "name": "{{ page.title }}",
-      "item": "{{ site.url }}{{ page.url }}"
+      "item": "{{ canonical_url }}"
     }{% endif %}
   ]
 }
