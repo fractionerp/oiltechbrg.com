@@ -7,6 +7,14 @@
 {% endif %}
 {% assign meta_description = page.description | default: site.description %}
 {% assign og_image = page.image | default: '/assets/img/og-image.jpg' | absolute_url %}
+{% assign og_image_type = page.image_type | default: 'image/jpeg' %}
+{% assign og_image_width = page.image_width | default: 1200 %}
+{% assign og_image_height = page.image_height | default: 630 %}
+{% if page.image_alt %}
+  {% assign og_image_alt = page.image_alt %}
+{% else %}
+  {% assign og_image_alt = site.title | append: ' - precision whitemetal bearing engineering' %}
+{% endif %}
 {% assign logo_image = '/assets/img/logo.png' | absolute_url %}
 
 <!-- Primary Meta Tags -->
@@ -27,10 +35,10 @@
 <meta property="og:description" content="{{ meta_description | escape }}">
 <meta property="og:image" content="{{ og_image }}">
 <meta property="og:image:secure_url" content="{{ og_image }}">
-<meta property="og:image:type" content="image/jpeg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="{{ site.title }} - precision whitemetal bearing engineering">
+<meta property="og:image:type" content="{{ og_image_type }}">
+<meta property="og:image:width" content="{{ og_image_width }}">
+<meta property="og:image:height" content="{{ og_image_height }}">
+<meta property="og:image:alt" content="{{ og_image_alt | escape }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="en_GB">
 
@@ -40,7 +48,7 @@
 <meta name="twitter:title" content="{{ meta_title | escape }}">
 <meta name="twitter:description" content="{{ meta_description | escape }}">
 <meta name="twitter:image" content="{{ og_image }}">
-<meta name="twitter:image:alt" content="{{ site.title }} - precision whitemetal bearing engineering">
+<meta name="twitter:image:alt" content="{{ og_image_alt | escape }}">
 
 <!-- Geo Tags for Local SEO -->
 <meta name="geo.region" content="GB-TWR">
@@ -62,6 +70,11 @@
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
 <link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="dns-prefetch" href="https://kit.fontawesome.com">
+
+{% if page.preload_image %}
+<!-- Page hero image -->
+<link rel="preload" href="{{ page.preload_image | relative_url }}" as="image" fetchpriority="high">
+{% endif %}
 
 <!-- Critical CSS - Bootstrap core -->
 <link rel="preload" href="{{ '/assets/vendor/bootstrap/css/bootstrap.min.css' | relative_url }}" as="style">
