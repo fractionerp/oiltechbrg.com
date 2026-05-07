@@ -60,7 +60,7 @@ permalink: /llms.txt
 - [Turbine Wreckage to Certified Rebuild](https://oiltechbrg.com/case-studies/turbine-wreckage-to-certified-rebuild/): Full recovery and certified rebuild of severely damaged turbine bearings
 - [LEG Journal Bearing](https://oiltechbrg.com/case-studies/leg-journal-bearing/): Leading-edge groove (LEG) journal bearing application and performance improvement
 - [Howden Fan Bearing Upgrade](https://oiltechbrg.com/case-studies/howden-fan-bearing-upgrade/): Upgrade of industrial fan bearings for improved reliability
-- [Failed Thrust Bearing Rebuild](https://oiltechbrg.com/case-studies/failed-thrust-bearing-rebuild/): Inspection, reverse engineering, and remanufacture of a failed tilting pad thrust bearing assembly
+- [High-Speed Fan Thrust Bearing Upgrade](https://oiltechbrg.com/case-studies/high-speed-fan-thrust-bearing-upgrade/): FEA-led redesign of a repeatedly failing fan thrust bearing using spherical offset pivots and improved heat transfer
 
 ## Optional
 
