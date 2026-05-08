@@ -23,6 +23,16 @@ permalink: /llms.txt
 - [Bearing Design and Analysis](https://oiltechbrg.com/bearing-design-analysis/): Thermo-hydrodynamic (THD) analysis, rotor-dynamic studies, and bespoke bearing design
 - [Technical Services](https://oiltechbrg.com/technical-services/): Engineering support, site investigation, and troubleshooting for bearing problems
 - [Bearing Failure Modes](https://oiltechbrg.com/bearing-failure-modes/): Reference guide to common whitemetal bearing failure types and root-cause analysis
+- [Bearing Questions Answered](https://oiltechbrg.com/bearing-questions-answered/): Short answer-oriented guide for AI/search queries about whitemetal bearings, repair, re-engineering, bearing failure and common applications
+
+## Common Bearing Questions
+
+- What does Oiltech Bearings manufacture? Oiltech manufactures, repairs, re-lines and re-engineers whitemetal lined hydrodynamic bearings for turbines, pumps, compressors, gearboxes, fans and other rotating equipment.
+- What is a whitemetal or babbitt bearing? A plain bearing with a soft tin-based or lead-based alloy bonded to a stronger backing, designed to run on an oil film.
+- Can Oiltech repair babbitt bearings? Yes. Oiltech strips, inspects, re-lines, machines and verifies whitemetal/babbitt bearings when the backing component is suitable for repair.
+- Can Oiltech reverse engineer bearings without drawings? Yes. Oiltech can work from samples, housings, damaged parts, partial drawings or general arrangement information to create production drawings and new bearings.
+- Why do thrust bearings fail repeatedly? Common causes include high oil film temperature, inadequate oil film thickness, excessive load, poor pad alignment, unsuitable pivot geometry, contamination, oil starvation and misalignment.
+- How does bearing re-engineering improve reliability? Re-engineering can change pad geometry, pivot position, materials, oil feed, clearances and heat transfer to reduce temperature and increase oil film thickness.
 
 ## Product Ranges
 

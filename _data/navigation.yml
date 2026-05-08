@@ -30,6 +30,8 @@ main:
         url: /technical-services
       - title: Failure Analysis
         url: /bearing-failure-modes
+      - title: Bearing Questions Answered
+        url: /bearing-questions-answered
   - title: Regions
     url: /oem-bearing-supply-usa
     dropdown:

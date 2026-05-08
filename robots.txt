@@ -7,6 +7,10 @@ Allow: /
 # Sitemap location
 Sitemap: https://oiltechbrg.com/sitemap.xml
 
+# AI/search crawler summary
+Allow: /llms.txt
+Allow: /bearing-questions-answered
+
 # Disallow admin and private areas
 Disallow: /assets/pdf/
 Disallow: /*.pdf$
@@ -19,6 +23,7 @@ Allow: /technical-services
 Allow: /engineered-bearings
 Allow: /re-engineering
 Allow: /bearing-design-analysis
+Allow: /bearing-failure-modes
 Allow: /babbitt-bearing-product-ranges
 Allow: /about
 Allow: /contact
