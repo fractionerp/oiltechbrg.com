@@ -42,6 +42,7 @@ permalink: /llms.txt
 - [M-Series Modular Thrust Bearings](https://oiltechbrg.com/m-series-modular-thrust-bearings/): Modular thrust bearing range
 - [T-Series Tilt Pad Journal Bearings](https://oiltechbrg.com/t-series-tilt-pad-journal-bearings/): High-speed tilting-pad journal bearings
 - [Whitemetal Alloys](https://oiltechbrg.com/whitemetal-alloys/): Tin-based and lead-based babbitt alloy specifications
+- [Legacy OEM Bearing Replacements](https://oiltechbrg.com/legacy-oem-bearing-replacements/): Replacement, repair and re-engineering support for older bearing references, including Glacier-style thrust bearing and GLYCO-style journal bearing enquiries such as E131, E133, E134, E136 and E137
 
 ## OEM Supply
 

@@ -12,6 +12,8 @@ main:
         url: /j-series-equalising-thrust-bearings
       - title: White Metal Bearings
         url: /whitemetal-alloys
+      - title: Legacy OEM Replacements
+        url: /legacy-oem-bearing-replacements
   - title: Services
     url: /whitemetal-bearing-repair
     dropdown:
