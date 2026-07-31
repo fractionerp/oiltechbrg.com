@@ -18,7 +18,7 @@
 {% assign logo_image = '/assets/img/logo.png' | absolute_url %}
 
 <!-- Primary Meta Tags -->
-<title>{% if page.title %}{{ page.title }} | {{ site.title }} | {{ site.company.phone }}{% else %}{{ site.title }} | Whitemetal Bearings | {{ site.company.phone }}{% endif %}</title>
+<title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }} | Whitemetal &amp; White Metal Bearings{% endif %}</title>
 <meta name="title" content="{{ meta_title | escape }}">
 <meta name="description" content="{{ meta_description | escape }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
@@ -144,6 +144,7 @@
   },
   "knowsAbout": [
     "whitemetal bearings",
+    "white metal bearings",
     "babbitt bearings",
     "hydrodynamic journal bearings",
     "tilting pad thrust bearings",
@@ -167,7 +168,7 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Whitemetal Bearing Manufacturing"
+          "name": "Whitemetal, White Metal and Babbitt Bearing Manufacturing"
         }
       },
       {

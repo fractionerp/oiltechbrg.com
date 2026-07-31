@@ -47,8 +47,6 @@ sitemap: false
     <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
     {%- elsif page.last_modified_at %}
     <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
-    {%- else %}
-    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     {%- endif %}
     <changefreq>{{ changefreq }}</changefreq>
     <priority>{{ priority }}</priority>

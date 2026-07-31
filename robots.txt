@@ -7,26 +7,4 @@ Allow: /
 # Sitemap location
 Sitemap: https://oiltechbrg.com/sitemap.xml
 
-# AI/search crawler summary
-Allow: /llms.txt
-Allow: /bearing-questions-answered
-
-# Disallow admin and private areas
-Disallow: /assets/pdf/
-Disallow: /*.pdf$
-
-# Allow search engines to crawl all main content
-Allow: /bearing-manufacturing
-Allow: /whitemetal-bearing-repair
-Allow: /technical-support
-Allow: /technical-services
-Allow: /engineered-bearings
-Allow: /re-engineering
-Allow: /bearing-design-analysis
-Allow: /bearing-failure-modes
-Allow: /babbitt-bearing-product-ranges
-Allow: /about
-Allow: /contact
-
-# Crawl delay (optional, be nice to servers)
-Crawl-delay: 1
+# Public technical pages, documents and AI-readable summaries are crawlable.

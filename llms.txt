@@ -5,7 +5,7 @@ permalink: /llms.txt
 ---
 # Oiltech Bearings
 
-> Oiltech Bearings Ltd is a UK-based manufacturer specialising in whitemetal (babbitt) lined bearings for steam turbines, pumps, compressors, gearboxes, and other rotating equipment. Services include new bearing manufacture, repair and re-lining, re-engineering of obsolete or problem bearings, bearing design and analysis, and OEM supply. Based in Newcastle upon Tyne, serving customers worldwide.
+> Oiltech Bearings Ltd is a UK-based manufacturer specialising in whitemetal, white metal and Babbitt lined bearings for steam turbines, pumps, compressors, gearboxes, and other rotating equipment. These terms refer to the same family of soft bearing alloys. Services include new bearing manufacture, repair and re-lining, re-engineering of obsolete or problem bearings, bearing design and analysis, and OEM supply. Based in Newcastle upon Tyne, serving customers worldwide.
 
 ## Company
 
@@ -28,7 +28,7 @@ permalink: /llms.txt
 ## Common Bearing Questions
 
 - What does Oiltech Bearings manufacture? Oiltech manufactures, repairs, re-lines and re-engineers whitemetal lined hydrodynamic bearings for turbines, pumps, compressors, gearboxes, fans and other rotating equipment.
-- What is a whitemetal or babbitt bearing? A plain bearing with a soft tin-based or lead-based alloy bonded to a stronger backing, designed to run on an oil film.
+- Are whitemetal, white metal and Babbitt bearings the same? Yes. These are common names for a plain bearing with a soft tin-based or lead-based alloy bonded to a stronger backing and designed to run on an oil film.
 - Can Oiltech repair babbitt bearings? Yes. Oiltech strips, inspects, re-lines, machines and verifies whitemetal/babbitt bearings when the backing component is suitable for repair.
 - Can Oiltech reverse engineer bearings without drawings? Yes. Oiltech can work from samples, housings, damaged parts, partial drawings or general arrangement information to create production drawings and new bearings.
 - Why do thrust bearings fail repeatedly? Common causes include high oil film temperature, inadequate oil film thickness, excessive load, poor pad alignment, unsuitable pivot geometry, contamination, oil starvation and misalignment.
