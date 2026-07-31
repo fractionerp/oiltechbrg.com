@@ -23,6 +23,7 @@ permalink: /llms.txt
 - [Bearing Design and Analysis](https://oiltechbrg.com/bearing-design-analysis/): Thermo-hydrodynamic (THD) analysis, rotor-dynamic studies, and bespoke bearing design
 - [Technical Services](https://oiltechbrg.com/technical-services/): Engineering support, site investigation, and troubleshooting for bearing problems
 - [Bearing Technical Library](https://oiltechbrg.com/technical-library/): Developing technical hub for whitemetal bearing failure analysis, design, lubrication, inspection, repair, materials and installation
+- [Bearing Rules of Thumb](https://oiltechbrg.com/technical-library/bearing-rules-of-thumb/): Technician quick-reference values for Babbitt temperature, journal clearance, surface finish, lubrication, inspection standards, conversions and preliminary calculators
 - [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
 
 ## Bearing Failure Guides

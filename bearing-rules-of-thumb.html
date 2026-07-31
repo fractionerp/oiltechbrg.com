@@ -1,0 +1,272 @@
+---
+layout: page
+title: "Whitemetal Bearing Rules of Thumb for Technicians"
+description: "Quick-reference values, formulas, conversions and field checks for whitemetal journal and thrust bearings, with clear limits on when OEM data is required."
+keywords: "bearing rules of thumb, whitemetal bearing clearance, babbitt bearing temperature limit, journal bearing surface finish, bearing surface speed calculator, bearing unit load calculator"
+permalink: /technical-library/bearing-rules-of-thumb/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/bearing-assembly.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "whitemetal bearing rules of thumb",
+    "journal bearing clearance",
+    "Babbitt bearing temperature",
+    "bearing inspection",
+    "hydrodynamic bearing calculations"
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/bearing-assembly.webp' | relative_url }}" class="hero-bg" alt="Whitemetal journal bearing assembly ready for dimensional inspection">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Whitemetal Bearing Rules of Thumb</h1>
+    <p>Basic values, formulas and field checks for technicians working with hydrodynamic journal and thrust bearings.</p>
+    <div class="hero-ctas">
+      <a href="#quick-values" class="btn-hero-primary">View Quick Values</a>
+      <a href="#calculators" class="btn-hero-secondary">Open Calculators</a>
+    </div>
+  </div>
+</section>
+
+<section class="rules-advisory">
+  <div class="container">
+    <div class="failure-guide-advisory">
+      <i class="ri-alert-line"></i>
+      <div>
+        <h2>Use as a Screening Reference, Not a Release Specification</h2>
+        <p>Machine drawings, bearing design data and OEM limits take precedence. Bearing profile, speed, load, oil viscosity, inlet temperature, shaft movement and sensor location can materially change an acceptable value. Stop and obtain an engineering review when the original limits are unavailable or the machine operates near a published ceiling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="rules-jump-nav" aria-label="Page sections">
+  <div class="container">
+    <a href="#quick-values">Quick values</a>
+    <a href="#calculators">Calculators</a>
+    <a href="#conversions">Conversions</a>
+    <a href="#field-checks">Field checks</a>
+    <a href="#standards">Standards</a>
+  </div>
+</nav>
+
+<section id="quick-values" class="rules-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Technician Reference</h2>
+        <h3><span>Quick Values and Limits</span></h3>
+        <p>The qualifier in the final column is part of the value. Do not separate a number from its stated application.</p>
+      </div>
+
+      <div class="rules-table-block">
+        <div class="rules-table-heading"><i class="ri-temp-hot-line"></i><div><h2>Temperature and Monitoring</h2><p>Measured metal temperature depends strongly on sensor position.</p></div></div>
+        <div class="table-responsive">
+          <table class="table rules-table">
+            <thead><tr><th>Parameter</th><th>Quick reference</th><th>How to use it</th></tr></thead>
+            <tbody>
+              <tr><td>Maximum Babbitt temperature</td><td><strong>130&deg;C / 266&deg;F</strong></td><td>Common industry maximum operating ceiling for Babbitt, not a normal target. Use a lower OEM or machine limit where specified.</td></tr>
+              <tr><td>Normal design running temperature</td><td><strong>115&deg;C or below</strong></td><td>Published guidance for Kingsbury KN fixed-profile journal bearings. It is useful context, not a universal acceptance limit.</td></tr>
+              <tr><td>Alarm and trip settings</td><td><strong>Trend from normal</strong></td><td>Establish a stable baseline at comparable load, speed and oil inlet temperature. One published KN approach uses alarm at normal +8&deg;C and trip 7&deg;C above alarm, never above 130&deg;C.</td></tr>
+              <tr><td>Thrust temperature calculation</td><td><strong>Review above 2.8&nbsp;MPa, 76.2&nbsp;m/s or 50&deg;C inlet</strong></td><td>Kingsbury recommends estimating Babbitt temperature when thrust loading exceeds 2.8&nbsp;MPa, collar speed exceeds 76.2&nbsp;m/s, oil inlet exceeds 50&deg;C, or a specification imposes a limit. These are analysis triggers, not bearing ratings.</td></tr>
+              <tr><td>Temperature investigation</td><td><strong>Compare conditions</strong></td><td>Check load, speed, oil flow, oil inlet temperature and sensor position before comparing readings between bearings or machines.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rules-table-block">
+        <div class="rules-table-heading"><i class="ri-ruler-2-line"></i><div><h2>Clearance, Tolerance and Surface Finish</h2><p>Confirm all finished dimensions with the bearing installed or assembled as specified.</p></div></div>
+        <div class="table-responsive">
+          <table class="table rules-table">
+            <thead><tr><th>Parameter</th><th>Quick reference</th><th>How to use it</th></tr></thead>
+            <tbody>
+              <tr><td>Journal diametral clearance</td><td><strong>0.001&ndash;0.002 &times; shaft diameter</strong></td><td>Preliminary screening range only: 1&ndash;2&nbsp;&micro;m per mm of diameter. Speed, profile, preload, oil and thermal growth determine the actual design value.</td></tr>
+              <tr><td>Minimum oil-film thickness</td><td><strong>Calculate for the duty</strong></td><td>Do not infer film thickness from radial or diametral clearance. It varies with load, speed, viscosity, temperature, geometry, alignment and surface condition.</td></tr>
+              <tr><td>Bearing unit-load limit</td><td><strong>Use the bearing rating</strong></td><td>Projected pressure is a useful screening calculation, but allowable load is design-specific and can be limited by film thickness, temperature, stability or structure.</td></tr>
+              <tr><td>Journal or shaft finish</td><td><strong>About 0.4&nbsp;&micro;m Ra</strong></td><td>Typical published figure at 100&nbsp;mm diameter. Confirm the drawing and inspect for taper, lobing, scoring and local repair steps as well as roughness.</td></tr>
+              <tr><td>Thrust runner finish</td><td><strong>0.3&ndash;0.4&nbsp;&micro;m Ra</strong></td><td>Published target for a lapped rotor or runner mating with Babbitt thrust shoes.</td></tr>
+              <tr><td>Thrust shoe finish</td><td><strong>0.8&nbsp;&micro;m Ra or better</strong></td><td>Published lapped-shoe guidance. Flatness and contact distribution remain essential.</td></tr>
+              <tr><td>Shaft diameter tolerance</td><td><strong>IT6 / H6 often specified</strong></td><td>Typical manufacturer guidance for certain industrial journal bearings. Apply the fit and datum system shown on the drawing.</td></tr>
+              <tr><td>Axial clearance or end float</td><td><strong>Use design drawing</strong></td><td>No dependable universal rule. Check collar arrangement, thermal growth, rotor position and machine assembly tolerances.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="rules-table-block">
+        <div class="rules-table-heading"><i class="ri-oil-line"></i><div><h2>Lubrication and Cleanliness</h2><p>Oil-film performance is governed by viscosity at the bearing operating temperature.</p></div></div>
+        <div class="table-responsive">
+          <table class="table rules-table">
+            <thead><tr><th>Parameter</th><th>Quick reference</th><th>How to use it</th></tr></thead>
+            <tbody>
+              <tr><td>ISO viscosity grade</td><td><strong>Nominal cSt at 40&deg;C</strong></td><td>ISO VG 32 or 46 does not state viscosity in the loaded film. Use the oil viscosity-temperature data at the expected operating temperature.</td></tr>
+              <tr><td>Oil supply</td><td><strong>Cool, clean and continuous</strong></td><td>Verify flow at the bearing, not only header pressure. Inspect pumps, filters, coolers, grooves, jets, drains and start/stop sequences.</td></tr>
+              <tr><td>Particle risk</td><td><strong>Clearance-sized particles matter</strong></td><td>Particles approaching the running clearance or minimum film thickness can score the lining and mating surface. Filter selection must match the system and risk.</td></tr>
+              <tr><td>Oil cleanliness code</td><td><strong>ISO 4406:2021</strong></td><td>The code reports particle concentration; it does not provide one universal target for every bearing system. Use the machine or lubricant-system requirement.</td></tr>
+              <tr><td>Flushing acceptance</td><td><strong>OEM requirement first</strong></td><td>Agree the method, sampling point and acceptance target before flushing. A clean tank does not prove that branch lines and bearing feeds are clean.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculators" class="rules-section section-bg">
+    <div class="container">
+      <div class="section-title">
+        <h2>Quick Calculators</h2>
+        <h3><span>Three Preliminary Checks</span></h3>
+        <p>Results support screening and communication. They do not calculate oil-film thickness, temperature, stability or bearing capacity.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <form class="rules-calculator" id="surface-speed-calculator">
+            <div class="rules-calculator-icon"><i class="ri-speed-line"></i></div>
+            <h2>Journal Surface Speed</h2>
+            <p class="formula">v = &pi; &times; D &times; n / 60,000</p>
+            <label for="speed-diameter">Shaft diameter <span>mm</span></label>
+            <input id="speed-diameter" type="number" min="0" step="any" value="100" inputmode="decimal">
+            <label for="speed-rpm">Rotational speed <span>rpm</span></label>
+            <input id="speed-rpm" type="number" min="0" step="any" value="3000" inputmode="decimal">
+            <div class="rules-result" aria-live="polite"><span>Surface speed</span><strong id="surface-speed-result">15.71 m/s</strong></div>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <form class="rules-calculator" id="journal-load-calculator">
+            <div class="rules-calculator-icon"><i class="ri-scales-3-line"></i></div>
+            <h2>Journal Projected Pressure</h2>
+            <p class="formula">p = F / (D &times; L)</p>
+            <label for="load-force">Radial load <span>kN</span></label>
+            <input id="load-force" type="number" min="0" step="any" value="10" inputmode="decimal">
+            <div class="rules-input-row">
+              <div><label for="load-diameter">Diameter <span>mm</span></label><input id="load-diameter" type="number" min="0" step="any" value="100" inputmode="decimal"></div>
+              <div><label for="load-length">Length <span>mm</span></label><input id="load-length" type="number" min="0" step="any" value="75" inputmode="decimal"></div>
+            </div>
+            <div class="rules-result" aria-live="polite"><span>Projected pressure</span><strong id="journal-load-result">1.33 MPa</strong></div>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <form class="rules-calculator" id="clearance-calculator">
+            <div class="rules-calculator-icon"><i class="ri-expand-left-right-line"></i></div>
+            <h2>Clearance Screening Band</h2>
+            <p class="formula">C<sub>d</sub> = 0.001&ndash;0.002 &times; D</p>
+            <label for="clearance-diameter">Shaft diameter <span>mm</span></label>
+            <input id="clearance-diameter" type="number" min="0" step="any" value="100" inputmode="decimal">
+            <div class="rules-result" aria-live="polite"><span>Preliminary diametral band</span><strong id="clearance-result">0.100&ndash;0.200 mm</strong></div>
+            <p class="rules-calculator-note">Screening only. Do not machine a bearing to this result without design confirmation.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conversions" class="rules-section">
+    <div class="container">
+      <div class="section-title"><h2>Workshop Reference</h2><h3><span>Useful Conversions and Formulae</span></h3></div>
+      <div class="rules-conversion-grid">
+        <div><strong>1 thou</strong><span>0.001 in = 0.0254 mm = 25.4 &micro;m</span></div>
+        <div><strong>1 &micro;m</strong><span>0.001 mm = 0.00003937 in</span></div>
+        <div><strong>1 MPa</strong><span>1 N/mm&sup2; = 145.04 psi</span></div>
+        <div><strong>1 bar</strong><span>100 kPa = 14.50 psi</span></div>
+        <div><strong>1 cSt</strong><span>1 mm&sup2;/s</span></div>
+        <div><strong>&deg;F</strong><span>(&deg;C &times; 9/5) + 32</span></div>
+      </div>
+      <div class="rules-formula-list">
+        <div><span>Journal projected area</span><strong>A = D &times; L</strong><small>Use diameter and effective bearing length.</small></div>
+        <div><span>Journal unit load</span><strong>p = F / (D &times; L)</strong><small>N divided by mm&sup2; gives MPa.</small></div>
+        <div><span>Thrust unit load</span><strong>p = F / A<sub>active</sub></strong><small>Use the total active loaded pad area, not envelope area.</small></div>
+        <div><span>Clearance ratio</span><strong>&psi; = C<sub>d</sub> / D</strong><small>Use diametral clearance consistently.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="field-checks" class="rules-section section-bg">
+    <div class="container">
+      <div class="section-title"><h2>Before Release</h2><h3><span>Technician Field Checks</span></h3></div>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6"><div class="rules-checklist"><h2><i class="ri-ruler-line"></i> Dimensions</h2><ul><li>Identify whether clearances are radial or diametral.</li><li>Measure the shaft at several axial and angular positions.</li><li>Check taper, ovality, runout and surface finish.</li><li>Measure the bearing in its specified assembled condition.</li><li>Record instrument resolution and calibration status.</li></ul></div></div>
+        <div class="col-lg-4 col-md-6"><div class="rules-checklist"><h2><i class="ri-oil-line"></i> Lubrication</h2><ul><li>Confirm oil grade and viscosity-temperature data.</li><li>Verify actual flow paths, grooves, jets and drains.</li><li>Check filters, differential pressure and bypass history.</li><li>Confirm pre-lube, jacking-oil and post-lube sequences.</li><li>Retain representative oil and debris samples after a failure.</li></ul></div></div>
+        <div class="col-lg-4 col-md-6"><div class="rules-checklist"><h2><i class="ri-checkbox-circle-line"></i> Assembly</h2><ul><li>Confirm bearing and pad orientation before dismantling.</li><li>Check split faces, seating, pivots and pad freedom.</li><li>Protect clean components from grinding and blasting work.</li><li>Verify sensor type, depth, position and identification.</li><li>Rotate only when the required lubrication is available.</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="rules-section">
+    <div class="container">
+      <div class="section-title"><h2>Inspection Reference</h2><h3><span>Relevant Standards</span></h3></div>
+      <div class="rules-standard-list">
+        <div><a href="https://www.iso.org/standard/77223.html"><strong>ISO 4386-1:2019</strong></a><p>Ultrasonic testing of the bond between bearing metal and backing for applicable metallic multilayer bearings with lining thickness of at least 0.5&nbsp;mm. It is a qualitative bond assessment, not a measurement of bond strength.</p></div>
+        <div><a href="https://www.iso.org/standard/68679.html"><strong>ISO 4386-3:2018</strong></a><p>Penetrant testing for bond defects visible at transition areas and discontinuities in the finished sliding surface, including areas that ultrasonic inspection cannot evaluate.</p></div>
+        <div><a href="https://www.iso.org/standard/36511.html"><strong>ISO 12301:2007</strong></a><p>Quality-control techniques for geometrical and material characteristics of specified plain-bearing types. Confirm that the bearing construction falls within its scope.</p></div>
+        <div><a href="https://www.iso.org/standard/79716.html"><strong>ISO 4406:2021</strong></a><p>Coding method for solid-particle contamination levels. The required cleanliness target still comes from the machine, lubricant-system or project specification.</p></div>
+      </div>
+      <div class="rules-source-note">
+        <h2>Technical Basis</h2>
+        <p>Reference values were cross-checked against published guidance from <a href="https://www.waukbearing.com/en/products/fluid-film-bearings/babbitt-bearings.html">Waukesha Bearings</a>, <a href="https://www.waukbearing.com/content/dam/dpc/waukbearing/wb_downloads/product-lit/DHB14-Medium-Thick-Wall-Journal-Bearings-2005.pdf">Waukesha medium and thick wall journal bearing data</a>, <a href="https://www.kingsbury.com/pdf/fixed_profile.pdf">Kingsbury fixed-profile journal bearing guidance</a>, <a href="https://www.kingsbury.com/how-to-estimate-babbitt-temperature">Kingsbury temperature-estimation guidance</a>, and <a href="https://www.kingsbury.com/minimizing-bearing-wear/">Kingsbury thrust surface-finish guidance</a>. Standards summaries link to Oiltech's <a href="{{ '/quality-assurance' | relative_url }}">quality and inspection services</a>.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="final-cta">
+    <div class="container"><div class="text-center">
+      <h3>Outside the Quick-Reference Range?</h3>
+      <p>Oiltech can review the bearing geometry, operating data, lubrication and failure history before repair or manufacture.</p>
+      <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/technical-library' | relative_url }}" class="cta-btn cta-btn-outline">Technical Library</a></div>
+    </div></div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function number(id) {
+      return parseFloat(document.getElementById(id).value);
+    }
+
+    function valid(values) {
+      return values.every(function (value) { return Number.isFinite(value) && value > 0; });
+    }
+
+    function updateSurfaceSpeed() {
+      var diameter = number('speed-diameter');
+      var rpm = number('speed-rpm');
+      document.getElementById('surface-speed-result').textContent = valid([diameter, rpm])
+        ? (Math.PI * diameter * rpm / 60000).toFixed(2) + ' m/s'
+        : 'Enter positive values';
+    }
+
+    function updateJournalLoad() {
+      var force = number('load-force');
+      var diameter = number('load-diameter');
+      var length = number('load-length');
+      document.getElementById('journal-load-result').textContent = valid([force, diameter, length])
+        ? (force * 1000 / (diameter * length)).toFixed(2) + ' MPa'
+        : 'Enter positive values';
+    }
+
+    function updateClearance() {
+      var diameter = number('clearance-diameter');
+      document.getElementById('clearance-result').textContent = valid([diameter])
+        ? (diameter * 0.001).toFixed(3) + ' - ' + (diameter * 0.002).toFixed(3) + ' mm'
+        : 'Enter a positive value';
+    }
+
+    document.getElementById('surface-speed-calculator').addEventListener('input', updateSurfaceSpeed);
+    document.getElementById('journal-load-calculator').addEventListener('input', updateJournalLoad);
+    document.getElementById('clearance-calculator').addEventListener('input', updateClearance);
+    document.querySelectorAll('.rules-calculator').forEach(function (calculator) {
+      calculator.addEventListener('submit', function (event) { event.preventDefault(); });
+    });
+  });
+</script>

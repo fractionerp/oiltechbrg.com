@@ -32,6 +32,8 @@ main:
         url: /technical-services
       - title: Technical Library
         url: /technical-library
+      - title: Bearing Rules of Thumb
+        url: /technical-library/bearing-rules-of-thumb
       - title: Bearing Failure Analysis
         url: /bearing-failure-modes
   - title: Regions
