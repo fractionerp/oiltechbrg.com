@@ -1,0 +1,245 @@
+---
+layout: page
+title: "Whitemetal Bearing Lining Thickness Guide"
+description: "A practical guide to Babbitt and whitemetal bearing lining thickness, including published examples, fatigue and embedability trade-offs, repair measurements and inspection standards."
+keywords: "whitemetal thickness, white metal bearing thickness, Babbitt thickness, bearing lining thickness, journal bearing lining thickness, thrust pad Babbitt thickness"
+permalink: /technical-library/whitemetal-bearing-thickness-guide/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/mill-bearing-pads.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "whitemetal bearing thickness",
+    "Babbitt lining thickness",
+    "journal bearing repair",
+    "thrust bearing pads",
+    "bearing fatigue strength"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the correct whitemetal bearing thickness?", "acceptedAnswer": { "@type": "Answer", "text": "There is no universal correct thickness. The finished lining is selected for bearing type, load, speed, temperature, backing material, fatigue duty, contamination risk, manufacturing method and repair strategy." } },
+    { "@type": "Question", "name": "Does thinner Babbitt have higher fatigue strength?", "acceptedAnswer": { "@type": "Answer", "text": "When the lining is properly bonded to a strong backing, reducing Babbitt thickness generally increases fatigue strength because the backing constrains the soft alloy. The complete bearing design still has to provide adequate embedability, conformability and manufacturing allowance." } },
+    { "@type": "Question", "name": "Is whitemetal lining thickness the same as oil-film thickness?", "acceptedAnswer": { "@type": "Answer", "text": "No. Lining thickness is the depth of bearing alloy bonded to the backing. Oil-film thickness is the much smaller operating separation between the bearing and rotating surface." } },
+    { "@type": "Question", "name": "Can an old bearing simply be relined to its measured remaining thickness?", "acceptedAnswer": { "@type": "Answer", "text": "Not safely. Remaining thickness may include wear, previous machining or distortion. Repair should establish the intended final geometry from drawings, machine dimensions, backing inspection and engineering review." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/mill-bearing-pads.webp' | relative_url }}" class="hero-bg" alt="Large whitemetal lined bearing pads showing the finished running surface">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Whitemetal Bearing Lining Thickness</h1>
+    <p>How finished Babbitt thickness affects fatigue strength, heat transfer, embedability, repair and inspection.</p>
+    <div class="hero-ctas">
+      <a href="#reference" class="btn-hero-primary">View Thickness Reference</a>
+      <a href="#calculator" class="btn-hero-secondary">Thickness Calculator</a>
+    </div>
+  </div>
+</section>
+
+<section class="thickness-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>There Is No Universal Correct Thickness</h2>
+        <p>Whitemetal thickness is part of the bearing design, not a standalone workshop preference. The correct finished layer depends on load, speed, temperature, dynamic duty, backing material, bond quality, contamination control, manufacturing method and the amount of fitting or future repair the bearing must accommodate.</p>
+        <div><i class="ri-error-warning-line"></i><span>Restore the drawing or confirmed original design during repair unless an engineering review intentionally changes the lining thickness.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="thickness-layers">
+  <div class="container">
+    <div class="section-title"><h2>Define the Measurement</h2><h3><span>Three Thicknesses Are Commonly Confused</span></h3></div>
+    <div class="thickness-layer-diagram" role="img" aria-label="Bearing cross-section showing backing, bond interface, finished whitemetal lining, oil film and rotating shaft">
+      <div class="layer-backing"><strong>Bearing backing</strong><span>Structural steel, bronze or copper alloy</span></div>
+      <div class="layer-bond"><strong>Bond interface</strong></div>
+      <div class="layer-lining"><strong>Finished whitemetal lining</strong><span>The thickness addressed by this guide</span></div>
+      <div class="layer-film"><strong>Operating oil film</strong></div>
+      <div class="layer-shaft"><strong>Shaft / collar</strong><span>Rotating mating surface</span></div>
+    </div>
+    <div class="row g-4 thickness-definitions">
+      <div class="col-lg-4"><div><span>01</span><h2>Raw or As-Cast Thickness</h2><p>Alloy present before finish machining. It includes machining stock, casting variation and any allowance required by the manufacturing or test process.</p></div></div>
+      <div class="col-lg-4"><div><span>02</span><h2>Finished Lining Thickness</h2><p>Distance from the finished running surface to the backing interface after final machining. This is normally the design thickness used for performance and fatigue assessment.</p></div></div>
+      <div class="col-lg-4"><div><span>03</span><h2>Remaining Thickness</h2><p>Local lining left after service wear, wiping, scraping or previous repair. It must not automatically be treated as the original design value.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reference" class="thickness-reference section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Published Data</h2>
+      <h3><span>Thickness Examples and Inspection Thresholds</span></h3>
+      <p>These values show how widely designs vary. They are not interchangeable selection bands or machining specifications.</p>
+    </div>
+    <div class="table-responsive">
+      <table class="table thickness-table">
+        <thead><tr><th>Published context</th><th>Thickness</th><th>What it tells the technician</th></tr></thead>
+        <tbody>
+          <tr><td>Thin-wall bearing shells described in a Texas A&amp;M Turbomachinery Laboratory tutorial</td><td><strong>0.05-0.127 mm</strong><small>0.002-0.005 in</small></td><td>A precision thin-wall construction. It is not representative of repairable thick-wall turbine or mill bearings.</td></tr>
+          <tr><td>Thin Babbitt on bronze backing used in turbomachinery upgrades in the same tutorial</td><td><strong>0.127-0.203 mm</strong><small>0.005-0.008 in</small></td><td>An example of using strong, thermally conductive backing and a thin lining to improve fatigue performance.</td></tr>
+          <tr><td>Traditional thick-wall turbomachinery bearing examples in the tutorial</td><td><strong>0.51-1.27 mm</strong><small>0.020-0.050 in</small></td><td>A historical application range, not a modern default. Dynamic load, temperature and backing construction still require review.</td></tr>
+          <tr><td>Large vertical thrust-shoe test installation published by Kingsbury</td><td><strong>Approx. 4.8 mm</strong><small>3/16 in</small></td><td>A machine-specific example showing that large, low-speed thrust designs can be far thicker than high-speed turbomachinery linings.</td></tr>
+          <tr><td>ISO 4386-1:2019 ultrasonic bond-test scope</td><td><strong>&ge;0.5 mm</strong></td><td>The standard applies to qualifying tin- or lead-based metallic linings at or above this thickness. This is an inspection-method threshold, not a minimum design thickness.</td></tr>
+          <tr><td>ISO 4386-2:2019 destructive bond-test scope</td><td><strong>&ge;2 mm tested layer</strong><small>plus at least 1 mm raw allowance</small></td><td>The additional raw material is required for the specified tensile specimen. It is not a general machining allowance for every bearing.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="thickness-tradeoff">
+  <div class="container">
+    <div class="section-title"><h2>Design Balance</h2><h3><span>Thinner and Thicker Linings Trade Different Benefits</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="thickness-side thickness-thin">
+          <div class="icon"><i class="ri-contract-left-right-line"></i></div>
+          <h2>Reasons to Use a Thinner Lining</h2>
+          <ul><li>Higher fatigue strength when the alloy is well bonded to a strong backing</li><li>Shorter thermal path from the oil film into the backing</li><li>Lower volume of soft alloy available to creep or distort</li><li>Useful for high-speed or dynamically loaded engineered bearings</li></ul>
+          <p>Requires accurate backing geometry, controlled manufacture, clean oil and limited allowance for scraping or future machining.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="thickness-side thickness-thick">
+          <div class="icon"><i class="ri-expand-left-right-line"></i></div>
+          <h2>Reasons to Retain a Thicker Lining</h2>
+          <ul><li>Greater capacity to embed occasional contamination</li><li>More conformability and allowance for local fitting or scraping</li><li>Machining stock for large, repairable or legacy components</li><li>Additional sacrificial material before the backing is exposed</li></ul>
+          <p>Thicker alloy generally has lower fatigue strength and greater thermal resistance, so dynamic load, temperature and bond quality become critical.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="thickness-contexts section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Application Context</h2><h3><span>What Pushes the Design Thinner or Thicker?</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-speed-line"></i><h2>High-Speed Turbomachinery</h2><p>Dynamic load, heat and long operating intervals favour controlled, uniform linings on stiff or thermally conductive backing. Thickness must be assessed with peak film pressure and operating temperature.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-settings-3-line"></i><h2>Large Low-Speed Bearings</h2><p>Large thrust pads, mill bearings and legacy designs may use thicker cast linings to provide conformability, contamination tolerance and repair stock. Size alone does not set the value.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-tools-line"></i><h2>Repair and Re-Lining</h2><p>The target should normally reproduce confirmed final geometry. Increasing thickness to recover an undersize backing changes fatigue, heat transfer, bore geometry and available bond area.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-pulse-line"></i><h2>Dynamic or Cyclic Load</h2><p>Vibration and fluctuating film pressure increase fatigue demand. A thick layer selected only for repair convenience may reduce the safety margin against crack initiation.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-temp-hot-line"></i><h2>Temperature and Backing</h2><p>High temperature reduces Babbitt strength. Lining depth and backing conductivity both affect the path carrying heat away from the oil film.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="thickness-context"><i class="ri-filter-3-line"></i><h2>Oil Cleanliness</h2><p>Historically, thick Babbitt provided more embedability where contamination was difficult to control. Modern filtration can reduce that requirement but does not eliminate contamination risk.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator" class="thickness-calculator-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-title text-start">
+          <h2>Nominal Geometry Check</h2>
+          <h3><span>Cylindrical Journal Lining Calculator</span></h3>
+          <p>For a concentric cylindrical backing bore, nominal radial lining thickness is half the difference between backing bore and finished bearing bore.</p>
+        </div>
+        <div class="thickness-formula">t = (D<sub>backing</sub> - D<sub>finished</sub>) / 2</div>
+        <ul class="thickness-calculator-limits"><li>Use verified diameters in the same units.</li><li>Do not use for taper, offset, multi-lobe or tilting-pad geometry.</li><li>The result does not include raw casting or machining allowance.</li><li>Confirm local minimum thickness and bond condition separately.</li></ul>
+      </div>
+      <div class="col-lg-6">
+        <form class="rules-calculator thickness-calculator" id="lining-thickness-calculator">
+          <div class="rules-calculator-icon"><i class="ri-ruler-2-line"></i></div>
+          <h2>Calculate Nominal Radial Lining</h2>
+          <p class="formula">Concentric cylindrical geometry only</p>
+          <label for="backing-bore">Backing bore diameter <span>mm</span></label>
+          <input id="backing-bore" type="number" min="0" step="any" value="104" inputmode="decimal">
+          <label for="finished-bore">Finished bearing bore <span>mm</span></label>
+          <input id="finished-bore" type="number" min="0" step="any" value="100" inputmode="decimal">
+          <div class="rules-result" aria-live="polite"><span>Nominal radial lining</span><strong id="lining-thickness-result">2.000 mm</strong></div>
+          <p class="rules-calculator-note">A calculated value is not an approved thickness. Compare it with the drawing, backing survey and engineering requirements.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="thickness-repair section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Repair Workflow</h2><h3><span>How to Establish the Re-Lining Thickness</span></h3></div>
+    <ol>
+      <li><span>1</span><div><h2>Recover the Design Basis</h2><p>Use approved drawings, shaft or collar dimensions, housing data, clearances and any previous repair records.</p></div></li>
+      <li><span>2</span><div><h2>Survey the Existing Bearing</h2><p>Record finished geometry, lining loss, damage pattern, split condition and local remaining thickness before stripping.</p></div></li>
+      <li><span>3</span><div><h2>Inspect the Bare Backing</h2><p>After controlled stripping, assess dimensions, distortion, cracking, corrosion, old repairs and suitability for re-use.</p></div></li>
+      <li><span>4</span><div><h2>Set Raw and Finished Requirements</h2><p>Define final thickness, casting stock, machining datums, grooves, chamfers, sensor positions and inspection acceptance criteria.</p></div></li>
+      <li><span>5</span><div><h2>Verify After Machining</h2><p>Confirm final geometry, local thickness where required, surface condition and bond inspection to the applicable specification.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="thickness-inspection">
+  <div class="container">
+    <div class="section-title"><h2>Inspection</h2><h3><span>Thickness Does Not Replace Bond Quality</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="thickness-inspection-item"><i class="ri-scan-2-line"></i><h2>Dimensional Verification</h2><p>Check final running geometry and, where required, derive lining depth from measured backing and finished surfaces. Map local variation rather than relying on one point.</p></div></div>
+      <div class="col-lg-4"><div class="thickness-inspection-item"><i class="ri-sound-module-line"></i><h2>Ultrasonic Bond Inspection</h2><p><a href="https://www.iso.org/standard/77223.html">ISO 4386-1:2019</a> covers qualitative ultrasonic bond testing for applicable metallic multilayer bearings with lining at least 0.5 mm thick.</p></div></div>
+      <div class="col-lg-4"><div class="thickness-inspection-item"><i class="ri-search-eye-line"></i><h2>Penetrant Inspection</h2><p><a href="https://www.iso.org/standard/68679.html">ISO 4386-3:2018</a> addresses visible transition areas and surface discontinuities that ultrasonic inspection cannot assess.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="terminology-faq thickness-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Whitemetal Thickness FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>What is the correct thickness?</h2><p>There is no universal value. Restore a confirmed design or select the thickness through bearing analysis, material choice, backing design and manufacturing review.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does thinner Babbitt resist fatigue better?</h2><p>Generally yes when it is uniformly bonded to a suitable strong backing. The thinner layer is better constrained, but embedability, fitting allowance and backing exposure must still be considered.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is lining thickness the oil-film thickness?</h2><p>No. Lining thickness is a material dimension. Oil-film thickness is the much smaller operating gap separating the bearing and rotating surface.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can the old remaining thickness be copied?</h2><p>Not without confirming the original geometry. Wear, wiping, scraping, previous machining or backing distortion can make the measured remainder misleading.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note thickness-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>Published examples and fatigue guidance were cross-checked against the Texas A&amp;M Turbomachinery Laboratory tutorial <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/a658ba2d-abe5-479b-ac10-fcdabce9653a/content">Fluid Film Bearing Fundamentals and Failure Analysis</a>, its paper on <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/c9bbfae2-1c4d-4469-8d70-12c561bba1b6/content">modern journal bearing performance</a>, a <a href="https://www.kingsbury.com/operational-data/">Kingsbury large thrust-bearing application</a>, and the official ISO 4386 inspection standards. Values are presented as sourced examples, not Oiltech design limits.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need to Confirm a Re-Lining Thickness?</h3>
+    <p>Send the bearing drawing, shaft or collar dimensions, operating data and photographs for an engineering review before manufacture.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/technical-library/bearing-rules-of-thumb' | relative_url }}" class="cta-btn cta-btn-outline">Rules of Thumb</a></div>
+  </div></div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var calculator = document.getElementById('lining-thickness-calculator');
+    var backing = document.getElementById('backing-bore');
+    var finished = document.getElementById('finished-bore');
+    var result = document.getElementById('lining-thickness-result');
+
+    function updateThickness() {
+      var backingValue = parseFloat(backing.value);
+      var finishedValue = parseFloat(finished.value);
+      var isValid = Number.isFinite(backingValue) && Number.isFinite(finishedValue) && backingValue > finishedValue && finishedValue > 0;
+      result.textContent = isValid ? ((backingValue - finishedValue) / 2).toFixed(3) + ' mm' : 'Backing bore must be larger';
+    }
+
+    calculator.addEventListener('input', updateThickness);
+    calculator.addEventListener('submit', function (event) { event.preventDefault(); });
+  });
+</script>

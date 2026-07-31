@@ -26,6 +26,7 @@ permalink: /llms.txt
 - [Bearing Rules of Thumb](https://oiltechbrg.com/technical-library/bearing-rules-of-thumb/): Technician quick-reference values for Babbitt temperature, journal clearance, surface finish, lubrication, inspection standards, conversions and preliminary calculators
 - [Bearing Terminology](https://oiltechbrg.com/technical-library/bearing-terminology/): Searchable glossary distinguishing whitemetal, Babbitt, sleeve, journal, thrust, fluid-film, hydrodynamic and related bearing terms
 - [Hydrodynamic Lubrication](https://oiltechbrg.com/technical-library/hydrodynamic-lubrication/): How speed, lubricant viscosity and converging geometry generate a load-carrying film in journal and thrust bearings
+- [Whitemetal Bearing Lining Thickness Guide](https://oiltechbrg.com/technical-library/whitemetal-bearing-thickness-guide/): Finished Babbitt lining thickness, fatigue and embedability trade-offs, published application examples, repair measurements, inspection thresholds and a cylindrical journal lining calculator
 - [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
 
 ## Bearing Failure Guides
