@@ -48,6 +48,11 @@ last_modified_at: 2026-07-31
       "name": "Bearing Stiffness and Damping Coefficients Explained",
       "url": "{{ '/technical-library/bearing-stiffness-damping-coefficients/' | absolute_url }}"
     },
+    {
+      "@type": "TechArticle",
+      "name": "Whitemetal Bearing Temperature Limits Guide",
+      "url": "{{ '/technical-library/bearing-temperature-limits/' | absolute_url }}"
+    },
     {% for mode in site.data.failure_modes %}{
       "@type": "TechArticle",
       "name": {{ mode.title | jsonify }},
@@ -76,7 +81,7 @@ last_modified_at: 2026-07-31
       <span class="library-status">Library in development</span>
       <div>
         <h2>A Growing Engineering Reference</h2>
-        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, materials, inspection and installation will be added as they are technically reviewed.</p>
+        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, temperature limits, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, materials, inspection and installation will be added as they are technically reviewed.</p>
       </div>
     </div>
   </div>
@@ -123,16 +128,22 @@ last_modified_at: 2026-07-31
           <div><span>Materials and repair</span><h2>Whitemetal Lining Thickness</h2><p>Understand finished lining depth, fatigue and embedability trade-offs, published examples, inspection thresholds and re-lining measurements.</p><strong>Open thickness guide <i class="ri-arrow-right-line"></i></strong></div>
         </a>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <a href="{{ '/technical-library/journal-bearing-preload-explained' | relative_url }}" class="library-fundamental-card">
           <img src="{{ '/assets/img/bearing-tiltpad.webp' | relative_url }}" alt="Tilting-pad journal bearing geometry used to explain preload" loading="lazy">
           <div><span>Journal geometry</span><h2>Bearing Preload Explained</h2><p>See how machined pad clearance and assembled clearance define preload, then check the ratio with a practical calculator.</p><strong>Understand preload <i class="ri-arrow-right-line"></i></strong></div>
         </a>
       </div>
-      <div class="col-lg-6 col-md-6">
+      <div class="col-lg-4 col-md-6">
         <a href="{{ '/technical-library/bearing-stiffness-damping-coefficients' | relative_url }}" class="library-fundamental-card">
           <img src="{{ '/assets/img/fea.webp' | relative_url }}" alt="Bearing performance model used to calculate stiffness and damping coefficients" loading="lazy">
           <div><span>Rotordynamics</span><h2>Stiffness and Damping Coefficients</h2><p>Interpret Kxx, Kyy, direct and cross-coupled terms, units, frequency dependence and the data required for a rotor model.</p><strong>Read coefficient guide <i class="ri-arrow-right-line"></i></strong></div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <a href="{{ '/technical-library/bearing-temperature-limits' | relative_url }}" class="library-fundamental-card">
+          <img src="{{ '/assets/img/bearing-upgrade.webp' | relative_url }}" alt="Instrumented whitemetal bearing components used for temperature monitoring" loading="lazy">
+          <div><span>Monitoring</span><h2>Bearing Temperature Limits</h2><p>Distinguish oil, metal and film temperatures, then apply published limits, sensor locations and alarm-setting principles correctly.</p><strong>Read temperature guide <i class="ri-arrow-right-line"></i></strong></div>
         </a>
       </div>
     </div>

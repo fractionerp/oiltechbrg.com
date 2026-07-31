@@ -1,0 +1,212 @@
+---
+layout: page
+title: "Whitemetal Bearing Temperature Limits Guide"
+description: "A practical guide to whitemetal and Babbitt bearing temperature limits, including oil and metal measurements, sensor position, published reference values, alarm settings and high-temperature investigation."
+keywords: "Babbitt bearing temperature limit, whitemetal bearing temperature, bearing metal temperature alarm, journal bearing temperature limit, thrust bearing temperature, bearing temperature sensor location"
+permalink: /technical-library/bearing-temperature-limits/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/gallery/ccz-tilt-pads.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "Babbitt bearing temperature limits",
+    "whitemetal bearing temperature",
+    "bearing metal temperature sensors",
+    "journal bearing monitoring",
+    "thrust bearing monitoring"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the maximum temperature for a Babbitt bearing?", "acceptedAnswer": { "@type": "Answer", "text": "A commonly published industry maximum operating ceiling for Babbitt bearings is 130 degrees Celsius or 266 degrees Fahrenheit. It is not a normal target or a universal trip setting; lower machine, OEM, alloy or sensor-specific limits take precedence." } },
+    { "@type": "Question", "name": "Is bearing oil temperature the same as bearing metal temperature?", "acceptedAnswer": { "@type": "Answer", "text": "No. Supply oil, drain oil, embedded metal and local oil-film or surface temperatures are different measurements. They cannot be substituted without a validated thermal model and known sensor locations." } },
+    { "@type": "Question", "name": "Where should a journal bearing temperature sensor be located?", "acceptedAnswer": { "@type": "Answer", "text": "The applicable machine or OEM drawing governs. For tilting-pad journal bearings, published guidance commonly places sensors in the loaded pad near the downstream high-temperature region; axial position and sensor depth also materially affect the reading." } },
+    { "@type": "Question", "name": "How should bearing temperature alarms be set?", "acceptedAnswer": { "@type": "Answer", "text": "Use the machinery protection specification and OEM limits, then validate them against a stable baseline at comparable speed, load, oil inlet temperature and sensor location. Alarm and trip values should remain below the verified allowable temperature with allowance for sensor lag and operating transients." } },
+    { "@type": "Question", "name": "What causes a bearing temperature to rise?", "acceptedAnswer": { "@type": "Answer", "text": "Causes include increased load or speed, high inlet temperature, reduced oil flow, loss of viscosity, hot-oil carryover, incorrect clearance or preload, misalignment, edge loading, contamination, cooling-system problems and sensor faults." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/gallery/ccz-tilt-pads.webp' | relative_url }}" class="hero-bg" alt="Copper-chrome-backed whitemetal tilting pads designed for improved bearing heat transfer">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Whitemetal Bearing Temperature Limits</h1>
+    <p>How to distinguish oil, metal and film temperatures before applying design, alarm or trip limits.</p>
+    <div class="hero-ctas">
+      <a href="#references" class="btn-hero-primary">View Published References</a>
+      <a href="#monitoring" class="btn-hero-secondary">Set Monitoring Limits</a>
+    </div>
+  </div>
+</section>
+
+<section class="temp-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>130&deg;C Is a Published Ceiling, Not a Normal Target</h2>
+        <p>Typical industry practice limits maximum Babbitt operating temperature to 130&deg;C (266&deg;F) because bearing-alloy strength falls as temperature rises. A healthy bearing is normally designed and protected below that ceiling. The applicable drawing, machinery specification, OEM limit, alloy, load and sensor location can all require a lower value.</p>
+        <div><i class="ri-error-warning-line"></i><span>Never raise an alarm or trip threshold simply because the existing value causes nuisance alarms. Confirm the measurement, operating condition and bearing thermal analysis first.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="temp-measurements">
+  <div class="container">
+    <div class="section-title"><h2>Measurement Types</h2><h3><span>Which Bearing Temperature Is Being Reported?</span></h3><p>Every temperature value should identify the measured medium, sensor location and operating condition.</p></div>
+    <div class="temp-path" role="img" aria-label="Bearing thermal path showing supply oil, local oil film and running surface, embedded metal sensor and mixed drain oil">
+      <div class="temp-path-item inlet"><i class="ri-drop-line"></i><strong>Supply oil</strong><span>Temperature entering the bearing system</span></div>
+      <i class="ri-arrow-right-line"></i>
+      <div class="temp-path-item film"><i class="ri-fire-line"></i><strong>Oil film / surface</strong><span>Local peak generated by shear and load</span></div>
+      <i class="ri-arrow-right-line"></i>
+      <div class="temp-path-item metal"><i class="ri-temp-hot-line"></i><strong>Embedded metal</strong><span>Sensor reading below the running surface</span></div>
+      <i class="ri-arrow-right-line"></i>
+      <div class="temp-path-item drain"><i class="ri-water-flash-line"></i><strong>Drain oil</strong><span>Mixed discharge from pads and housing</span></div>
+    </div>
+    <div class="row g-4 temp-measure-grid">
+      <div class="col-lg-3 col-md-6"><article><span>01</span><h2>Supply / Inlet Oil</h2><p>Sets the entering viscosity and cooling potential. It does not measure the loaded film or pad hot spot.</p></article></div>
+      <div class="col-lg-3 col-md-6"><article><span>02</span><h2>Drain / Outlet Oil</h2><p>Useful for heat balance and overall temperature rise, but mixing can conceal one locally hot pad.</p></article></div>
+      <div class="col-lg-3 col-md-6"><article><span>03</span><h2>Embedded Metal</h2><p>The usual protection measurement. Circumferential position, axial position and depth below the surface determine the reading.</p></article></div>
+      <div class="col-lg-3 col-md-6"><article><span>04</span><h2>Film / Surface Peak</h2><p>Normally predicted by a thermal bearing model or specialised test instrumentation. It can be hotter than the embedded sensor indicates.</p></article></div>
+    </div>
+  </div>
+</section>
+
+<section id="references" class="temp-references section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Published References</h2><h3><span>Temperature Values in Their Proper Context</span></h3><p>These values come from different products and guidance documents. They are not a universal alarm ladder.</p></div>
+    <div class="table-responsive">
+      <table class="table temp-table">
+        <thead><tr><th>Published context</th><th>Temperature</th><th>How to use it</th></tr></thead>
+        <tbody>
+          <tr><td>Typical industry maximum operating ceiling for Babbitt bearings, published by Waukesha Bearings</td><td><strong>130&deg;C</strong><small>266&deg;F</small></td><td>A material-related ceiling, not a normal design target or automatic trip value. Lower verified limits govern.</td></tr>
+          <tr><td>Maximum bearing-metal design criterion reported in a Texas A&amp;M turbomachinery tutorial discussing API 617</td><td><strong>100&deg;C</strong><small>212&deg;F</small></td><td>A design criterion reported for the referenced turbomachinery context. Confirm the applicable standard edition, equipment specification and measurement definition.</td></tr>
+          <tr><td>Normal design running guidance published for Kingsbury KN fixed-profile journal bearings</td><td><strong>&le;115&deg;C</strong><small>&le;240&deg;F</small></td><td>Product-specific guidance, useful only when the bearing type, measurement and duty are comparable.</td></tr>
+          <tr><td>Example alarm progression in the same Kingsbury KN guidance</td><td><strong>Alarm: normal +8&deg;C</strong><small>Trip: alarm +7&deg;C; never above 130&deg;C</small></td><td>An example of combining a stable operating baseline with an absolute ceiling. It is not a default for unrelated machines.</td></tr>
+          <tr><td>Kingsbury trigger for estimating thrust-bearing Babbitt temperature</td><td><strong>Inlet oil &gt;50&deg;C</strong><small>Also load &gt;2.8 MPa or collar speed &gt;76.2 m/s</small></td><td>An analysis trigger, not an inlet-temperature trip or bearing rating.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="temp-reference-warning"><i class="ri-shield-check-line"></i><p>The protection-system setpoints approved for the machine always take precedence over this reference table. Where no approved values exist, obtain bearing and rotor-system engineering review before setting them.</p></div>
+  </div>
+</section>
+
+<section class="temp-sensors">
+  <div class="container">
+    <div class="section-title"><h2>Sensor Position</h2><h3><span>The Same Bearing Can Produce Different Readings</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="temp-sensor-card journal">
+          <div class="temp-sensor-visual" role="img" aria-label="Tilting journal pad showing leading edge, pivot, trailing edge and a sensor near the downstream loaded region">
+            <div class="temp-pad-arc"></div><div class="temp-pivot"></div><div class="temp-sensor-dot"></div><div class="temp-rotation"><i class="ri-arrow-right-line"></i><span>Rotation</span></div>
+          </div>
+          <div><span>Journal bearings</span><h2>Instrument the Distressed Region</h2><p>Published tilting-pad guidance commonly places a sensor on the loaded pad near the downstream high-temperature region, often around 75% of pad arc from the leading edge and near the axial centreline for self-aligning pads. Non-aligning pads may need sensors at more than one axial position to identify edge loading.</p></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="temp-sensor-card thrust">
+          <div class="temp-thrust-visual" role="img" aria-label="Tilting thrust pad showing the 75 percent circumferential and 75 percent radial sensor region for one-direction rotation">
+            <div class="temp-thrust-pad"></div><div class="temp-thrust-pivot"></div><div class="temp-thrust-sensor"></div><span>75 / 75</span>
+          </div>
+          <div><span>Thrust bearings</span><h2>Position Depends on Rotation</h2><p>The 75/75 position is widely published for unidirectional tilting pads. Bidirectional arrangements may use a pivot-centred circumferential position, commonly described as 50/75. Multiple pads should be considered because load sharing and misalignment can create pad-to-pad temperature differences.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="temp-depth-note"><i class="ri-ruler-2-line"></i><p><strong>Depth matters:</strong> temperature gradients through the lining and backing can be steep. A sensor placed deeper in the backing normally reads lower and responds more slowly than one close to the running surface. Compare only equivalent installations.</p></div>
+  </div>
+</section>
+
+<section class="temp-trending section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Trending</h2><h3><span>Change From Baseline Can Matter Before the Ceiling</span></h3><p>A temperature that remains below an absolute maximum can still indicate a developing fault when its trend or pad-to-pad spread changes.</p></div>
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="temp-trend-card"><i class="ri-line-chart-line"></i><h2>Stable Baseline</h2><p>Record normal values after thermal stabilisation at known speed, load, inlet temperature, flow and machine configuration.</p></div></div>
+      <div class="col-lg-4"><div class="temp-trend-card"><i class="ri-timer-flash-line"></i><h2>Rate of Rise</h2><p>A rapid increase can require action before the steady-state alarm is reached. Account for sensor response lag and normal run-up transients.</p></div></div>
+      <div class="col-lg-4"><div class="temp-trend-card"><i class="ri-split-cells-horizontal"></i><h2>Temperature Spread</h2><p>Compare loaded pads and axial sensor pairs. Divergence can reveal unequal load sharing, misalignment, local starvation or a sensor problem.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="monitoring" class="temp-monitoring">
+  <div class="container">
+    <div class="section-title"><h2>Alarm and Trip Settings</h2><h3><span>A Defensible Protection-Setting Workflow</span></h3></div>
+    <ol>
+      <li><span>1</span><div><h2>Collect Governing Limits</h2><p>Start with the machinery specification, OEM manual, approved bearing drawing, protection-system cause and effect, alloy and operating envelope.</p></div></li>
+      <li><span>2</span><div><h2>Define the Measurement</h2><p>Record sensor type, pad, angular and axial position, depth, units, calibration and whether the value is oil, metal or calculated surface temperature.</p></div></li>
+      <li><span>3</span><div><h2>Establish Normal</h2><p>Trend stable readings over representative speed, load, inlet temperature and ambient conditions, including expected transients.</p></div></li>
+      <li><span>4</span><div><h2>Set Alarm Margin</h2><p>Choose an alert above expected variation but below the validated design and damage limits, considering sensor uncertainty and response delay.</p></div></li>
+      <li><span>5</span><div><h2>Set Protective Trip</h2><p>Provide sufficient separation from alarm for response while remaining below the verified maximum for every credible operating condition.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="temp-causes section-bg">
+  <div class="container">
+    <div class="section-title"><h2>High-Temperature Investigation</h2><h3><span>What Can Move the Reading Up?</span></h3></div>
+    <div class="temp-cause-grid">
+      <div><i class="ri-speed-line"></i><h2>Duty</h2><p>Higher load, speed, load angle or changed process condition.</p></div>
+      <div><i class="ri-drop-line"></i><h2>Oil Supply</h2><p>High inlet temperature, wrong viscosity, low flow, blocked feed or aeration.</p></div>
+      <div><i class="ri-refresh-line"></i><h2>Hot-Oil Carryover</h2><p>Recirculated discharge oil entering the next pad or inadequate evacuation.</p></div>
+      <div><i class="ri-compasses-2-line"></i><h2>Geometry</h2><p>Incorrect clearance or preload, thermal growth, housing distortion or assembly error.</p></div>
+      <div><i class="ri-align-vertically"></i><h2>Alignment</h2><p>Edge loading, collar runout, shaft deflection or unequal thrust-pad loading.</p></div>
+      <div><i class="ri-tools-line"></i><h2>Instrumentation</h2><p>Loose sensor, changed depth, wiring fault, calibration drift or channel mismatch.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="temp-response">
+  <div class="container">
+    <div class="section-title"><h2>When a Reading Rises</h2><h3><span>Preserve Evidence Before Changing the Bearing</span></h3></div>
+    <div class="temp-response-grid">
+      <div><span>01</span><p>Confirm the channel, sensor health, units and recent protection-system work.</p></div>
+      <div><span>02</span><p>Compare speed, load, inlet temperature, oil pressure, flow and vibration with the normal baseline.</p></div>
+      <div><span>03</span><p>Check other pads, drain temperature, axial sensor pairs and redundant measurements.</p></div>
+      <div><span>04</span><p>Review the rate of rise and follow the approved operating and trip procedure.</p></div>
+      <div><span>05</span><p>Retain trend data, oil samples, filter debris and inspection evidence for root-cause analysis.</p></div>
+      <div><span>06</span><p>Do not increase oil flow, clearance or setpoints without understanding the resulting film and rotor-dynamic effects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="terminology-faq temp-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Bearing Temperature FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is 130&deg;C a normal operating target?</h2><p>No. It is a commonly published Babbitt maximum operating ceiling. Normal design, alarm and trip values are generally lower and specific to the machine and measurement.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can drain temperature replace pad temperature?</h2><p>No. Drain oil is mixed and can hide a local hot spot. It is useful for heat balance and trending but measures a different thermal condition.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Why do two pad sensors read differently?</h2><p>Load sharing, alignment, pad position, sensor depth, calibration and local oil supply can all create a difference. The trend and installation must be reviewed together.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does higher oil flow always reduce temperature?</h2><p>Not necessarily. Flow path, oil mixing, evacuation and churning matter. Any change should be checked against the bearing design rather than judged from flow quantity alone.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note temp-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>Published values and monitoring guidance were cross-checked against <a href="https://www.waukbearing.com/en/products/fluid-film-bearings/babbitt-bearings.html">Waukesha Babbitt material guidance</a>, <a href="https://www.kingsbury.com/how-to-estimate-babbitt-temperature">Kingsbury thrust-bearing temperature guidance</a>, <a href="https://www.kingsbury.com/pdf/fixed_profile.pdf">Kingsbury fixed-profile journal-bearing data</a>, and Texas A&amp;M Turbomachinery Laboratory papers on <a href="https://oaktrust.library.tamu.edu/bitstreams/8960f933-74f6-4023-a35f-b7af5f8b4158/download">modern journal-bearing performance</a>, <a href="https://oaktrust.library.tamu.edu/bitstreams/2ed8980c-4e0d-44f8-8c78-97882d54d306/download">tilting-pad design</a> and <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/1decdb23-9c38-4717-96df-0e1026025a27/content">temperature measurement</a>. Values are source-specific references, not Oiltech alarm or trip setpoints.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need to Review a High Bearing Temperature?</h3>
+    <p>Send the bearing drawing, sensor locations, operating trends, oil data and machine conditions for an engineering assessment.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/technical-services' | relative_url }}" class="cta-btn cta-btn-outline">Technical Services</a></div>
+  </div></div>
+</section>

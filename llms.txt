@@ -29,6 +29,7 @@ permalink: /llms.txt
 - [Whitemetal Bearing Lining Thickness Guide](https://oiltechbrg.com/technical-library/whitemetal-bearing-thickness-guide/): Finished Babbitt lining thickness, fatigue and embedability trade-offs, published application examples, repair measurements, inspection thresholds and a cylindrical journal lining calculator
 - [Journal Bearing Preload Explained](https://oiltechbrg.com/technical-library/journal-bearing-preload-explained/): Tilting-pad journal bearing preload definition, pad and assembled clearances, preload formula, design effects, hot geometry cautions and a diameter-based calculator
 - [Bearing Stiffness and Damping Coefficients](https://oiltechbrg.com/technical-library/bearing-stiffness-damping-coefficients/): Journal-bearing Kxx, Kyy, direct and cross-coupled stiffness and damping terms, matrix notation, units, frequency dependence and rotor-model data requirements
+- [Whitemetal Bearing Temperature Limits](https://oiltechbrg.com/technical-library/bearing-temperature-limits/): Babbitt temperature ceilings, supply and drain oil versus embedded metal and film temperatures, sensor placement, alarm-setting principles and high-temperature investigation
 - [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
 
 ## Bearing Failure Guides
