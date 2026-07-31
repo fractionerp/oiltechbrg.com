@@ -1,0 +1,286 @@
+---
+layout: page
+title: "Journal Bearing Preload Explained"
+description: "A practical explanation of tilting-pad journal bearing preload, including pad and assembled clearance, the preload formula, operating effects, measurement cautions and a preload calculator."
+keywords: "journal bearing preload, tilting pad bearing preload, bearing preload calculation, preload factor, bearing preset, pad clearance, assembled clearance"
+permalink: /technical-library/journal-bearing-preload-explained/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/finished-leg-journal-bearings.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "tilting-pad journal bearing preload",
+    "bearing preload factor",
+    "pad clearance",
+    "assembled bearing clearance",
+    "rotordynamic bearing design"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is preload in a tilting-pad journal bearing?", "acceptedAnswer": { "@type": "Answer", "text": "Preload is a dimensionless geometric ratio comparing assembled bearing clearance with the clearance produced by the machined pad curvature. It is not an external force applied to the shaft." } },
+    { "@type": "Question", "name": "How is journal bearing preload calculated?", "acceptedAnswer": { "@type": "Answer", "text": "Using one common convention, preload m equals 1 minus assembled diametral clearance Cb divided by pad diametral clearance Cp. The dimensions must use the same diametral or radial convention and the same reference condition." } },
+    { "@type": "Question", "name": "What does zero preload mean?", "acceptedAnswer": { "@type": "Answer", "text": "Zero preload means assembled clearance equals pad clearance. At the centred position, the pad and assembled bore radii are equal under the ideal geometric definition." } },
+    { "@type": "Question", "name": "Is more bearing preload always better?", "acceptedAnswer": { "@type": "Answer", "text": "No. Preload affects stiffness, damping, film shape, temperature, power loss and load sharing. The appropriate value depends on the complete bearing and rotor system, including hot clearances and manufacturing tolerances." } },
+    { "@type": "Question", "name": "Does this preload formula apply to thrust bearings?", "acceptedAnswer": { "@type": "Answer", "text": "No. This guide addresses the geometric preload or preset used for profiled and tilting-pad journal bearings. Thrust-bearing pad loading and mechanical or spring preload require different definitions." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/finished-leg-journal-bearings.webp' | relative_url }}" class="hero-bg" alt="Finished tilting-pad journal bearing assemblies used to explain bearing preload">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Journal Bearing Preload Explained</h1>
+    <p>What preload means, how it is calculated and why pad curvature and assembled clearance must be considered together.</p>
+    <div class="hero-ctas">
+      <a href="#definition" class="btn-hero-primary">Understand the Geometry</a>
+      <a href="#calculator" class="btn-hero-secondary">Calculate Preload</a>
+    </div>
+  </div>
+</section>
+
+<section class="preload-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>Preload Is Geometry, Not an Applied Force</h2>
+        <p>In a tilting-pad journal bearing, preload describes the relationship between the curvature machined into each pad and the clearance that remains when the pads are installed around the shaft. Positive preload moves the pads inward from the concentric position and establishes a converging film geometry even when external bearing load is low.</p>
+        <div><i class="ri-focus-3-line"></i><span>Rolling-element preload, thrust-bearing mechanical preload and journal-bearing geometric preload are different concepts. This page addresses journal-bearing geometry.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="definition" class="preload-definition">
+  <div class="container">
+    <div class="section-title">
+      <h2>Core Definition</h2>
+      <h3><span>Two Clearances Define Preload</span></h3>
+      <p>Use either diametral dimensions throughout or radial dimensions throughout. Mixing the two conventions produces the wrong result.</p>
+    </div>
+    <div class="row align-items-center g-4">
+      <div class="col-lg-5">
+        <div class="preload-geometry" role="img" aria-label="Conceptual cross-section showing a shaft, assembled bearing bore, machined pad curvature and pivot; not to scale">
+          <div class="preload-assembly-ring"></div>
+          <div class="preload-pad-arc"></div>
+          <div class="preload-shaft"><span>D<sub>j</sub></span></div>
+          <div class="preload-pivot"></div>
+        </div>
+        <div class="preload-legend">
+          <span><i class="assembly"></i>Assembled bore D<sub>b</sub></span>
+          <span><i class="pad"></i>Pad bore curvature D<sub>p</sub></span>
+          <span><i class="shaft"></i>Shaft D<sub>j</sub></span>
+        </div>
+        <p class="preload-not-scale">Conceptual geometry only &ndash; centres, clearances and pad movement are exaggerated.</p>
+      </div>
+      <div class="col-lg-7">
+        <div class="preload-equation">m = 1 &minus; (C<sub>b</sub> / C<sub>p</sub>)</div>
+        <div class="preload-variables">
+          <div><strong>C<sub>p</sub> = D<sub>p</sub> &minus; D<sub>j</sub></strong><span>Pad diametral clearance from the machined pad bore diameter and shaft diameter.</span></div>
+          <div><strong>C<sub>b</sub> = D<sub>b</sub> &minus; D<sub>j</sub></strong><span>Assembled or set diametral clearance from the installed bearing bore and shaft diameter.</span></div>
+          <div><strong>m = preload factor</strong><span>A dimensionless ratio. A value of 0.30 is also described as 30% preload.</span></div>
+        </div>
+        <div class="preload-convention"><i class="ri-alert-line"></i><p>Some drawings and software use radial clearances or different symbols. The ratio is unchanged only when numerator and denominator use the same convention. State the convention with every value.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preload-states section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Geometry States</h2><h3><span>What the Preload Number Means</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="preload-state negative"><span>m &lt; 0</span><h2>Negative Preload</h2><p>Assembled clearance is greater than pad clearance. This can substantially reduce support from lightly loaded pads and alter stiffness and damping. It may result from geometry, tolerance or thermal change and requires engineering review.</p></div></div>
+      <div class="col-lg-4"><div class="preload-state zero"><span>m = 0</span><h2>Zero Preload</h2><p>Assembled and pad clearances are equal. Under the ideal definition, pad and assembly radii coincide when centred. Near-zero preload can improve effective damping in some rotor systems, but it is not automatically optimum.</p></div></div>
+      <div class="col-lg-4"><div class="preload-state positive"><span>0 &lt; m &lt; 1</span><h2>Positive Preload</h2><p>Pad clearance is greater than assembled clearance. The pads are located inward relative to their machined curvature, producing a preset converging geometry and hydrodynamic forces at low external load.</p></div></div>
+    </div>
+    <div class="preload-published-note">
+      <i class="ri-book-open-line"></i>
+      <p>A classic Texas A&amp;M tilting-pad design tutorial describes <strong>0.2&ndash;0.6</strong> as typical examples, while Kingsbury publishes <strong>0.30&ndash;0.35</strong> for specific standard direct-lubricated platforms. These are product and application references, not a universal selection range.</p>
+    </div>
+  </div>
+</section>
+
+<section id="calculator" class="preload-calculator-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-title text-start">
+          <h2>Geometry Check</h2>
+          <h3><span>Preload Factor Calculator</span></h3>
+          <p>Enter three diameters measured or specified in the same units and at the same reference condition. The calculator derives both clearances before applying the preload ratio.</p>
+        </div>
+        <ol class="preload-calculation-steps">
+          <li><span>1</span><p>Calculate pad clearance: <strong>C<sub>p</sub> = D<sub>p</sub> &minus; D<sub>j</sub></strong></p></li>
+          <li><span>2</span><p>Calculate assembled clearance: <strong>C<sub>b</sub> = D<sub>b</sub> &minus; D<sub>j</sub></strong></p></li>
+          <li><span>3</span><p>Calculate preload: <strong>m = 1 &minus; C<sub>b</sub>/C<sub>p</sub></strong></p></li>
+        </ol>
+        <p class="preload-calculator-warning"><i class="ri-error-warning-line"></i>Calculated geometry is not an approved operating value. Confirm tolerance, temperature, pad deflection, pivot movement and rotor-dynamic requirements.</p>
+      </div>
+      <div class="col-lg-6">
+        <form class="rules-calculator preload-calculator" id="preload-calculator">
+          <div class="rules-calculator-icon"><i class="ri-compasses-2-line"></i></div>
+          <h2>Calculate Journal Bearing Preload</h2>
+          <p class="formula">Diametral convention: m = 1 &minus; Cb/Cp</p>
+          <label for="preload-shaft">Shaft diameter D<sub>j</sub> <span>mm</span></label>
+          <input id="preload-shaft" type="number" min="0" step="any" value="100.000" inputmode="decimal">
+          <label for="preload-pad">Machined pad bore D<sub>p</sub> <span>mm</span></label>
+          <input id="preload-pad" type="number" min="0" step="any" value="100.200" inputmode="decimal">
+          <label for="preload-bearing">Assembled bearing bore D<sub>b</sub> <span>mm</span></label>
+          <input id="preload-bearing" type="number" min="0" step="any" value="100.140" inputmode="decimal">
+          <div class="preload-results" aria-live="polite">
+            <div><span>Pad clearance C<sub>p</sub></span><strong id="preload-pad-result">0.200 mm</strong></div>
+            <div><span>Assembled clearance C<sub>b</sub></span><strong id="preload-bearing-result">0.140 mm</strong></div>
+            <div class="primary"><span>Preload factor m</span><strong id="preload-factor-result">0.300 (30.0%)</strong></div>
+          </div>
+          <p class="rules-calculator-note" id="preload-state-result">Positive preload: assembled clearance is smaller than pad clearance.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="preload-effects section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Design Effects</h2><h3><span>Changing Preload Changes More Than Clearance</span></h3><p>The direction and size of each effect depend on what other dimension is held constant and on the full bearing and rotor model.</p></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="preload-effect higher"><div class="icon"><i class="ri-arrow-up-line"></i></div><h2>Increasing Positive Preload</h2><ul><li>Usually increases bearing stiffness when achieved by reducing assembled clearance</li><li>Develops hydrodynamic support on pads at lower external bearing load</li><li>Changes pad load sharing and the shaft equilibrium position</li><li>Can reduce clearance margin for thermal growth and tolerance variation</li><li>Can alter minimum film thickness, temperature, oil flow and power loss</li></ul></div></div>
+      <div class="col-lg-6"><div class="preload-effect lower"><div class="icon"><i class="ri-arrow-down-line"></i></div><h2>Reducing Preload</h2><ul><li>Moves pad and assembled clearances closer together</li><li>Can increase effective damping in some turbomachinery systems</li><li>May reduce direct stiffness and change critical-speed separation</li><li>Can unload upper or lightly loaded pads as preload approaches negative</li><li>Requires rotor-dynamic review rather than a bearing-only judgement</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="preload-operating">
+  <div class="container">
+    <div class="section-title"><h2>Cold Versus Operating Geometry</h2><h3><span>Why the Drawing Value May Not Be the Hot Value</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="preload-operating-item"><i class="ri-temp-hot-line"></i><h2>Differential Expansion</h2><p>The shaft, pads, lining and carrier do not necessarily heat or expand equally. Pad thermal crowning and bore growth can change both C<sub>p</sub> and C<sub>b</sub> during operation.</p></div></div>
+      <div class="col-lg-4"><div class="preload-operating-item"><i class="ri-shape-2-line"></i><h2>Pad and Pivot Deflection</h2><p>Hydrodynamic pressure, pad bending and pivot contact deformation change effective running geometry. A rigid cold dimensional model cannot capture these effects alone.</p></div></div>
+      <div class="col-lg-4"><div class="preload-operating-item"><i class="ri-ruler-2-line"></i><h2>Tolerance Stack</h2><p>Pad curvature, pivot height, carrier bore, housing fit, shaft size and assembly condition all contribute. Calculate minimum and maximum preload, not only the nominal value.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="preload-workflow section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Measurement and Specification</h2><h3><span>A Practical Preload Check</span></h3></div>
+    <ol>
+      <li><span>01</span><div><h2>Confirm the Convention</h2><p>Identify whether the drawing uses diametral or radial clearance, and whether dimensions are cold, hot, nominal or measured.</p></div></li>
+      <li><span>02</span><div><h2>Verify Shaft Diameter</h2><p>Use the applicable journal size and temperature condition. Include journal tolerance, wear and any coating or repair allowance.</p></div></li>
+      <li><span>03</span><div><h2>Establish Pad Curvature</h2><p>Determine the effective machined pad bore or radius from controlled measurement, manufacturing records or the approved drawing.</p></div></li>
+      <li><span>04</span><div><h2>Measure the Assembly</h2><p>Assemble pads in the correct carrier and housing condition. Account for pad count, load orientation and the specified clearance method.</p></div></li>
+      <li><span>05</span><div><h2>Calculate the Range</h2><p>Apply tolerances to C<sub>p</sub> and C<sub>b</sub>, then review nominal, minimum and maximum preload against the bearing analysis.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="preload-mistakes">
+  <div class="container">
+    <div class="section-title"><h2>Common Errors</h2><h3><span>Preload Values That Cannot Be Compared</span></h3></div>
+    <div class="preload-mistake-grid">
+      <div><i class="ri-close-circle-line"></i><p>Mixing radial clearance in one term with diametral clearance in the other.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Calling assembled clearance alone the preload without knowing pad curvature.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Comparing cold drawing preload directly with predicted hot operating preload.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Changing preload without recalculating temperature, film thickness and rotor dynamics.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Ignoring manufacturing tolerances and reporting only a nominal ratio.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Applying journal-bearing preload terminology to thrust pads or rolling-element bearings.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="terminology-faq preload-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Journal Bearing Preload FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is preload an applied force?</h2><p>No. In this context it is a geometric ratio between assembled and machined-pad clearance. The resulting geometry influences the hydrodynamic forces generated in operation.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is more preload always better?</h2><p>No. It changes stiffness, damping, load sharing, film shape and thermal margin. The selected value must suit the entire rotor-bearing system.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can preload be calculated from assembled clearance?</h2><p>Not by itself. Shaft diameter and the pad's machined bore or radius are also required to establish pad clearance.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does the same formula apply to thrust bearings?</h2><p>No. This geometric preload definition is used for profiled and tilting-pad journal bearings. Thrust-bearing load equalisation and mechanical preload are separate subjects.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note preload-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>The preload definition and design discussion were cross-checked against the Texas A&amp;M Turbomachinery Laboratory papers <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/c9bbfae2-1c4d-4469-8d70-12c561bba1b6/content">Methods to Effectively Evaluate Modern Journal Bearing Performance</a>, <a href="https://oaktrust.library.tamu.edu/bitstream/handle/1969.1/160284/ATPS2016T14.pdf?isAllowed=y&amp;sequence=1">Fundamentals of Fluid Film Journal Bearing Operation and Modeling</a> and <a href="https://oaktrust.library.tamu.edu/bitstreams/2ed8980c-4e0d-44f8-8c78-97882d54d306/download">Tilting Pad Bearing Design</a>, together with published <a href="https://www.kingsbury.com/fluid-film-journal-bearings/">Kingsbury journal-bearing data</a>. Values are explanatory examples, not Oiltech design limits.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need to Confirm Bearing Preload?</h3>
+    <p>Send the shaft, pad and carrier drawings with operating speed, load, lubricant and temperature data for an engineering review.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/bearing-design-analysis' | relative_url }}" class="cta-btn cta-btn-outline">Design and Analysis</a></div>
+  </div></div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var calculator = document.getElementById('preload-calculator');
+    var shaft = document.getElementById('preload-shaft');
+    var pad = document.getElementById('preload-pad');
+    var bearing = document.getElementById('preload-bearing');
+    var padResult = document.getElementById('preload-pad-result');
+    var bearingResult = document.getElementById('preload-bearing-result');
+    var factorResult = document.getElementById('preload-factor-result');
+    var stateResult = document.getElementById('preload-state-result');
+
+    function showInvalid(message) {
+      padResult.textContent = 'Check dimensions';
+      bearingResult.textContent = 'Check dimensions';
+      factorResult.textContent = 'Unable to calculate';
+      stateResult.textContent = message;
+    }
+
+    function updatePreload() {
+      var shaftValue = parseFloat(shaft.value);
+      var padValue = parseFloat(pad.value);
+      var bearingValue = parseFloat(bearing.value);
+
+      if (!Number.isFinite(shaftValue) || !Number.isFinite(padValue) || !Number.isFinite(bearingValue) || shaftValue <= 0) {
+        showInvalid('Enter three valid positive diameters.');
+        return;
+      }
+      if (padValue <= shaftValue || bearingValue <= shaftValue) {
+        showInvalid('Both pad and assembled bore diameters must be larger than the shaft.');
+        return;
+      }
+
+      var padClearance = padValue - shaftValue;
+      var bearingClearance = bearingValue - shaftValue;
+      var preload = 1 - (bearingClearance / padClearance);
+
+      padResult.textContent = padClearance.toFixed(3) + ' mm';
+      bearingResult.textContent = bearingClearance.toFixed(3) + ' mm';
+      factorResult.textContent = preload.toFixed(3) + ' (' + (preload * 100).toFixed(1) + '%)';
+
+      if (Math.abs(preload) < 0.0005) {
+        stateResult.textContent = 'Zero preload: assembled clearance equals pad clearance.';
+      } else if (preload > 0) {
+        stateResult.textContent = 'Positive preload: assembled clearance is smaller than pad clearance.';
+      } else {
+        stateResult.textContent = 'Negative preload: assembled clearance is larger than pad clearance; engineering review is required.';
+      }
+    }
+
+    calculator.addEventListener('input', updatePreload);
+    calculator.addEventListener('submit', function (event) { event.preventDefault(); });
+  });
+</script>
