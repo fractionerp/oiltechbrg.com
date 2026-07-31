@@ -1,174 +1,105 @@
 ---
 layout: page
-title: "Failure Modes of Whitemetal (Babbitt) Bearings"
-description: "Common failure modes of whitemetal bearings — fatigue, oil starvation, contamination, misalignment and electrical discharge. Root cause analysis and diagnosis."
-keywords: "bearing failure modes, whitemetal failure, babbitt bearing failure, fatigue failure, oil starvation, bearing wipe, electrical discharge, bearing contamination"
+title: "Whitemetal Bearing Failure Analysis Guide"
+description: "Compare common whitemetal and Babbitt bearing failure modes, recognise visible damage patterns and access dedicated diagnosis and corrective-action guides."
+keywords: "bearing failure analysis, bearing failure modes, whitemetal bearing failure, white metal bearing damage, babbitt bearing failure, bearing root cause analysis"
 redirect_from:
   - /bearing-failure-modes.php
+last_modified_at: 2026-07-31
 ---
 
-<!-- ======= Page Hero ======= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Whitemetal Bearing Failure Analysis Guide",
+  "description": {{ page.description | jsonify }},
+  "url": "{{ page.url | absolute_url }}",
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "hasPart": [
+    {% for mode in site.data.failure_modes %}{
+      "@type": "TechArticle",
+      "name": {{ mode.title | jsonify }},
+      "url": "{{ mode.url | absolute_url }}"
+    }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+</script>
+
 <section id="hero" class="page-hero">
-  <img src="{{ '/assets/img/slide/repair.jpeg' | relative_url }}" class="hero-bg" alt="Bearing Failure Modes">
+  <img src="{{ '/assets/img/slide/repair.jpeg' | relative_url }}" class="hero-bg" alt="Whitemetal bearing undergoing failure inspection">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <h1>Failure Modes of Whitemetal (Babbitt) Bearings</h1>
-    <p>Understanding how and why bearings fail is key to preventing recurrence and protecting critical rotating equipment.</p>
+    <h1>Whitemetal Bearing Failure Analysis</h1>
+    <p>Compare common damage patterns, investigate the operating conditions behind them and move from visible evidence to root cause.</p>
     <div class="hero-ctas">
-      <a href="{{ '/contact' | relative_url }}" class="btn-hero-primary">Request Failure Analysis</a>
-      <a href="{{ '/contact' | relative_url }}" class="btn-hero-secondary">Speak to an Engineer</a>
+      <a href="#failure-guides" class="btn-hero-primary">Compare Failure Modes</a>
+      <a href="{{ '/contact' | relative_url }}" class="btn-hero-secondary">Request Failure Analysis</a>
     </div>
   </div>
-</section><!-- End Page Hero -->
+</section>
 
-<!-- ======= Overview ======= -->
 <section class="positioning">
   <div class="container">
     <div class="text-center">
-      <p>Root cause analysis of rotating machinery after an unscheduled shutdown or outage can be vital to ensure corrective action is taken to prevent further problems.</p>
-      <p style="margin-top: 15px;">Bearings are designed as a sacrificial component — the manner in which they fail can help understand system or machinery problems. Oiltech can provide insightful analysis based on bearing condition, usually just from photographs of the damage.</p>
+      <h2>Damage Is Evidence, Not the Complete Diagnosis</h2>
+      <p>Whitemetal bearings are often the first components to record a lubrication, alignment, loading or electrical problem. The visible pattern can narrow the investigation, but several mechanisms may act together. Reliable diagnosis combines bearing inspection with operating history, oil-system data, vibration, shaft condition and machine geometry.</p>
     </div>
   </div>
-</section><!-- End Overview -->
+</section>
 
-<!-- ======= Failure Modes ======= -->
-<section class="info-rows">
+<section id="failure-guides" class="services section-bg library-guides">
   <div class="container">
     <div class="section-title">
-      <h3><span>Common Failure Modes</span></h3>
+      <h2>Damage Index</h2>
+      <h3><span>Common Bearing Failure Modes</span></h3>
+      <p>Select the closest visible pattern for signs, contributing factors, inspection steps and corrective actions.</p>
     </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/fatigue.jpg' | relative_url }}" class="img-fluid" alt="bearing fatigue failure" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Fatigue</h3>
-          <p>Whitemetal alloy has a very low fatigue strength. When subject to varying loads — normally the vibration of the rotor — cracks will start to appear in the whitemetal layer. These cracks propagate through the material until they reach the interface with the backing material. Close to the boundary layer, these cracks turn through 90 degrees and traverse along the interface until they meet another crack, at which point entire pieces of whitemetal can be ejected from the bearing lining.</p>
-        </div>
+    <div class="row g-4">
+      {% for mode in site.data.failure_modes %}
+      <div class="col-lg-4 col-md-6">
+        <a class="library-guide-card" href="{{ mode.url | relative_url }}">
+          <img src="{{ mode.image | relative_url }}" alt="{{ mode.alt }}" loading="lazy" width="640" height="420">
+          <div class="library-guide-content">
+            <h2>{{ mode.title }}</h2>
+            <p>{{ mode.summary }}</p>
+            <span>Open diagnosis guide <i class="ri-arrow-right-line"></i></span>
+          </div>
+        </a>
       </div>
-    </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/oil-starvation.JPG' | relative_url }}" class="img-fluid" alt="oil starvation failure" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Oil Starvation</h3>
-          <p>Hydrodynamic bearings require oil films to operate. If there is a reduction or stop in the supply of fresh, cool oil, the oil film will reduce or collapse. The result is metal-to-metal contact causing a wipe, overheat and melting of the whitemetal. The severity of damage depends on having thermal sensors installed to trip the machine and how long it takes the machine to stop.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/black-scab.jpg' | relative_url }}" class="img-fluid" alt="wire wool black scab failure" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Wire Wool / Black Scab</h3>
-          <p>This failure mode is caused by hard particles between the bearing and rotor — typically from nearby grinding work where part of the grinding disc or metal enters the bearing during overhaul. Once inside the bearing, the hard particle embeds into the whitemetal but can leave a protrusion that acts like a cutting tool, slowly machining the shaft. The swarf produced is known as wire wool.</p>
-          <p style="margin-top: 10px;">Black scab is essentially the same problem but normally results from high chromium content steels in the rotor or particles from HVOF coatings after restoration work.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/contamination.png' | relative_url }}" class="img-fluid" alt="contamination scoring" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Contamination / Scoring</h3>
-          <p>If contamination of dirt and hard particles enters the bearing oil film, they can score the bearing surface. Ideally they are pushed into the soft whitemetal alloy, but often do damage before finding a steady position. This leaves score marks on the bearing and if there are sufficient contaminants, the performance of the oil film is affected.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/misalignment.png' | relative_url }}" class="img-fluid" alt="misalignment failure" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Misalignment</h3>
-          <p>The oil film between a bearing and shaft is typically 25 to 75 microns thick. Adequate alignment is essential to ensure a consistent oil film. When misalignment occurs, part of the bearing — usually at one end — will run hotter than the rest and the hydrodynamic pressure will be much higher. This causes localised overloading and overheating which can result in material creep and ultimately failure.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <div class="row align-items-center">
-        <div class="col-lg-4 col-md-5 mb-3 mb-md-0">
-          <img src="{{ '/assets/img/failures/electrical-discharge.jpeg' | relative_url }}" class="img-fluid" alt="electrical discharge failure" loading="lazy">
-        </div>
-        <div class="col-lg-8 col-md-7">
-          <h3>Electrical Discharge</h3>
-          <p>Rotating machines can contain residual magnetic fields. During rotation, electrical fields are generated and the electrical potential will discharge through the easiest path — typically the bearings if the machine does not have sufficient grounding strips. Small sparks damage the whitemetal alloy through a process similar to electric discharge machining. The result can be extensive damage to the bearing lining.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
-</section><!-- End Failure Modes -->
+</section>
 
-<!-- ======= Prevention ======= -->
-<section class="cta">
-  <div class="container">
-    <div class="text-center">
-      <h3>Turning Failure Into Prevention</h3>
-      <p>Understanding failure is key to preventing recurrence.</p>
-      <p>Every failure analysis provides an opportunity to improve bearing design, material selection and operating conditions — reducing risk and improving long-term reliability.</p>
-    </div>
-  </div>
-</section><!-- End Prevention -->
-
-<!-- ======= Related Services ======= -->
-<section class="industries-home">
+<section class="services">
   <div class="container">
     <div class="section-title">
-      <h3><span>Related Services</span></h3>
+      <h2>Investigation Method</h2>
+      <h3><span>Confirm the Root Cause</span></h3>
     </div>
-    <div class="row justify-content-center g-4">
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ '/whitemetal-bearing-repair' | relative_url }}" style="text-decoration: none;">
-          <div class="industry-card">
-            <div class="icon"><i class="ri-tools-fill"></i></div>
-            <h4>Bearing Repair &amp; Recovery</h4>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ '/technical-services' | relative_url }}" style="text-decoration: none;">
-          <div class="industry-card">
-            <div class="icon"><i class="ri-search-eye-line"></i></div>
-            <h4>Technical Services &amp; Engineering</h4>
-          </div>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6">
-        <a href="{{ '/whitemetal-alloys' | relative_url }}" style="text-decoration: none;">
-          <div class="industry-card">
-            <div class="icon"><i class="ri-flask-line"></i></div>
-            <h4>Whitemetal Alloys</h4>
-          </div>
-        </a>
-      </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><div class="support-box investigation-step"><div class="icon"><i class="ri-camera-line"></i></div><h2>1. Preserve the Evidence</h2><p>Record bearing position, orientation, damage distribution and mating-surface condition before cleaning or repair. Retain oil, filter and debris samples where useful.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="support-box investigation-step"><div class="icon"><i class="ri-line-chart-line"></i></div><h2>2. Review Machine Data</h2><p>Correlate the pattern with load, speed, temperature, pressure, flow, vibration, alarms, trips and recent maintenance or process changes.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="support-box investigation-step"><div class="icon"><i class="ri-ruler-2-line"></i></div><h2>3. Test the Mechanism</h2><p>Inspect clearances, alignment, shaft geometry, lubrication paths, material and bond condition to confirm or eliminate each credible failure mechanism.</p></div></div>
     </div>
   </div>
-</section><!-- End Related Services -->
+</section>
 
-<!-- ======= Final CTA ======= -->
+<section class="planned-failure-guides section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Library Roadmap</h2><h3><span>Further Failure Guides in Development</span></h3></div>
+    <div class="row g-3 justify-content-center">
+      {% assign planned_failures = "Cavitation erosion|Corrosion and hydrogen sulphide attack|Lacquering and oil varnish|Lining extrusion, creep and cracking|Pivot wear and pivot fatigue|Bore distortion and uneven wear" | split: "|" %}
+      {% for topic in planned_failures %}<div class="col-lg-4 col-md-6"><div class="library-topic"><i class="ri-draft-line"></i><span>{{ topic }}</span><small>Planned</small></div></div>{% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="final-cta">
-  <div class="container">
-    <div class="text-center">
-      <h3>Experienced a Bearing Failure?</h3>
-      <p>Send us photographs or details and our team can provide an initial assessment and recommendations.</p>
-      <div class="cta-buttons">
-        <a href="{{ '/contact' | relative_url }}" class="cta-btn">Request Failure Analysis</a>
-        <a href="{{ '/contact' | relative_url }}" class="cta-btn cta-btn-outline">Contact Engineering Team</a>
-      </div>
-    </div>
-  </div>
-</section><!-- End Final CTA -->
+  <div class="container"><div class="text-center">
+    <h3>Experienced a Bearing Failure?</h3>
+    <p>Send photographs, operating data and failure history for an initial assessment and recommended next steps.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Request Failure Analysis</a><a href="{{ '/technical-library' | relative_url }}" class="cta-btn cta-btn-outline">Technical Library</a></div>
+  </div></div>
+</section>

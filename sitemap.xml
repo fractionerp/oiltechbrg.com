@@ -25,6 +25,12 @@ sitemap: false
 {%- elsif url contains "oem-bearing-supply" -%}
   {%- assign priority = "0.8" -%}
   {%- assign changefreq = "monthly" -%}
+{%- elsif url == "/technical-library/" -%}
+  {%- assign priority = "0.9" -%}
+  {%- assign changefreq = "monthly" -%}
+{%- elsif url contains "/technical-library/" -%}
+  {%- assign priority = "0.8" -%}
+  {%- assign changefreq = "monthly" -%}
 {%- elsif url contains "journal-bearings" or url contains "thrust-bearings" or url contains "product-ranges" or url contains "whitemetal-alloys" -%}
   {%- assign priority = "0.9" -%}
   {%- assign changefreq = "monthly" -%}

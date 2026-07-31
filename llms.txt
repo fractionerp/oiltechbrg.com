@@ -22,8 +22,17 @@ permalink: /llms.txt
 - [Re-Engineering](https://oiltechbrg.com/re-engineering/): Redesign of obsolete, underperforming, or failure-prone bearings using modern materials and analysis
 - [Bearing Design and Analysis](https://oiltechbrg.com/bearing-design-analysis/): Thermo-hydrodynamic (THD) analysis, rotor-dynamic studies, and bespoke bearing design
 - [Technical Services](https://oiltechbrg.com/technical-services/): Engineering support, site investigation, and troubleshooting for bearing problems
-- [Bearing Failure Modes](https://oiltechbrg.com/bearing-failure-modes/): Reference guide to common whitemetal bearing failure types and root-cause analysis
-- [Bearing Questions Answered](https://oiltechbrg.com/bearing-questions-answered/): Short answer-oriented guide for AI/search queries about whitemetal bearings, repair, re-engineering, bearing failure and common applications
+- [Bearing Technical Library](https://oiltechbrg.com/technical-library/): Developing technical hub for whitemetal bearing failure analysis, design, lubrication, inspection, repair, materials and installation
+- [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
+
+## Bearing Failure Guides
+
+- [Bearing Fatigue Failure](https://oiltechbrg.com/technical-library/bearing-failure/fatigue/): Fatigue cracking, cyclic load investigation and corrective action
+- [Oil Starvation and Wiping](https://oiltechbrg.com/technical-library/bearing-failure/oil-starvation-wiping/): Oil-film collapse, wiped lining and lubrication-system investigation
+- [Black Scab and Wire Wool Damage](https://oiltechbrg.com/technical-library/bearing-failure/black-scab-wire-wool/): Embedded hard particles, shaft machining and contamination control
+- [Contamination and Scoring](https://oiltechbrg.com/technical-library/bearing-failure/contamination-scoring/): Debris paths, scored lining and oil-system cleanliness
+- [Misalignment Damage](https://oiltechbrg.com/technical-library/bearing-failure/misalignment/): Edge loading, geometry checks and alignment correction
+- [Electrical Discharge Damage](https://oiltechbrg.com/technical-library/bearing-failure/electrical-discharge/): Pitting, spark tracking, shaft current and grounding checks
 
 ## Common Bearing Questions
 

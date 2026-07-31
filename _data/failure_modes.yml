@@ -1,0 +1,35 @@
+- title: Fatigue
+  url: /technical-library/bearing-failure/fatigue
+  image: /assets/img/failures/fatigue.webp
+  alt: Fatigue cracking and material loss in a whitemetal bearing lining
+  summary: Cyclic loading, vibration and high temperature can initiate cracks and lead to lining pullout.
+
+- title: Oil Starvation & Wiping
+  url: /technical-library/bearing-failure/oil-starvation-wiping
+  image: /assets/img/failures/oil-starvation.webp
+  alt: Wiped whitemetal bearing caused by oil starvation
+  summary: Interrupted or inadequate lubrication can collapse the oil film, causing rubbing, smearing and melting.
+
+- title: Wire Wool & Black Scab
+  url: /technical-library/bearing-failure/black-scab-wire-wool
+  image: /assets/img/failures/black-scab.webp
+  alt: Black scab and wire wool damage on a whitemetal bearing
+  summary: Embedded hard particles can machine the shaft and generate wire-like metallic debris.
+
+- title: Contamination & Scoring
+  url: /technical-library/bearing-failure/contamination-scoring
+  image: /assets/img/failures/contamination.webp
+  alt: Contamination scoring across a whitemetal bearing surface
+  summary: Dirt or metallic debris in the lubricant can score the lining and damage the mating surface.
+
+- title: Misalignment
+  url: /technical-library/bearing-failure/misalignment
+  image: /assets/img/failures/misalignment.webp
+  alt: Uneven whitemetal bearing damage caused by misalignment
+  summary: Geometric or operational misalignment concentrates load and temperature at an edge or end of the bearing.
+
+- title: Electrical Discharge
+  url: /technical-library/bearing-failure/electrical-discharge
+  image: /assets/img/failures/electrical-discharge.webp
+  alt: Electrical discharge pitting in a whitemetal bearing lining
+  summary: Stray current or shaft magnetism can produce pitting, frosting or spark tracks across the bearing surface.

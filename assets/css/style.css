@@ -896,6 +896,249 @@ section {
       height: 180px; }
     .info-rows .info-item h3 {
       font-size: 20px; } }
+
+/*--------------------------------------------------------------
+# Bearing Technical Library
+--------------------------------------------------------------*/
+.library-development {
+  display: flex;
+  gap: 22px;
+  align-items: flex-start;
+  padding: 24px 28px;
+  background: #eaf3fa;
+  border-left: 4px solid #428bca; }
+  .library-development .library-status {
+    flex: 0 0 auto;
+    margin-top: 2px;
+    padding: 5px 9px;
+    border-radius: 3px;
+    background: #1d5f91;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .library-development h2 {
+    margin: 0 0 7px;
+    color: #272c30;
+    font-size: 20px;
+    font-weight: 700; }
+  .library-development p {
+    margin: 0;
+    color: #2f4d63;
+    font-size: 15px;
+    line-height: 1.6; }
+
+.positioning h2 {
+  margin: 0 auto 14px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700; }
+.positioning .library-development h2 {
+  color: #272c30; }
+
+.library-guides {
+  padding: 70px 0; }
+.library-guide-card {
+  display: block;
+  height: 100%;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+  .library-guide-card:hover {
+    color: inherit;
+    border-color: #428bca;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px); }
+  .library-guide-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover; }
+  .library-guide-card .library-guide-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 210px;
+    padding: 22px; }
+  .library-guide-card h2 {
+    margin: 0 0 9px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .library-guide-card p {
+    margin: 0;
+    color: #626b73;
+    font-size: 14px;
+    line-height: 1.6; }
+  .library-guide-card span {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #1d6fa8;
+    font-size: 13px;
+    font-weight: 700; }
+  .library-guide-card span i {
+    margin-left: 3px;
+    vertical-align: -1px; }
+
+.library-button {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 4px;
+  background: #428bca;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700; }
+  .library-button:hover {
+    background: #2d75b2;
+    color: #fff; }
+
+.library-topic {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  height: 100%;
+  min-height: 64px;
+  padding: 14px 16px;
+  background: #fff;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px; }
+  .library-topic > i {
+    flex: 0 0 auto;
+    color: #428bca;
+    font-size: 21px; }
+  .library-topic > span {
+    flex: 1 1 auto;
+    color: #394047;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4; }
+  .library-topic > small,
+  .library-topic-group li small {
+    flex: 0 0 auto;
+    padding: 4px 8px;
+    border-radius: 3px;
+    background: #edf1f4;
+    color: #58636c;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase; }
+
+.library-topic-group,
+.investigation-step {
+  height: 100%;
+  padding: 26px;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px;
+  background: #fff; }
+  .library-topic-group .icon,
+  .investigation-step .icon {
+    margin-bottom: 14px;
+    color: #428bca;
+    font-size: 28px; }
+  .library-topic-group h2,
+  .investigation-step h2 {
+    margin: 0 0 14px;
+    color: #272c30;
+    font-size: 20px;
+    font-weight: 700; }
+  .library-topic-group ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .library-topic-group li {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #e6eaed;
+    color: #58636c;
+    font-size: 14px;
+    line-height: 1.5; }
+  .library-topic-group li:last-child {
+    border-bottom: 0; }
+  .library-topic-group li small {
+    margin-top: 1px;
+    font-size: 9px; }
+  .investigation-step p {
+    margin: 0;
+    color: #58636c;
+    font-size: 14px;
+    line-height: 1.65; }
+
+.planned-failure-guides {
+  padding: 70px 0; }
+
+.failure-guide-section h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #272c30;
+  margin-bottom: 14px; }
+.failure-guide-list h2 i {
+  margin-right: 7px;
+  color: #428bca; }
+.failure-guide-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+.failure-guide-list li {
+  position: relative;
+  padding: 8px 0 8px 24px;
+  color: #505a62;
+  font-size: 15px;
+  line-height: 1.55;
+  border-bottom: 1px solid #e2e7eb; }
+  .failure-guide-list li::before {
+    content: '\2713';
+    position: absolute;
+    left: 0;
+    color: #428bca;
+    font-weight: 700; }
+
+.failure-guide-note {
+  padding: 55px 0; }
+.failure-guide-advisory {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 25px 28px;
+  border-left: 4px solid #428bca;
+  background: #f3f7fa; }
+  .failure-guide-advisory > i {
+    color: #428bca;
+    font-size: 27px;
+    line-height: 1; }
+  .failure-guide-advisory h2 {
+    margin: 0 0 7px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .failure-guide-advisory p {
+    margin: 0;
+    color: #58636c;
+    font-size: 14px;
+    line-height: 1.65; }
+
+.library-related-link {
+  display: block;
+  height: 100%; }
+
+@media (max-width: 767px) {
+  .library-development {
+    display: block;
+    padding: 22px 20px; }
+  .library-development .library-status {
+    display: inline-block;
+    margin: 0 0 14px; }
+  .library-topic > small {
+    font-size: 9px; }
+  .failure-guide-advisory {
+    padding: 22px 20px; }
+  .library-guide-card .library-guide-content {
+    padding: 18px; } }
   .info-rows .table-responsive {
     margin: 0 auto;
     max-width: 900px; }

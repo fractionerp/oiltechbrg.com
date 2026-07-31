@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": {{ page.title | jsonify }},
+    "description": {{ page.description | jsonify }},
+    "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+    "image": "{{ page.image | absolute_url }}",
+    "author": {
+      "@id": "{{ '/' | absolute_url }}#organization"
+    },
+    "publisher": {
+      "@id": "{{ '/' | absolute_url }}#organization"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    },
+    "about": [
+      "whitemetal bearing failure",
+      "white metal bearing damage",
+      {{ page.failure_name | jsonify }}
+    ]
+  }
+  </script>
+
+  <section id="hero" class="page-hero">
+    <img src="{{ page.image | relative_url }}" class="hero-bg" alt="{{ page.image_alt }}">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>{{ page.heading }}</h1>
+      <p>{{ page.hero_text }}</p>
+      <div class="hero-ctas">
+        <a href="{{ '/contact' | relative_url }}" class="btn-hero-primary">Request Failure Analysis</a>
+        <a href="{{ '/bearing-failure-modes' | relative_url }}" class="btn-hero-secondary">All Failure Guides</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="positioning">
+      <div class="container">
+        <div class="text-center">
+          <p>{{ page.intro }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="who-we-support failure-guide-section">
+      <div class="container">
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-5 col-md-6">
+            <div class="support-box">
+              <div class="icon"><i class="ri-search-eye-line"></i></div>
+              <h2>What the Damage Looks Like</h2>
+              <ul>
+                {% for item in page.signs %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <div class="support-box">
+              <div class="icon"><i class="ri-error-warning-line"></i></div>
+              <h2>Likely Contributing Factors</h2>
+              <ul>
+                {% for item in page.causes %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-bg failure-guide-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Diagnosis and Response</h2>
+          <h3><span>Move From Damage to Root Cause</span></h3>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-5">
+            <div class="failure-guide-list">
+              <h2><i class="ri-clipboard-line"></i> What to Inspect</h2>
+              <ul>
+                {% for item in page.inspection %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="failure-guide-list">
+              <h2><i class="ri-tools-line"></i> Corrective Actions to Consider</h2>
+              <ul>
+                {% for item in page.actions %}<li>{{ item }}</li>{% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta2">
+      <div class="container">
+        <div class="text-center">
+          <h3>Repair or Replace?</h3>
+          <p>{{ page.repair }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="failure-guide-note">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="failure-guide-advisory">
+              <i class="ri-information-line"></i>
+              <div>
+                <h2>Diagnosis Note</h2>
+                <p>{{ page.diagnosis_note }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries-home">
+      <div class="container">
+        <div class="section-title">
+          <h3><span>Continue in the Technical Library</span></h3>
+        </div>
+        <div class="row justify-content-center g-4">
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ '/bearing-failure-modes' | relative_url }}" class="library-related-link">
+              <div class="industry-card">
+                <div class="icon"><i class="ri-file-list-3-line"></i></div>
+                <h4>All Failure Modes</h4>
+                <p>Compare common whitemetal bearing damage patterns.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ '/technical-library' | relative_url }}" class="library-related-link">
+              <div class="industry-card">
+                <div class="icon"><i class="ri-book-open-line"></i></div>
+                <h4>Bearing Technical Library</h4>
+                <p>Browse failure analysis and developing technical guides.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <a href="{{ '/whitemetal-bearing-repair' | relative_url }}" class="library-related-link">
+              <div class="industry-card">
+                <div class="icon"><i class="ri-tools-fill"></i></div>
+                <h4>Bearing Repair</h4>
+                <p>Inspection, re-lining and engineered recovery services.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="text-center">
+          <h3>Need an Engineering Assessment?</h3>
+          <p>Send photographs, operating data and failure history for an initial review by Oiltech Bearings.</p>
+          <div class="cta-buttons">
+            <a href="{{ '/contact' | relative_url }}" class="cta-btn">Request Failure Analysis</a>
+            <a href="{{ '/technical-library' | relative_url }}" class="cta-btn cta-btn-outline">Technical Library</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+</body>
+</html>

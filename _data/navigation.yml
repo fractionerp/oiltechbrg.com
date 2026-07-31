@@ -30,10 +30,10 @@ main:
         url: /bearing-design-analysis
       - title: FEA
         url: /technical-services
-      - title: Failure Analysis
+      - title: Technical Library
+        url: /technical-library
+      - title: Bearing Failure Analysis
         url: /bearing-failure-modes
-      - title: Bearing Questions Answered
-        url: /bearing-questions-answered
   - title: Regions
     url: /oem-bearing-supply-usa
     dropdown:
