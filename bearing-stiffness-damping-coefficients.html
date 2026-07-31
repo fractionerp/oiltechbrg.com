@@ -1,0 +1,265 @@
+---
+layout: page
+title: "Bearing Stiffness and Damping Coefficients Explained"
+description: "A practical guide to journal bearing stiffness and damping coefficients, including Kxx, Kyy, cross-coupled terms, units, matrix notation, frequency dependence and rotordynamic interpretation."
+keywords: "bearing stiffness coefficients, bearing damping coefficients, journal bearing Kxx Kyy, rotordynamic coefficients, cross coupled stiffness, oil film stiffness, tilting pad bearing damping"
+permalink: /technical-library/bearing-stiffness-damping-coefficients/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/tilt-pad-steam-turbine.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "journal bearing stiffness coefficients",
+    "bearing damping coefficients",
+    "rotordynamic force coefficients",
+    "cross-coupled stiffness",
+    "tilting-pad journal bearings"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is a journal bearing stiffness coefficient?", "acceptedAnswer": { "@type": "Answer", "text": "A bearing stiffness coefficient is the local change in oil-film reaction force associated with a small shaft displacement about a specified operating equilibrium. It is an operating-point-dependent dynamic property, not the stiffness of the bearing material alone." } },
+    { "@type": "Question", "name": "What is a bearing damping coefficient?", "acceptedAnswer": { "@type": "Answer", "text": "A bearing damping coefficient relates incremental oil-film reaction force to small relative shaft velocity about an operating point. Direct damping terms oppose motion in the same axis; cross-coupled terms connect motion and force in different axes." } },
+    { "@type": "Question", "name": "What do Kxx and Kyy mean?", "acceptedAnswer": { "@type": "Answer", "text": "Kxx is the x-direction reaction-force coefficient caused by x displacement, while Kyy is the y-direction reaction-force coefficient caused by y displacement. They are direct stiffness terms and may differ because bearing loading and geometry are not necessarily symmetric." } },
+    { "@type": "Question", "name": "What are cross-coupled bearing coefficients?", "acceptedAnswer": { "@type": "Answer", "text": "Off-diagonal terms such as Kxy and Kyx describe force generated in one axis by motion in the other. Their magnitude and sign influence orbit shape and rotor stability and must be interpreted using the stated coordinate and force convention." } },
+    { "@type": "Question", "name": "Are bearing stiffness and damping coefficients constant?", "acceptedAnswer": { "@type": "Answer", "text": "No. They depend on speed, load, shaft position, oil viscosity and temperature, clearance, preload, geometry, lubrication, structural flexibility and the perturbation or reduction method. Some models also represent frequency dependence with an added-mass matrix." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/tilt-pad-steam-turbine.webp' | relative_url }}" class="hero-bg" alt="Tilting-pad steam turbine journal bearing used for rotordynamic stiffness and damping analysis">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Bearing Stiffness and Damping Coefficients</h1>
+    <p>How oil-film reaction forces are linearised for critical-speed, unbalance-response and rotor-stability analysis.</p>
+    <div class="hero-ctas">
+      <a href="#force-model" class="btn-hero-primary">Read the Force Model</a>
+      <a href="#coefficient-map" class="btn-hero-secondary">Interpret the Terms</a>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>Coefficients Describe the Oil Film Around One Operating Point</h2>
+        <p>A journal bearing does not behave like a simple steel spring and dashpot. Its hydrodynamic reaction force changes with shaft position, velocity, speed, load, lubricant condition and bearing geometry. Stiffness and damping coefficients are a local linear model of those force changes for small shaft motions about a calculated equilibrium.</p>
+        <div><i class="ri-focus-3-line"></i><span>A coefficient value is incomplete unless its operating point, axes, units, force sign, temperature condition and frequency or reduction method are also stated.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="force-model" class="coeff-force-model">
+  <div class="container">
+    <div class="section-title">
+      <h2>Linearised Force Model</h2>
+      <h3><span>From Shaft Motion to Bearing Reaction Force</span></h3>
+      <p>For small perturbations, a common convention writes the bearing reaction as the negative sum of stiffness, damping and added-mass contributions.</p>
+    </div>
+    <div class="coeff-equation" aria-label="Bearing force equals negative stiffness matrix times displacement minus damping matrix times velocity minus mass matrix times acceleration">
+      <strong>F<sub>b</sub></strong><span>=</span><strong>&minus; ( K q + C q&#775; + M q&#776; )</strong>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div class="coeff-matrices">
+          <div class="coeff-matrix-block">
+            <span>Stiffness [K]</span>
+            <div class="coeff-matrix"><strong>K<sub>xx</sub></strong><strong>K<sub>xy</sub></strong><strong>K<sub>yx</sub></strong><strong>K<sub>yy</sub></strong></div>
+            <small>Force per displacement</small>
+          </div>
+          <div class="coeff-matrix-block">
+            <span>Damping [C]</span>
+            <div class="coeff-matrix"><strong>C<sub>xx</sub></strong><strong>C<sub>xy</sub></strong><strong>C<sub>yx</sub></strong><strong>C<sub>yy</sub></strong></div>
+            <small>Force per velocity</small>
+          </div>
+          <div class="coeff-matrix-block">
+            <span>Added mass [M]</span>
+            <div class="coeff-matrix"><strong>M<sub>xx</sub></strong><strong>M<sub>xy</sub></strong><strong>M<sub>yx</sub></strong><strong>M<sub>yy</sub></strong></div>
+            <small>Force per acceleration</small>
+          </div>
+        </div>
+        <div class="coeff-sign-note"><i class="ri-alert-line"></i><p>Some software reports applied excitation force rather than bearing reaction force, reverses an axis or uses a different harmonic convention. The numeric signs can therefore differ even when the physical bearing is identical.</p></div>
+      </div>
+      <div class="col-lg-5">
+        <div class="coeff-axis-diagram" role="img" aria-label="Journal bearing axes showing x as the non-load direction, y as the load direction and a small shaft orbit around equilibrium">
+          <div class="coeff-bearing-ring"></div>
+          <div class="coeff-orbit"></div>
+          <div class="coeff-journal"></div>
+          <div class="coeff-axis-x"><span>x</span></div>
+          <div class="coeff-axis-y"><span>y</span></div>
+          <div class="coeff-load-arrow"><span>Load</span></div>
+        </div>
+        <p class="coeff-axis-note">A common horizontal-machine convention uses x as the non-load axis and y as the load axis. Always verify the model definition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="coefficient-map" class="coeff-map section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Coefficient Map</h2><h3><span>How to Read the Subscripts</span></h3><p>The first subscript identifies the force direction. The second identifies the motion causing that force.</p></div>
+    <div class="coeff-map-grid">
+      <article><span>Direct stiffness</span><h2>K<sub>xx</sub></h2><p>x-direction reaction force caused by x displacement.</p></article>
+      <article><span>Cross-coupled stiffness</span><h2>K<sub>xy</sub></h2><p>x-direction reaction force caused by y displacement.</p></article>
+      <article><span>Cross-coupled stiffness</span><h2>K<sub>yx</sub></h2><p>y-direction reaction force caused by x displacement.</p></article>
+      <article><span>Direct stiffness</span><h2>K<sub>yy</sub></h2><p>y-direction reaction force caused by y displacement.</p></article>
+      <article><span>Direct damping</span><h2>C<sub>xx</sub></h2><p>x-direction reaction force caused by x velocity.</p></article>
+      <article><span>Cross-coupled damping</span><h2>C<sub>xy</sub></h2><p>x-direction reaction force caused by y velocity.</p></article>
+      <article><span>Cross-coupled damping</span><h2>C<sub>yx</sub></h2><p>y-direction reaction force caused by x velocity.</p></article>
+      <article><span>Direct damping</span><h2>C<sub>yy</sub></h2><p>y-direction reaction force caused by y velocity.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-roles">
+  <div class="container">
+    <div class="section-title"><h2>Physical Roles</h2><h3><span>Stiffness, Damping and Cross-Coupling Are Not Interchangeable</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4"><div class="coeff-role stiffness"><i class="ri-contract-left-right-line"></i><h2>Direct Stiffness</h2><p>Controls how strongly the oil film reacts to displacement in the same axis. It influences bearing-supported natural frequencies, critical speeds, static orientation and mode shapes. Different K<sub>xx</sub> and K<sub>yy</sub> values indicate directional stiffness or orthotropy.</p></div></div>
+      <div class="col-lg-4"><div class="coeff-role damping"><i class="ri-pulse-line"></i><h2>Direct Damping</h2><p>Relates reaction force to velocity in the same axis. It influences resonance amplification and how rapidly vibration energy is removed. A larger C value does not automatically mean more effective system damping because mode shape and stiffness also matter.</p></div></div>
+      <div class="col-lg-4"><div class="coeff-role coupling"><i class="ri-arrow-left-right-line"></i><h2>Cross-Coupled Terms</h2><p>Connect motion in one axis with force in the other. Their signs and relative magnitudes can add or remove energy from a forward whirl. Tilting-pad bearings commonly reduce destabilising stiffness cross-coupling, but it must not be assumed to be exactly zero.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-units section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Units and Terminology</h2><h3><span>Keep Dimensional and Normalised Data Separate</span></h3></div>
+    <div class="table-responsive">
+      <table class="table coeff-table">
+        <thead><tr><th>Quantity</th><th>Common SI unit</th><th>Common scaled form</th><th>Meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Stiffness K</td><td><strong>N/m</strong></td><td>MN/m</td><td>Incremental reaction force per unit displacement.</td></tr>
+          <tr><td>Damping C</td><td><strong>N&middot;s/m</strong></td><td>kN&middot;s/m</td><td>Incremental reaction force per unit relative velocity.</td></tr>
+          <tr><td>Added or virtual mass M</td><td><strong>kg</strong></td><td>kg</td><td>Incremental reaction force per unit relative acceleration.</td></tr>
+          <tr><td>Dynamic stiffness / impedance</td><td><strong>N/m</strong></td><td>MN/m, complex</td><td>Frequency-domain force-to-displacement relation combining K, C and M.</td></tr>
+          <tr><td>Dimensionless coefficients</td><td><strong>No universal unit</strong></td><td>Normalised</td><td>Scaled by a stated load, clearance, speed or geometry convention. The normalisation definition is essential.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="coeff-impedance">
+      <strong>Z(&omega;) = K &minus; &omega;<sup>2</sup>M + i&omega;C</strong>
+      <p>One common harmonic convention for dynamic stiffness. The sign of the imaginary term changes if the assumed time dependence changes, so the convention must accompany complex data.</p>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-conditions">
+  <div class="container">
+    <div class="section-title"><h2>Operating Conditions</h2><h3><span>Why the Coefficients Change</span></h3><p>A bearing coefficient table is a map of operating points, not a permanent nameplate property.</p></div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-speed-line"></i><h2>Speed and Load</h2><p>Journal speed, load magnitude and load angle determine equilibrium position and hydrodynamic pressure distribution.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-drop-line"></i><h2>Oil and Temperature</h2><p>Viscosity, inlet temperature, hot-oil carryover, flow regime and supply arrangement change film force and damping.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-compasses-2-line"></i><h2>Clearance and Preload</h2><p>Hot assembled clearance, pad curvature and <a href="{{ '/technical-library/journal-bearing-preload-explained' | relative_url }}">journal bearing preload</a> strongly affect stiffness and damping.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-shape-2-line"></i><h2>Pad and Pivot Flexibility</h2><p>Pad bending, pivot contact stiffness and carrier or housing compliance can sit in series with the oil-film stiffness.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-layout-grid-line"></i><h2>Bearing Configuration</h2><p>Pad count, L/D ratio, pivot offset, load-on-pad or load-between-pad orientation and lubrication method all matter.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="coeff-condition"><i class="ri-sound-module-line"></i><h2>Perturbation Frequency</h2><p>Excitation frequency, synchronous reduction and any retained pad degrees of freedom affect the coefficients supplied to the rotor model.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-frequency section-bg">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="section-title text-start"><h2>Frequency Dependence</h2><h3><span>When [K][C] Is Not the Whole Model</span></h3><p>Tilting-pad bearings introduce pad motion, pivot flexibility and fluid inertia. Depending on the formulation, their journal-level coefficients may vary with perturbation frequency.</p></div>
+        <div class="coeff-frequency-note"><i class="ri-information-line"></i><p>Texas A&amp;M and GE testing reviewed by the Turbomachinery Laboratory found that direct real dynamic stiffness could often be represented as a quadratic function of frequency, with direct damping represented as approximately constant, by adding an [M] matrix to form a frequency-independent [K][C][M] model.</p></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="coeff-model-compare">
+          <div><span>Basic model</span><h2>[K] [C]</h2><p>Suitable when the supplied coefficients and analysis method support a frequency-independent stiffness and damping representation.</p></div>
+          <i class="ri-arrow-right-line"></i>
+          <div><span>Extended model</span><h2>[K] [C] [M]</h2><p>Adds virtual or added mass to represent part of the measured frequency dependence without changing K and C at every frequency.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-data">
+  <div class="container">
+    <div class="section-title"><h2>Minimum Data Set</h2><h3><span>What Must Accompany the Coefficient Matrix</span></h3></div>
+    <div class="coeff-data-grid">
+      <div><span>01</span><p>Shaft speed, static bearing load and load angle</p></div>
+      <div><span>02</span><p>x/y axis orientation and load-on-pad or load-between-pad arrangement</p></div>
+      <div><span>03</span><p>Dimensional units and any coefficient normalisation</p></div>
+      <div><span>04</span><p>Reaction-force sign and matrix subscript convention</p></div>
+      <div><span>05</span><p>Oil grade or viscosity, inlet temperature and lubrication condition</p></div>
+      <div><span>06</span><p>Hot clearance, preload and equilibrium shaft position</p></div>
+      <div><span>07</span><p>Perturbation frequency, synchronous reduction or [K][C][M] formulation</p></div>
+      <div><span>08</span><p>Thermal, pad, pivot, housing and turbulence assumptions used in the model</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="coeff-workflow section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Engineering Workflow</h2><h3><span>How Coefficients Become a Rotor Model</span></h3></div>
+    <ol>
+      <li><span>1</span><div><h2>Solve Steady State</h2><p>Establish equilibrium position, film thickness, pressure, temperature, flow and pad attitude at each operating point.</p></div></li>
+      <li><span>2</span><div><h2>Perturb the Journal</h2><p>Apply small displacement and velocity perturbations, or a frequency-domain excitation, about that equilibrium.</p></div></li>
+      <li><span>3</span><div><h2>Extract Coefficients</h2><p>Linearise the reaction forces into direct and cross-coupled K, C and, where required, M matrices.</p></div></li>
+      <li><span>4</span><div><h2>Assemble the Rotor</h2><p>Insert bearing matrices at the correct stations and coordinates with shaft, disks, seals, couplings and supports.</p></div></li>
+      <li><span>5</span><div><h2>Assess the System</h2><p>Calculate critical speeds, mode shapes, unbalance response, separation margins and stability over the operating range.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="coeff-mistakes">
+  <div class="container">
+    <div class="section-title"><h2>Common Errors</h2><h3><span>Why Coefficient Comparisons Go Wrong</span></h3></div>
+    <div class="coeff-mistake-grid">
+      <div><i class="ri-close-circle-line"></i><p>Comparing coefficients at different speed, load, oil temperature or clearance.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Swapping K<sub>xy</sub> and K<sub>yx</sub> or rotating axes without transforming the matrix.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Mixing N/m with MN/m, or dimensional values with normalised coefficients.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Assuming a positive damping number guarantees adequate rotor stability.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Using cold geometry when the coefficient model assumes hot operating clearance.</p></div>
+      <div><i class="ri-close-circle-line"></i><p>Ignoring frequency reduction, added mass, pivot stiffness or pad flexibility.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="terminology-faq coeff-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Stiffness and Damping FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Are coefficients material properties?</h2><p>No. They describe the complete operating oil film and bearing structure about one equilibrium point. Lining, pad and pivot materials can influence them, but do not define them alone.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Why are K<sub>xx</sub> and K<sub>yy</sub> different?</h2><p>Load direction, shaft eccentricity, pad orientation and geometry make the bearing directionally asymmetric. This is commonly described as stiffness orthotropy.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is more damping always better?</h2><p>Not as a standalone coefficient. Effective modal damping depends on stiffness, mode shape, cross-coupling and the complete rotor-bearing system.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can one coefficient set cover every speed?</h2><p>Normally no. Coefficients should be calculated across the operating and transient range required by the rotor-dynamic study.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note coeff-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>The force model and coefficient definitions were cross-checked against Texas A&amp;M Turbomachinery Laboratory research on <a href="https://oaktrust.library.tamu.edu/server/api/core/bitstreams/38f988d5-468d-46fa-ba8e-2bd1783d4054/content">tilting-pad bearing force measurements</a>, <a href="https://oaktrust.library.tamu.edu/items/a5eca17c-daf1-43dc-9b08-b7710a45bbb6">measured frequency characteristics</a>, <a href="https://oaktrust.library.tamu.edu/items/30916848-7ce5-424e-bea0-94708ade48b8">pad and pivot flexibility</a> and the tutorial <a href="https://oaktrust.library.tamu.edu/items/67d57c09-9d65-4b3c-81c4-70a2b742e675">Fundamentals of Fluid Film Journal Bearing Operation and Modeling</a>. This guide explains interpretation and does not provide machine-specific coefficients.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need Bearing Coefficients for a Rotor Model?</h3>
+    <p>Send the bearing geometry, shaft data, operating envelope, lubricant conditions and rotor-dynamic requirements for an engineering review.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/bearing-design-analysis' | relative_url }}" class="cta-btn cta-btn-outline">Design and Analysis</a></div>
+  </div></div>
+</section>
