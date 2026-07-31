@@ -1021,6 +1021,60 @@ section {
     margin-left: 4px;
     vertical-align: -1px; }
 
+.library-fundamentals {
+  padding: 70px 0; }
+.library-fundamental-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.2fr);
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit; }
+  .library-fundamental-card:hover {
+    border-color: #428bca;
+    color: inherit; }
+  .library-fundamental-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 255px;
+    object-fit: cover; }
+  .library-fundamental-card > div {
+    display: flex;
+    flex-direction: column;
+    padding: 25px; }
+  .library-fundamental-card span {
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .library-fundamental-card h2 {
+    margin: 5px 0 10px;
+    color: #272c30;
+    font-size: 21px;
+    font-weight: 700; }
+  .library-fundamental-card p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.6; }
+  .library-fundamental-card strong {
+    margin-top: auto;
+    padding-top: 16px;
+    color: #1d6fa8;
+    font-size: 13px; }
+
+@media (max-width: 767px) {
+  .library-fundamental-card {
+    grid-template-columns: 1fr; }
+  .library-fundamental-card img {
+    height: 220px;
+    min-height: 0; }
+  .library-fundamental-card > div {
+    min-height: 245px;
+    padding: 22px; } }
+
 .library-topic {
   display: flex;
   gap: 12px;
@@ -1518,6 +1572,415 @@ section {
   .rules-formula-list > div {
     grid-template-columns: 1fr;
     gap: 5px; } }
+
+/*--------------------------------------------------------------
+# Bearing Terminology
+--------------------------------------------------------------*/
+.terminology-intro,
+.terminology-glossary,
+.terminology-faq {
+  padding: 75px 0; }
+
+.terminology-map {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px; }
+  .terminology-map > div {
+    padding: 23px;
+    border-top: 4px solid #428bca;
+    background: #f3f7fa; }
+  .terminology-map i {
+    display: block;
+    margin-bottom: 13px;
+    color: #428bca;
+    font-size: 27px; }
+  .terminology-map span {
+    color: #68727a;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .terminology-map h2 {
+    margin: 5px 0 8px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .terminology-map p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.5; }
+
+.terminology-search {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto 35px; }
+  .terminology-search > i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    color: #68727a;
+    font-size: 20px;
+    transform: translateY(-50%); }
+  .terminology-search label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0; }
+  .terminology-search input {
+    width: 100%;
+    height: 54px;
+    padding: 10px 105px 10px 48px;
+    border: 1px solid #cdd5db;
+    border-radius: 4px;
+    background: #fff;
+    color: #272c30;
+    font-size: 15px; }
+  .terminology-search input:focus {
+    border-color: #428bca;
+    outline: 2px solid rgba(66, 139, 202, 0.18); }
+  .terminology-search > span {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    color: #68727a;
+    font-size: 12px;
+    font-weight: 700;
+    transform: translateY(-50%); }
+
+.terminology-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px; }
+  .term-entry {
+    min-width: 0;
+    padding: 22px 24px;
+    border: 1px solid #dfe5ea;
+    border-radius: 8px;
+    background: #fff; }
+  .term-entry[hidden] {
+    display: none; }
+  .term-entry > span {
+    display: block;
+    margin-bottom: 5px;
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .term-entry h2 {
+    margin: 0 0 9px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .term-entry p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.65; }
+  .term-entry p strong {
+    color: #394047; }
+
+.terminology-empty {
+  margin: 0;
+  padding: 32px;
+  border: 1px solid #dfe5ea;
+  background: #fff;
+  color: #58636c;
+  text-align: center; }
+
+.terminology-answer {
+  height: 100%;
+  padding: 24px;
+  border-left: 4px solid #428bca;
+  background: #f3f7fa; }
+  .terminology-answer h2 {
+    margin: 0 0 9px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .terminology-answer p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.65; }
+
+.terminology-source,
+.hydrodynamic-source {
+  margin: 0;
+  padding: 35px 0;
+  border-width: 1px 0 0;
+  background: #fff; }
+
+/*--------------------------------------------------------------
+# Hydrodynamic Lubrication
+--------------------------------------------------------------*/
+.hydrodynamic-definition {
+  padding: 58px 0;
+  background: #272c30; }
+  .hydrodynamic-definition p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 19px;
+    line-height: 1.7;
+    text-align: center; }
+  .hydrodynamic-definition p strong {
+    color: #fff; }
+  .hydrodynamic-distinction {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    max-width: 820px;
+    margin: 24px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 13px;
+    line-height: 1.55; }
+  .hydrodynamic-distinction i {
+    flex: 0 0 auto;
+    color: #6aa3d5;
+    font-size: 19px; }
+
+.hydrodynamic-process,
+.hydrodynamic-applications,
+.hydrodynamic-regimes,
+.hydrodynamic-factors,
+.hydrodynamic-cycle,
+.hydrodynamic-warning {
+  padding: 75px 0; }
+
+.hydrodynamic-steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none; }
+  .hydrodynamic-steps li {
+    position: relative;
+    padding: 0 20px;
+    border-left: 1px solid #d7dfe5; }
+  .hydrodynamic-steps li:last-child {
+    border-right: 1px solid #d7dfe5; }
+  .hydrodynamic-steps li > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #428bca;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700; }
+  .hydrodynamic-steps h2 {
+    margin: 0 0 8px;
+    color: #272c30;
+    font-size: 17px;
+    font-weight: 700; }
+  .hydrodynamic-steps p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.hydrodynamic-application {
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px;
+  background: #fff; }
+  .hydrodynamic-application img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    object-fit: cover; }
+  .hydrodynamic-application > div {
+    padding: 25px; }
+  .hydrodynamic-application span {
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .hydrodynamic-application h2 {
+    margin: 4px 0 10px;
+    color: #272c30;
+    font-size: 22px;
+    font-weight: 700; }
+  .hydrodynamic-application p {
+    margin: 0 0 15px;
+    color: #58636c;
+    font-size: 14px;
+    line-height: 1.65; }
+  .hydrodynamic-application a {
+    font-size: 13px;
+    font-weight: 700; }
+
+.hydrodynamic-table {
+  min-width: 800px;
+  margin: 0;
+  border: 1px solid #dfe5ea;
+  background: #fff; }
+  .hydrodynamic-table thead th {
+    padding: 13px 17px;
+    border: 0;
+    background: #272c30;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700; }
+  .hydrodynamic-table td {
+    padding: 15px 17px;
+    border-color: #e4e8eb;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.55;
+    vertical-align: top; }
+  .hydrodynamic-table td:first-child {
+    color: #1d6fa8;
+    font-weight: 700; }
+
+.hydrodynamic-factor {
+  height: 100%;
+  padding: 23px;
+  border-top: 3px solid #428bca;
+  background: #f3f7fa; }
+  .hydrodynamic-factor i {
+    display: block;
+    margin-bottom: 13px;
+    color: #428bca;
+    font-size: 27px; }
+  .hydrodynamic-factor h2 {
+    margin: 0 0 8px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .hydrodynamic-factor p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.hydrodynamic-cycle {
+  background: #eaf3fa; }
+.hydrodynamic-cycle-track {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+  gap: 15px;
+  align-items: center; }
+  .hydrodynamic-cycle-track > div {
+    min-height: 158px;
+    padding: 21px;
+    border-top: 4px solid #428bca;
+    background: #fff; }
+  .hydrodynamic-cycle-track > i {
+    color: #428bca;
+    font-size: 22px; }
+  .hydrodynamic-cycle-track span {
+    display: block;
+    margin-bottom: 7px;
+    color: #68727a;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .hydrodynamic-cycle-track strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #272c30;
+    font-size: 15px; }
+  .hydrodynamic-cycle-track p {
+    margin: 0;
+    color: #58636c;
+    font-size: 12px;
+    line-height: 1.55; }
+
+.hydrodynamic-faq {
+  background: #fff; }
+
+@media (max-width: 991px) {
+  .terminology-map {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hydrodynamic-steps {
+    grid-template-columns: 1fr; }
+  .hydrodynamic-steps li,
+  .hydrodynamic-steps li:last-child {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 14px;
+    padding: 18px 0;
+    border: 0;
+    border-bottom: 1px solid #d7dfe5; }
+  .hydrodynamic-steps li > span {
+    margin: 0; }
+  .hydrodynamic-cycle-track {
+    grid-template-columns: 1fr; }
+  .hydrodynamic-cycle-track > div {
+    min-height: 0; }
+  .hydrodynamic-cycle-track > i {
+    justify-self: center;
+    transform: rotate(90deg); } }
+
+@media (max-width: 767px) {
+  .terminology-intro,
+  .terminology-glossary,
+  .terminology-faq,
+  .hydrodynamic-process,
+  .hydrodynamic-applications,
+  .hydrodynamic-regimes,
+  .hydrodynamic-factors,
+  .hydrodynamic-cycle,
+  .hydrodynamic-warning {
+    padding: 58px 0; }
+  .terminology-map,
+  .terminology-list {
+    grid-template-columns: 1fr; }
+  .terminology-search input {
+    padding-right: 82px;
+    font-size: 13px; }
+  .term-entry {
+    padding: 20px; }
+  .hydrodynamic-definition p {
+    font-size: 16px; }
+  .hydrodynamic-application img {
+    aspect-ratio: 4 / 3; }
+  .hydrodynamic-table {
+    min-width: 0;
+    width: 100%; }
+  .hydrodynamic-table thead {
+    display: none; }
+  .hydrodynamic-table tbody,
+  .hydrodynamic-table tr,
+  .hydrodynamic-table td {
+    display: block;
+    width: 100%; }
+  .hydrodynamic-table tr {
+    padding: 15px 16px;
+    border-bottom: 1px solid #dfe5ea; }
+  .hydrodynamic-table tr:last-child {
+    border-bottom: 0; }
+  .hydrodynamic-table td {
+    padding: 5px 0;
+    border: 0; }
+  .hydrodynamic-table td::before {
+    display: block;
+    margin-bottom: 2px;
+    color: #77818a;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .hydrodynamic-table td:nth-child(1)::before {
+    content: 'Regime'; }
+  .hydrodynamic-table td:nth-child(2)::before {
+    content: 'Load support'; }
+  .hydrodynamic-table td:nth-child(3)::before {
+    content: 'When it occurs'; }
+  .hydrodynamic-table td:nth-child(4)::before {
+    content: 'Key distinction'; } }
   .info-rows .table-responsive {
     margin: 0 auto;
     max-width: 900px; }

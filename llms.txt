@@ -24,6 +24,8 @@ permalink: /llms.txt
 - [Technical Services](https://oiltechbrg.com/technical-services/): Engineering support, site investigation, and troubleshooting for bearing problems
 - [Bearing Technical Library](https://oiltechbrg.com/technical-library/): Developing technical hub for whitemetal bearing failure analysis, design, lubrication, inspection, repair, materials and installation
 - [Bearing Rules of Thumb](https://oiltechbrg.com/technical-library/bearing-rules-of-thumb/): Technician quick-reference values for Babbitt temperature, journal clearance, surface finish, lubrication, inspection standards, conversions and preliminary calculators
+- [Bearing Terminology](https://oiltechbrg.com/technical-library/bearing-terminology/): Searchable glossary distinguishing whitemetal, Babbitt, sleeve, journal, thrust, fluid-film, hydrodynamic and related bearing terms
+- [Hydrodynamic Lubrication](https://oiltechbrg.com/technical-library/hydrodynamic-lubrication/): How speed, lubricant viscosity and converging geometry generate a load-carrying film in journal and thrust bearings
 - [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
 
 ## Bearing Failure Guides

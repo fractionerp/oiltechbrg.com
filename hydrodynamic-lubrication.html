@@ -1,0 +1,187 @@
+---
+layout: page
+title: "Hydrodynamic Lubrication: How Fluid-Film Bearings Work"
+description: "Learn how hydrodynamic journal and thrust bearings use rotation, a converging lubricant wedge and oil-film pressure to support rotating machinery loads."
+keywords: "hydrodynamic lubrication, how journal bearings work, how thrust bearings work, fluid film bearing, oil wedge bearing, hydrodynamic oil film, Babbitt bearing operation"
+permalink: /technical-library/hydrodynamic-lubrication/
+last_modified_at: 2026-07-31
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/tiltpadjournal.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "hydrodynamic lubrication",
+    "fluid-film bearings",
+    "journal bearings",
+    "thrust bearings",
+    "oil-film pressure"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What creates pressure in a hydrodynamic bearing?", "acceptedAnswer": { "@type": "Answer", "text": "Relative motion draws viscous lubricant into a converging gap. Resistance to flow through that narrowing geometry generates a pressure distribution that supports the bearing load." } },
+    { "@type": "Question", "name": "Does the lubrication pump pressure support the shaft?", "acceptedAnswer": { "@type": "Answer", "text": "In a normally operating hydrodynamic bearing, the pump supplies and cools the lubricant but the main load-carrying pressure is generated locally by motion in the converging film. Hydrostatic or jacking-oil systems use external pressure to support or lift the shaft." } },
+    { "@type": "Question", "name": "Do the shaft and bearing touch during hydrodynamic operation?", "acceptedAnswer": { "@type": "Answer", "text": "A properly operating full-film bearing separates the surfaces during normal running. Contact can occur during start-up, shutdown or abnormal loss of film." } },
+    { "@type": "Question", "name": "Why is bearing clearance necessary?", "acceptedAnswer": { "@type": "Answer", "text": "Clearance provides space for lubricant flow, thermal expansion and formation of the converging geometry. Too little or too much clearance can both reduce performance." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/tiltpadjournal.webp' | relative_url }}" class="hero-bg" alt="Tilting-pad journal bearing showing individual hydrodynamic pads">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Hydrodynamic Lubrication</h1>
+    <p>How rotation, lubricant viscosity and converging geometry create the pressure that supports a shaft without continuous surface contact.</p>
+    <div class="hero-ctas">
+      <a href="#how-it-works" class="btn-hero-primary">How the Oil Film Forms</a>
+      <a href="{{ '/technical-library/bearing-terminology' | relative_url }}" class="btn-hero-secondary">Bearing Terminology</a>
+    </div>
+  </div>
+</section>
+
+<section class="hydrodynamic-definition">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p><strong>Hydrodynamic lubrication</strong> occurs when relative motion draws lubricant into a narrowing gap between two surfaces. The resulting pressure within that moving film supports the applied load and separates the surfaces during normal operation.</p>
+        <div class="hydrodynamic-distinction"><i class="ri-information-line"></i><span>The normal supply pump delivers cool, clean oil to the bearing. Rotation and bearing geometry generate the main load-carrying pressure inside the hydrodynamic film.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works" class="hydrodynamic-process section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Operating Principle</h2>
+      <h3><span>How a Load-Carrying Oil Film Forms</span></h3>
+      <p>All five conditions interact. Supplying oil alone does not guarantee hydrodynamic separation.</p>
+    </div>
+    <ol class="hydrodynamic-steps">
+      <li><span>1</span><div><h2>Lubricant Reaches the Inlet</h2><p>The system provides lubricant of the required viscosity, temperature, flow and cleanliness to the bearing entrance.</p></div></li>
+      <li><span>2</span><div><h2>The Surface Starts Moving</h2><p>Rotation drags lubricant along through viscous shear. At zero speed, this self-generated hydrodynamic action does not exist.</p></div></li>
+      <li><span>3</span><div><h2>A Converging Gap Develops</h2><p>Journal eccentricity, a machined profile or pad tilt creates an inlet that becomes progressively narrower in the direction of motion.</p></div></li>
+      <li><span>4</span><div><h2>Film Pressure Builds</h2><p>Lubricant resists being forced through the narrowing gap. A pressure distribution develops, rising to a peak and then falling toward the film outlet.</p></div></li>
+      <li><span>5</span><div><h2>The Film Supports the Load</h2><p>The integrated film pressure balances the applied load. The shaft or collar runs separated from the bearing surface by a very thin lubricant film.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="hydrodynamic-applications">
+  <div class="container">
+    <div class="section-title"><h2>Two Load Directions</h2><h3><span>Journal and Thrust Bearings</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <article class="hydrodynamic-application">
+          <img src="{{ '/assets/img/fixedprofile.webp' | relative_url }}" alt="Fixed-profile hydrodynamic journal bearing" loading="lazy">
+          <div><span>Radial load</span><h2>Journal Bearings</h2><p>The shaft settles slightly away from the bearing centre under load. Rotation pulls oil into the converging clearance between the journal and bore. Fixed-profile bearings use bore geometry; tilting-pad journal bearings allow each pad to establish its own wedge.</p><a href="{{ '/journal-bearings' | relative_url }}">Explore journal bearings <i class="ri-arrow-right-line"></i></a></div>
+        </article>
+      </div>
+      <div class="col-lg-6">
+        <article class="hydrodynamic-application">
+          <img src="{{ '/assets/img/tilt-pad-thrust-bearing.webp' | relative_url }}" alt="Tilting-pad hydrodynamic thrust bearing" loading="lazy">
+          <div><span>Axial load</span><h2>Thrust Bearings</h2><p>The rotating collar moves oil across the pad face. A taper-land profile or pad tilt creates the converging wedge. In a tilting-pad bearing, each pad finds an operating angle determined by load, speed, pivot geometry and oil conditions.</p><a href="{{ '/j-series-equalising-thrust-bearings' | relative_url }}">Explore thrust bearings <i class="ri-arrow-right-line"></i></a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hydrodynamic-regimes section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Do Not Confuse</h2><h3><span>Lubrication and Support Regimes</span></h3></div>
+    <div class="table-responsive">
+      <table class="table hydrodynamic-table">
+        <thead><tr><th>Regime</th><th>How load is supported</th><th>When it occurs</th><th>Key distinction</th></tr></thead>
+        <tbody>
+          <tr><td>Full-film hydrodynamic</td><td>Pressure generated by relative motion in a converging film</td><td>Normal running at sufficient speed with suitable oil and geometry</td><td>Surfaces are separated by the fluid film</td></tr>
+          <tr><td>Hydrostatic</td><td>Pressure supplied by an external high-pressure system</td><td>Jacking oil, low-speed turning or a continuously hydrostatic design</td><td>Can support load without normal running speed</td></tr>
+          <tr><td>Mixed lubrication</td><td>Part fluid film and part local surface contact</td><td>Acceleration, coast-down, overload or marginal film conditions</td><td>Some asperity contact remains</td></tr>
+          <tr><td>Boundary lubrication</td><td>Mostly surface contact and lubricant boundary layers</td><td>Start, stop or severe loss of film</td><td>Wear and wiping risk rises significantly</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="hydrodynamic-factors">
+  <div class="container">
+    <div class="section-title"><h2>Film Formation</h2><h3><span>What Controls Bearing Performance?</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-speed-line"></i><h2>Speed</h2><p>More surface speed generally increases the lubricant-dragging action, but also raises viscous shear and power loss.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-drop-line"></i><h2>Viscosity</h2><p>Viscosity must be considered at operating temperature. Oil that becomes too thin can reduce film thickness; excessive viscosity increases losses and heat.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-expand-left-right-line"></i><h2>Clearance and Geometry</h2><p>The gap must allow oil flow and form the intended wedge while accommodating tolerance, shaft motion and thermal expansion.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-scales-3-line"></i><h2>Load</h2><p>Load changes shaft position, pad angle, pressure and film thickness. Dynamic and transient loads can be as important as steady load.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-oil-line"></i><h2>Oil Supply and Cooling</h2><p>Continuous clean oil replaces leakage and carries away generated heat. Flow at the bearing matters more than header pressure alone.</p></div></div>
+      <div class="col-lg-4 col-md-6"><div class="hydrodynamic-factor"><i class="ri-focus-3-line"></i><h2>Alignment and Surface Condition</h2><p>Misalignment, runout, roughness or contamination can concentrate load and reduce the local film safety margin.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="hydrodynamic-cycle">
+  <div class="container">
+    <div class="section-title"><h2>Operating Cycle</h2><h3><span>Why Start-Up and Shutdown Are Different</span></h3></div>
+    <div class="hydrodynamic-cycle-track">
+      <div><span>Stopped</span><strong>No hydrodynamic pressure</strong><p>Static load may leave the shaft or collar resting on the bearing.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><span>Starting</span><strong>Mixed or boundary regime</strong><p>Film develops as speed rises. Pre-lube and, where fitted, jacking oil reduce contact.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><span>Running</span><strong>Full-film operation</strong><p>Designed speed and oil conditions establish separation and load capacity.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><span>Coast-down</span><strong>Film reduces with speed</strong><p>Post-lube and lift systems may remain required until the rotor stops.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="hydrodynamic-warning industries-home section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Loss of Film</h2><h3><span>What Happens When Conditions Deteriorate?</span></h3></div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-4 col-md-6"><a href="{{ '/technical-library/bearing-failure/oil-starvation-wiping' | relative_url }}" class="library-related-link"><div class="industry-card"><div class="icon"><i class="ri-drop-line"></i></div><h4>Oil Starvation &amp; Wiping</h4><p>Interrupted supply or collapsed film can cause rubbing, smearing and melting.</p></div></a></div>
+      <div class="col-lg-4 col-md-6"><a href="{{ '/technical-library/bearing-failure/misalignment' | relative_url }}" class="library-related-link"><div class="industry-card"><div class="icon"><i class="ri-focus-3-line"></i></div><h4>Misalignment</h4><p>Concentrated contact raises local pressure and temperature while reducing film thickness.</p></div></a></div>
+      <div class="col-lg-4 col-md-6"><a href="{{ '/technical-library/bearing-failure/contamination-scoring' | relative_url }}" class="library-related-link"><div class="industry-card"><div class="icon"><i class="ri-error-warning-line"></i></div><h4>Contamination &amp; Scoring</h4><p>Particles can bridge the film, score the bearing and damage the mating surface.</p></div></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="terminology-faq hydrodynamic-faq">
+  <div class="container">
+    <div class="section-title"><h2>Practical Questions</h2><h3><span>Hydrodynamic Lubrication FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>What creates the pressure?</h2><p>Relative motion pulls viscous lubricant into the converging gap. Resistance to flow creates a pressure distribution that supports the applied load.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does pump pressure carry the machine load?</h2><p>Normally no. The pump supplies and cools the oil; the hydrodynamic film generates its load-carrying pressure locally. A hydrostatic or jacking system is different.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Do the surfaces touch?</h2><p>Not during healthy full-film operation. Contact can occur while starting or stopping, or if speed, viscosity, flow, geometry or load no longer supports adequate separation.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Why is clearance necessary?</h2><p>Clearance provides space for oil flow, thermal expansion and the converging film geometry. Too little and too much clearance can both damage performance.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note hydrodynamic-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>This explanation is aligned with <a href="https://www.waukbearing.com/en/resources/bearing-knowledge/how-fluid-film-bearings-work.html">Waukesha Bearings' fluid-film operating principle</a>, <a href="https://www.kingsbury.com/fluid-film-bearings-selection-troubleshooting-repair/">Kingsbury's hydrodynamic bearing guidance</a> and the lubrication terminology covered by <a href="https://www.iso.org/standard/86320.html">ISO 4378-3:2024</a>.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Apply the Principle to a Real Bearing</h3>
+    <p>Use the rules-of-thumb reference for preliminary checks, or send Oiltech the operating data for a full bearing performance review.</p>
+    <div class="cta-buttons"><a href="{{ '/technical-library/bearing-rules-of-thumb' | relative_url }}" class="cta-btn">Rules of Thumb</a><a href="{{ '/contact' | relative_url }}" class="cta-btn cta-btn-outline">Ask an Engineer</a></div>
+  </div></div>
+</section>
