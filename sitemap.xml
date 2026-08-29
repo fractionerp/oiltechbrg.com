@@ -31,7 +31,7 @@ sitemap: false
 {%- elsif url contains "/technical-library/" -%}
   {%- assign priority = "0.8" -%}
   {%- assign changefreq = "monthly" -%}
-{%- elsif url contains "journal-bearings" or url contains "thrust-bearings" or url contains "product-ranges" or url contains "whitemetal-alloys" -%}
+{%- elsif url contains "journal-bearings" or url contains "thrust-bearings" or url contains "product-ranges" -%}
   {%- assign priority = "0.9" -%}
   {%- assign changefreq = "monthly" -%}
 {%- elsif url contains "quality-assurance" or url contains "re-engineering" or url contains "technical-services" or url contains "whitemetal-bearing-repair" or url contains "bearing-design-analysis" or url contains "bearing-failure-modes" -%}

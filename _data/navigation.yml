@@ -10,8 +10,6 @@ main:
         url: /t-series-tilt-pad-journal-bearings
       - title: Thrust Bearings
         url: /j-series-equalising-thrust-bearings
-      - title: White Metal Bearings
-        url: /whitemetal-alloys
       - title: Legacy OEM Replacements
         url: /legacy-oem-bearing-replacements
   - title: Services
@@ -36,6 +34,8 @@ main:
         url: /technical-library/bearing-rules-of-thumb
       - title: Hydrodynamic Lubrication
         url: /technical-library/hydrodynamic-lubrication
+      - title: Whitemetal Alloys
+        url: /technical-library/whitemetal-alloys
       - title: Bearing Failure Analysis
         url: /bearing-failure-modes
   - title: Regions
@@ -99,8 +99,6 @@ footer_products:
     url: /t-series-tilt-pad-journal-bearings
   - title: Thrust Bearings
     url: /j-series-equalising-thrust-bearings
-  - title: White Metal Bearings
-    url: /whitemetal-alloys
 
 footer_company:
   - title: Contact
