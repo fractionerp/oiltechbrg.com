@@ -6,7 +6,7 @@ keywords: "bearing technical library, whitemetal bearing guide, white metal bear
 permalink: /technical-library/
 redirect_from:
   - /bearing-questions-answered/
-last_modified_at: 2026-07-31
+last_modified_at: 2026-08-29
 ---
 
 <script type="application/ld+json">
@@ -58,6 +58,11 @@ last_modified_at: 2026-07-31
       "name": "Fluid-Film Bearing Material Selection Guide",
       "url": "{{ '/technical-library/fluid-film-bearing-material-selection/' | absolute_url }}"
     },
+    {
+      "@type": "TechArticle",
+      "name": "Copper-Free Whitemetal Bearings Guide",
+      "url": "{{ '/technical-library/copper-free-whitemetal-bearings/' | absolute_url }}"
+    },
     {% for mode in site.data.failure_modes %}{
       "@type": "TechArticle",
       "name": {{ mode.title | jsonify }},
@@ -86,7 +91,7 @@ last_modified_at: 2026-07-31
       <span class="library-status">Library in development</span>
       <div>
         <h2>A Growing Engineering Reference</h2>
-        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, material selection, temperature limits, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, inspection and installation will be added as they are technically reviewed.</p>
+        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, material selection, copper-free requirements, temperature limits, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, inspection and installation will be added as they are technically reviewed.</p>
       </div>
     </div>
   </div>
@@ -155,6 +160,10 @@ last_modified_at: 2026-07-31
     <a href="{{ '/technical-library/fluid-film-bearing-material-selection' | relative_url }}" class="library-material-feature">
       <img src="{{ '/assets/img/equalising-thrust-bearing.webp' | relative_url }}" alt="Metallic tilting-pad thrust bearings illustrating fluid-film bearing material selection" loading="lazy" width="800" height="533">
       <div><span>Material systems</span><h2>Fluid-Film Bearing Material Selection</h2><p>Compare Babbitt, bronze, copper-lead, aluminium-tin and tri-metal constructions, including relative strengths, contamination and corrosion risks, backing choices and a defensible selection workflow.</p><strong>Open material selection guide <i class="ri-arrow-right-line"></i></strong></div>
+    </a>
+    <a href="{{ '/technical-library/copper-free-whitemetal-bearings' | relative_url }}" class="library-material-feature copper-feature">
+      <img src="{{ '/assets/img/slide/j-series.webp' | relative_url }}" alt="Finished whitemetal bearing requiring controlled copper content and material traceability" loading="lazy" width="640" height="407">
+      <div><span>Chemical compatibility</span><h2>Copper-Free Whitemetal Bearings</h2><p>Understand what the phrase means, why H2S, sour-gas or ammonia service may drive it, and how to define the chemistry, assembly boundary and verification method.</p><strong>Open copper-free guide <i class="ri-arrow-right-line"></i></strong></div>
     </a>
   </div>
 </section>

@@ -31,6 +31,7 @@ permalink: /llms.txt
 - [Bearing Stiffness and Damping Coefficients](https://oiltechbrg.com/technical-library/bearing-stiffness-damping-coefficients/): Journal-bearing Kxx, Kyy, direct and cross-coupled stiffness and damping terms, matrix notation, units, frequency dependence and rotor-model data requirements
 - [Whitemetal Bearing Temperature Limits](https://oiltechbrg.com/technical-library/bearing-temperature-limits/): Babbitt temperature ceilings, supply and drain oil versus embedded metal and film temperatures, sensor placement, alarm-setting principles and high-temperature investigation
 - [Fluid-Film Bearing Material Selection](https://oiltechbrg.com/technical-library/fluid-film-bearing-material-selection/): Comparison of Babbitt, bronze, copper-lead, aluminium-tin and tri-metal bearing constructions, selection inputs, backing choices, corrosion risks and repair implications
+- [Copper-Free Whitemetal Bearings](https://oiltechbrg.com/technical-library/copper-free-whitemetal-bearings/): Meaning, H2S and ammonia service context, complete assembly boundary, material alternatives, chemistry limits, verification and specification requirements
 - [Bearing Failure Analysis](https://oiltechbrg.com/bearing-failure-modes/): Damage index and structured root-cause investigation process for common whitemetal bearing failures
 
 ## Bearing Failure Guides
