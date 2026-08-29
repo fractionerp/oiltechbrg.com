@@ -53,6 +53,11 @@ last_modified_at: 2026-07-31
       "name": "Whitemetal Bearing Temperature Limits Guide",
       "url": "{{ '/technical-library/bearing-temperature-limits/' | absolute_url }}"
     },
+    {
+      "@type": "TechArticle",
+      "name": "Fluid-Film Bearing Material Selection Guide",
+      "url": "{{ '/technical-library/fluid-film-bearing-material-selection/' | absolute_url }}"
+    },
     {% for mode in site.data.failure_modes %}{
       "@type": "TechArticle",
       "name": {{ mode.title | jsonify }},
@@ -81,7 +86,7 @@ last_modified_at: 2026-07-31
       <span class="library-status">Library in development</span>
       <div>
         <h2>A Growing Engineering Reference</h2>
-        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, temperature limits, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, materials, inspection and installation will be added as they are technically reviewed.</p>
+        <p>The technician rules of thumb, bearing terminology, hydrodynamic lubrication, lining thickness, material selection, temperature limits, journal preload, dynamic coefficients and first failure-analysis guides are available now. Further articles on design, inspection and installation will be added as they are technically reviewed.</p>
       </div>
     </div>
   </div>
@@ -147,6 +152,10 @@ last_modified_at: 2026-07-31
         </a>
       </div>
     </div>
+    <a href="{{ '/technical-library/fluid-film-bearing-material-selection' | relative_url }}" class="library-material-feature">
+      <img src="{{ '/assets/img/equalising-thrust-bearing.webp' | relative_url }}" alt="Metallic tilting-pad thrust bearings illustrating fluid-film bearing material selection" loading="lazy" width="800" height="533">
+      <div><span>Material systems</span><h2>Fluid-Film Bearing Material Selection</h2><p>Compare Babbitt, bronze, copper-lead, aluminium-tin and tri-metal constructions, including relative strengths, contamination and corrosion risks, backing choices and a defensible selection workflow.</p><strong>Open material selection guide <i class="ri-arrow-right-line"></i></strong></div>
+    </a>
   </div>
 </section>
 
@@ -200,7 +209,7 @@ last_modified_at: 2026-07-31
       <p>These topic groups establish the scope of the library. Titles marked as planned are not yet technical guidance.</p>
     </div>
     <div class="row g-4">
-      {% assign topics = "Bearing Fundamentals|Journal and thrust bearing selection;Fixed-profile and tilting-pad bearing design;Oil film thickness and bearing clearance;Hydrodynamic performance parameters||Design & Lubrication|Load, speed and oil data for bearing selection;Centre-pivot and offset-pivot thrust pads;Equalising and non-equalising thrust bearings;Flooded and directed lubrication||Inspection & Repair|When to repair or replace a bearing;Whitemetal re-lining process;Ultrasonic bond testing to ISO 4386-1;Dye penetrant testing to ISO 4386-3||Materials & Standards|Whitemetal and Babbitt alloy selection;BS 3332, ASTM B23 and ISO 4381;Steel, bronze and copper-alloy backings;EN 10204 material certification||Installation & Operation|Bearing clearance and lift checks;Shaft and thrust collar condition;Oil cleanliness and system flushing;Start-up, shutdown and jacking oil" | split: "||" %}
+      {% assign topics = "Bearing Fundamentals|Journal and thrust bearing selection;Fixed-profile and tilting-pad bearing design;Oil film thickness and bearing clearance;Hydrodynamic performance parameters||Design & Lubrication|Load, speed and oil data for bearing selection;Centre-pivot and offset-pivot thrust pads;Equalising and non-equalising thrust bearings;Flooded and directed lubrication||Inspection & Repair|When to repair or replace a bearing;Whitemetal re-lining process;Ultrasonic bond testing to ISO 4386-1;Dye penetrant testing to ISO 4386-3||Materials & Standards|Polymer and composite bearing materials;BS 3332, ASTM B23 and ISO 4381;Material compatibility with process fluids;EN 10204 material certification||Installation & Operation|Bearing clearance and lift checks;Shaft and thrust collar condition;Oil cleanliness and system flushing;Start-up, shutdown and jacking oil" | split: "||" %}
       {% for topic in topics %}
         {% assign details = topic | split: "|" %}
         <div class="col-lg-4 col-md-6">

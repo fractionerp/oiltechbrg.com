@@ -4490,6 +4490,492 @@ section {
     min-height: 0; } }
 
 /*--------------------------------------------------------------
+# Fluid-Film Bearing Material Selection
+--------------------------------------------------------------*/
+.material-answer {
+  padding: 52px 0;
+  border-bottom: 1px solid #e2e7ea;
+  background: #fff; }
+  .material-answer h2 {
+    margin: 0 0 13px;
+    color: #272c30;
+    font-size: 27px;
+    font-weight: 700; }
+  .material-answer p {
+    margin: 0;
+    color: #58636c;
+    font-size: 15px;
+    line-height: 1.75; }
+  .material-answer > .container .col-lg-10 > div {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 20px;
+    padding: 16px 18px;
+    border-left: 4px solid #b77b32;
+    background: #f5eee5;
+    color: #5d554c;
+    font-size: 13px;
+    line-height: 1.6; }
+  .material-answer i {
+    flex: 0 0 auto;
+    color: #986324;
+    font-size: 22px; }
+
+.material-constructions,
+.material-comparison,
+.material-examples,
+.material-drivers,
+.material-backing,
+.material-workflow,
+.material-repair,
+.material-faq {
+  padding: 75px 0; }
+
+.material-anatomy-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px; }
+  .material-anatomy-grid article {
+    grid-column: span 2;
+    min-width: 0;
+    min-height: 320px;
+    padding: 22px;
+    border: 1px solid #dce3e8;
+    border-radius: 8px;
+    background: #fff; }
+  .material-anatomy-grid article:nth-child(4) {
+    grid-column: 2 / span 2; }
+  .material-anatomy-grid article:nth-child(5) {
+    grid-column: 4 / span 2; }
+  .material-anatomy-grid .material-type {
+    display: block;
+    margin-top: 20px;
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .material-anatomy-grid h2 {
+    margin: 6px 0 9px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .material-anatomy-grid p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.6; }
+.material-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 105px;
+  overflow: hidden;
+  border: 1px solid #cbd4da;
+  border-radius: 5px;
+  background: #eef2f4; }
+  .material-stack .layer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 0;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700; }
+  .material-stack.one .layer {
+    height: 100%; }
+  .material-stack.two .layer:first-child {
+    height: 38%; }
+  .material-stack.two .layer:last-child {
+    height: 62%; }
+  .material-stack.three .layer:first-child {
+    height: 18%; }
+    .material-stack.three .layer:first-child {
+      font-size: 8px; }
+  .material-stack.three .layer:nth-child(2) {
+    height: 34%; }
+  .material-stack.three .layer:last-child {
+    height: 48%; }
+  .material-stack .babbitt {
+    background: #aeb8bf;
+    color: #20282e; }
+  .material-stack .steel {
+    background: #4d5860; }
+  .material-stack .bronze {
+    background: #a66c2c; }
+  .material-stack .copper-lead {
+    background: #7e604c; }
+  .material-stack .aluminium {
+    background: #778d99; }
+  .material-stack .overlay {
+    background: #d1d7db;
+    color: #20282e; }
+.material-definition-note {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-left: 4px solid #428bca;
+  background: #eaf3fa; }
+  .material-definition-note i {
+    flex: 0 0 auto;
+    color: #1d6fa8;
+    font-size: 22px; }
+  .material-definition-note p {
+    margin: 0;
+    color: #4b5963;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.material-comparison .table-responsive {
+  overflow: hidden;
+  border: 1px solid #d6dde2;
+  border-radius: 8px;
+  background: #fff; }
+.material-table {
+  min-width: 980px;
+  margin: 0; }
+  .material-table thead th {
+    padding: 14px 17px;
+    border: 0;
+    background: #272c30;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .material-table thead th:first-child {
+    width: 19%; }
+  .material-table td {
+    padding: 17px;
+    border-color: #e3e8eb;
+    color: #58636c;
+    font-size: 12px;
+    line-height: 1.6;
+    vertical-align: top; }
+  .material-table td:first-child {
+    background: #f7f9fa; }
+  .material-table td strong,
+  .material-table td small {
+    display: block; }
+  .material-table td strong {
+    color: #272c30;
+    font-size: 14px; }
+  .material-table td small {
+    margin-top: 4px;
+    color: #77818a;
+    font-size: 10px; }
+
+.material-example-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; }
+  .material-example-grid article {
+    min-width: 0;
+    min-height: 245px;
+    padding: 26px;
+    border: 1px solid #dfe5ea;
+    border-top: 4px solid #b77b32;
+    border-radius: 8px;
+    background: #fff; }
+  .material-example-grid span,
+  .material-example-grid strong {
+    display: block; }
+  .material-example-grid span {
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .material-example-grid strong {
+    margin: 8px 0 12px;
+    color: #986324;
+    font-size: 28px;
+    font-weight: 700; }
+  .material-example-grid p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.65; }
+.material-example-warning {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border-left: 4px solid #c76245;
+  background: #f8ece8; }
+  .material-example-warning i {
+    flex: 0 0 auto;
+    color: #b65338;
+    font-size: 22px; }
+  .material-example-warning p {
+    margin: 0;
+    color: #5f514c;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.material-driver-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px; }
+  .material-driver-grid article {
+    min-width: 0;
+    min-height: 205px;
+    padding: 23px;
+    border: 1px solid #dfe5ea;
+    background: #f3f7fa; }
+  .material-driver-grid i {
+    display: block;
+    margin-bottom: 13px;
+    color: #428bca;
+    font-size: 25px; }
+  .material-driver-grid h2 {
+    margin: 0 0 8px;
+    color: #272c30;
+    font-size: 17px;
+    font-weight: 700; }
+  .material-driver-grid p {
+    margin: 0;
+    color: #58636c;
+    font-size: 12px;
+    line-height: 1.6; }
+
+.material-backing article {
+  height: 100%;
+  min-height: 230px;
+  padding: 25px;
+  border: 1px solid #dfe5ea;
+  border-radius: 8px;
+  background: #fff; }
+  .material-backing article > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #596169;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700; }
+  .material-backing h2 {
+    margin: 0 0 9px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .material-backing p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.65; }
+
+.material-workflow ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .material-workflow li {
+    display: flex;
+    gap: 16px;
+    min-width: 0;
+    min-height: 190px;
+    padding: 22px;
+    border: 1px solid #dfe5ea;
+    border-radius: 8px;
+    background: #fff; }
+  .material-workflow li > span {
+    display: flex;
+    flex: 0 0 34px;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #428bca;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700; }
+  .material-workflow h2 {
+    margin: 2px 0 8px;
+    color: #272c30;
+    font-size: 16px;
+    font-weight: 700; }
+  .material-workflow p {
+    margin: 0;
+    color: #58636c;
+    font-size: 12px;
+    line-height: 1.6; }
+
+.material-repair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px; }
+  .material-repair-grid > div {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    min-width: 0;
+    min-height: 165px;
+    padding: 23px;
+    border: 1px solid #dfe5ea;
+    background: #fff; }
+  .material-repair-grid i {
+    grid-row: 1 / span 2;
+    color: #b77b32;
+    font-size: 25px; }
+  .material-repair-grid h2 {
+    margin: 0 0 8px;
+    color: #272c30;
+    font-size: 17px;
+    font-weight: 700; }
+  .material-repair-grid p {
+    margin: 0;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.6; }
+.material-source {
+  margin: 0;
+  padding: 35px 0;
+  border-width: 1px 0 0;
+  background: #fff; }
+
+.library-material-feature {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1px solid #dbe2e7;
+  border-radius: 8px;
+  background: #fff;
+  color: inherit; }
+  .library-material-feature:hover {
+    border-color: #a9bfd0;
+    color: inherit; }
+  .library-material-feature img {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    object-fit: cover; }
+  .library-material-feature > div {
+    padding: 30px; }
+  .library-material-feature span {
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .library-material-feature h2 {
+    margin: 8px 0 10px;
+    color: #272c30;
+    font-size: 23px;
+    font-weight: 700; }
+  .library-material-feature p {
+    margin: 0 0 16px;
+    color: #58636c;
+    font-size: 13px;
+    line-height: 1.65; }
+  .library-material-feature strong {
+    color: #1d6fa8;
+    font-size: 12px;
+    font-weight: 700; }
+
+@media (max-width: 991px) {
+  .material-anatomy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .material-anatomy-grid article,
+  .material-anatomy-grid article:nth-child(4),
+  .material-anatomy-grid article:nth-child(5) {
+    grid-column: auto; }
+  .material-anatomy-grid article:last-child {
+    grid-column: 1 / -1; }
+  .material-driver-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .material-workflow ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .library-material-feature {
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr); } }
+
+@media (max-width: 767px) {
+  .material-answer {
+    padding: 42px 0; }
+  .material-answer h2 {
+    font-size: 23px; }
+  .material-constructions,
+  .material-comparison,
+  .material-examples,
+  .material-drivers,
+  .material-backing,
+  .material-workflow,
+  .material-repair,
+  .material-faq {
+    padding: 58px 0; }
+  .material-anatomy-grid,
+  .material-example-grid,
+  .material-driver-grid,
+  .material-workflow ol,
+  .material-repair-grid {
+    grid-template-columns: 1fr; }
+  .material-anatomy-grid article,
+  .material-anatomy-grid article:last-child {
+    grid-column: auto;
+    min-height: 0; }
+  .material-table {
+    min-width: 0;
+    width: 100%; }
+  .material-table thead {
+    display: none; }
+  .material-table tbody,
+  .material-table tr,
+  .material-table td {
+    display: block;
+    width: 100%; }
+  .material-table tr {
+    padding: 16px;
+    border-bottom: 1px solid #dfe5ea; }
+  .material-table tr:last-child {
+    border-bottom: 0; }
+  .material-table td,
+  .material-table td:first-child {
+    padding: 5px 0;
+    border: 0;
+    background: transparent; }
+  .material-table td::before {
+    display: block;
+    margin-bottom: 3px;
+    color: #77818a;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .material-table td:nth-child(1)::before {
+    content: 'Material system'; }
+  .material-table td:nth-child(2)::before {
+    content: 'Useful characteristics'; }
+  .material-table td:nth-child(3)::before {
+    content: 'Important limitations'; }
+  .material-table td:nth-child(4)::before {
+    content: 'Reason to shortlist'; }
+  .material-table td:not(:first-child) {
+    margin-top: 9px; }
+  .material-example-grid article,
+  .material-driver-grid article,
+  .material-backing article,
+  .material-workflow li,
+  .material-repair-grid > div {
+    min-height: 0; }
+  .material-workflow li {
+    gap: 13px; }
+  .library-material-feature {
+    grid-template-columns: 1fr; }
+  .library-material-feature img {
+    min-height: 210px;
+    max-height: 250px; }
+  .library-material-feature > div {
+    padding: 24px; }
+  .library-material-feature h2 {
+    font-size: 20px; } }
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
