@@ -6030,4 +6030,901 @@ section {
   .profile-table td {
     min-width: 220px; } }
 
+/* Whitemetal bearing backing materials */
+.backing-answer,
+.sensor-answer {
+  padding: 58px 0;
+  background: #fff; }
+  .backing-answer h2,
+  .sensor-answer h2 {
+    margin: 0 0 14px;
+    color: #272c30;
+    font-size: 27px;
+    font-weight: 700; }
+  .backing-answer p,
+  .sensor-answer p {
+    margin: 0;
+    color: #4f5b62;
+    font-size: 16px;
+    line-height: 1.75; }
+  .backing-answer > .container .col-lg-10 > div,
+  .sensor-answer > .container .col-lg-10 > div {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    margin-top: 22px;
+    padding: 17px 19px;
+    border-left: 4px solid #a56531;
+    background: #fbf1e8;
+    color: #4c5357;
+    font-size: 14px;
+    line-height: 1.6; }
+  .backing-answer i,
+  .sensor-answer i {
+    flex: 0 0 auto;
+    color: #9a5a27;
+    font-size: 22px; }
+
+.backing-anatomy,
+.backing-materials,
+.backing-comparison,
+.backing-thermal,
+.backing-supports,
+.backing-selection,
+.backing-repair,
+.backing-faq {
+  padding: 72px 0; }
+.backing-stack {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 26px;
+  border: 1px solid #dce3e7;
+  border-radius: 8px;
+  background: #fff; }
+.backing-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  border: 1px solid rgba(39, 44, 48, 0.18);
+  color: #273038;
+  font-size: 13px;
+  font-weight: 700; }
+  .backing-layer.film {
+    min-height: 45px;
+    border-color: #8bc0df;
+    background: #d9eef9;
+    color: #145b84; }
+  .backing-layer.lining {
+    background: #e8edf0; }
+  .backing-layer.bond {
+    min-height: 26px;
+    background: #c78c50;
+    color: #fff;
+    font-size: 10px; }
+  .backing-layer.body {
+    min-height: 112px;
+    background: #66747b;
+    color: #fff; }
+.backing-support {
+  display: flex;
+  justify-content: center;
+  margin: 18px auto 0;
+  padding: 14px 18px;
+  border: 2px solid #43796b;
+  border-radius: 4px;
+  background: #edf6f2;
+  color: #2b5e50;
+  font-size: 12px;
+  font-weight: 700; }
+.backing-functions {
+  display: grid;
+  gap: 12px; }
+  .backing-functions > div {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 13px;
+    align-items: center;
+    padding: 17px;
+    border-bottom: 1px solid #dce3e7; }
+  .backing-functions span {
+    color: #a56531;
+    font-size: 17px;
+    font-weight: 700; }
+  .backing-functions p {
+    margin: 0;
+    color: #536068;
+    font-size: 14px;
+    line-height: 1.55; }
+  .backing-functions strong {
+    color: #272c30; }
+
+.backing-material-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px; }
+  .backing-material-grid article {
+    min-height: 390px;
+    padding: 29px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .backing-material-grid article.steel {
+    border-top: 4px solid #627078; }
+  .backing-material-grid article.bronze {
+    border-top: 4px solid #a56531; }
+  .backing-material-grid article.ccz {
+    border-top: 4px solid #3b8577; }
+  .backing-material-grid article.iron {
+    border-top: 4px solid #8a704f; }
+  .backing-material-grid article > i {
+    margin-bottom: 18px;
+    color: #1d6fa8;
+    font-size: 34px; }
+  .backing-material-grid article.bronze > i {
+    color: #a56531; }
+  .backing-material-grid article.ccz > i {
+    color: #3b8577; }
+  .backing-material-grid article.iron > i {
+    color: #806341; }
+  .backing-material-grid article > span,
+  .backing-kicker {
+    display: block;
+    color: #758087;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .backing-material-grid h2 {
+    margin: 5px 0 11px;
+    color: #272c30;
+    font-size: 23px;
+    font-weight: 700; }
+  .backing-material-grid p,
+  .backing-material-grid li {
+    color: #536068;
+    font-size: 14px;
+    line-height: 1.6; }
+  .backing-material-grid ul {
+    margin: 17px 0 0;
+    padding-left: 20px; }
+  .backing-material-grid li {
+    margin-bottom: 6px; }
+
+.backing-table {
+  margin: 0;
+  border: 1px solid #d8e0e5;
+  background: #fff; }
+  .backing-table th,
+  .backing-table td {
+    min-width: 195px;
+    padding: 14px 15px;
+    border-color: #dfe5e9;
+    color: #4b575e;
+    font-size: 12px;
+    line-height: 1.55;
+    vertical-align: top; }
+  .backing-table th {
+    background: #27353b;
+    color: #fff;
+    font-weight: 700; }
+  .backing-table th:first-child,
+  .backing-table td:first-child {
+    min-width: 170px;
+    color: #27353b;
+    font-weight: 700; }
+  .backing-table tbody tr:nth-child(even) td {
+    background: #f5f7f8; }
+
+.backing-thermal img {
+  display: block;
+  width: 100%;
+  max-height: 430px;
+  border-radius: 8px;
+  object-fit: cover; }
+.backing-thermal h2 {
+  margin: 8px 0 16px;
+  color: #272c30;
+  font-size: 29px;
+  font-weight: 700; }
+.backing-thermal p {
+  color: #526068;
+  font-size: 14px;
+  line-height: 1.7; }
+.backing-thermal a {
+  color: #1d6fa8;
+  font-size: 14px;
+  font-weight: 700; }
+.backing-kicker {
+  color: #3b8577; }
+
+.backing-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px; }
+  .backing-support-grid > div {
+    min-height: 260px;
+    padding: 24px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .backing-support-grid i {
+    color: #3b8577;
+    font-size: 29px; }
+  .backing-support-grid h2 {
+    margin: 16px 0 10px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .backing-support-grid p {
+    margin: 0;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.65; }
+.backing-support-note {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-top: 22px;
+  padding: 17px 19px;
+  border-left: 4px solid #c8892f;
+  background: #fff7e8; }
+  .backing-support-note i {
+    flex: 0 0 auto;
+    color: #a76612;
+    font-size: 22px; }
+  .backing-support-note p {
+    margin: 0;
+    color: #4d585e;
+    font-size: 14px;
+    line-height: 1.6; }
+
+.backing-selection-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .backing-selection-list li {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 15px;
+    min-height: 148px;
+    padding: 23px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .backing-selection-list > li > span {
+    color: #a56531;
+    font-size: 17px;
+    font-weight: 700; }
+  .backing-selection-list h2 {
+    margin: 0 0 8px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .backing-selection-list p {
+    margin: 0;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.backing-repair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px; }
+  .backing-repair-grid article {
+    min-height: 205px;
+    padding: 25px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .backing-repair-grid span {
+    color: #3b8577;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .backing-repair-grid h2 {
+    margin: 6px 0 10px;
+    color: #272c30;
+    font-size: 20px;
+    font-weight: 700; }
+  .backing-repair-grid p {
+    margin: 0;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.65; }
+.backing-repair-link,
+.sensor-diagnosis-link {
+  margin: 22px 0 0;
+  padding: 15px 17px;
+  border-left: 4px solid #3b8577;
+  background: #edf6f2;
+  color: #4c5b57;
+  font-size: 14px; }
+.backing-source a,
+.sensor-source a {
+  overflow-wrap: anywhere; }
+
+/* Bearing temperature sensors */
+.sensor-answer > .container .col-lg-10 > div {
+  border-left-color: #c8892f;
+  background: #fff7e8; }
+.sensor-chain,
+.sensor-types,
+.sensor-rtd-wiring,
+.sensor-placement,
+.sensor-installation,
+.sensor-specification,
+.sensor-testing,
+.sensor-diagnosis,
+.sensor-faq {
+  padding: 72px 0; }
+.sensor-chain-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center; }
+  .sensor-chain-grid > div {
+    position: relative;
+    min-height: 230px;
+    padding: 25px 20px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-chain-grid > div > i {
+    color: #1d6fa8;
+    font-size: 30px; }
+  .sensor-chain-grid > div > span {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: #a56531;
+    font-size: 13px;
+    font-weight: 700; }
+  .sensor-chain-grid h2 {
+    margin: 18px 0 10px;
+    color: #272c30;
+    font-size: 17px;
+    font-weight: 700; }
+  .sensor-chain-grid p {
+    margin: 0;
+    color: #566269;
+    font-size: 12px;
+    line-height: 1.6; }
+  .sensor-chain-grid > i {
+    color: #9aa6ad;
+    font-size: 22px;
+    text-align: center; }
+.sensor-chain-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 20px 0 0;
+  padding: 15px 18px;
+  border-left: 4px solid #1d6fa8;
+  background: #eaf3fa;
+  color: #465861;
+  font-size: 13px;
+  line-height: 1.6; }
+  .sensor-chain-note i {
+    flex: 0 0 auto;
+    color: #1d6fa8;
+    font-size: 20px; }
+
+.sensor-type-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px; }
+  .sensor-type-grid article {
+    min-height: 370px;
+    padding: 29px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-type-grid article.rtd {
+    border-top: 4px solid #1d6fa8; }
+  .sensor-type-grid article.tc {
+    border-top: 4px solid #b76d31; }
+  .sensor-type-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #eaf3fa;
+    color: #1d6fa8;
+    font-size: 25px; }
+  .sensor-type-grid article.tc .sensor-type-icon {
+    background: #fbf0e7;
+    color: #a55d26; }
+  .sensor-type-grid article > span {
+    display: block;
+    color: #758087;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .sensor-type-grid h2 {
+    margin: 5px 0 10px;
+    color: #272c30;
+    font-size: 25px;
+    font-weight: 700; }
+  .sensor-type-grid p,
+  .sensor-type-grid li {
+    color: #536068;
+    font-size: 14px;
+    line-height: 1.6; }
+  .sensor-type-grid ul {
+    margin: 16px 0 0;
+    padding-left: 20px; }
+  .sensor-type-grid li {
+    margin-bottom: 6px; }
+.sensor-table-wrap {
+  margin-top: 24px; }
+.sensor-table,
+.sensor-fault-table {
+  margin: 0;
+  border: 1px solid #d8e0e5;
+  background: #fff; }
+  .sensor-table th,
+  .sensor-table td,
+  .sensor-fault-table th,
+  .sensor-fault-table td {
+    min-width: 260px;
+    padding: 14px 16px;
+    border-color: #dfe5e9;
+    color: #4d5960;
+    font-size: 12px;
+    line-height: 1.55;
+    vertical-align: top; }
+  .sensor-table th,
+  .sensor-fault-table th {
+    background: #27353b;
+    color: #fff;
+    font-weight: 700; }
+  .sensor-table th:first-child,
+  .sensor-table td:first-child,
+  .sensor-fault-table th:first-child,
+  .sensor-fault-table td:first-child {
+    min-width: 190px;
+    color: #27353b;
+    font-weight: 700; }
+  .sensor-table tbody tr:nth-child(even) td,
+  .sensor-fault-table tbody tr:nth-child(even) td {
+    background: #f5f7f8; }
+
+.sensor-wire-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; }
+  .sensor-wire-grid article {
+    min-height: 305px;
+    padding: 25px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-wire-grid article > span {
+    color: #1d6fa8;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .sensor-wire-grid h2 {
+    margin: 17px 0 9px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .sensor-wire-grid p {
+    margin: 0;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.6; }
+.sensor-wire-diagram {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  margin-top: 19px;
+  padding: 17px 35px;
+  border-radius: 4px;
+  background: #edf3f6; }
+  .sensor-wire-diagram::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 19px;
+    bottom: 12px;
+    width: 16px;
+    border: 3px solid #a56531;
+    border-left: 0;
+    border-radius: 0 12px 12px 0; }
+  .sensor-wire-diagram i {
+    display: block;
+    height: 3px;
+    background: #1d6fa8; }
+  .sensor-wire-diagram i:nth-child(even) {
+    background: #66747b; }
+.sensor-reference {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-top: 22px;
+  padding: 19px 22px;
+  border-left: 4px solid #1d6fa8;
+  background: #eaf3fa; }
+  .sensor-reference strong {
+    color: #1d6fa8;
+    font-size: 17px; }
+  .sensor-reference p {
+    margin: 0;
+    color: #4a5961;
+    font-size: 13px;
+    line-height: 1.6; }
+
+.sensor-placement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; }
+  .sensor-placement-grid article {
+    min-height: 470px;
+    overflow: hidden;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-placement-grid article > span,
+  .sensor-placement-grid article > h2,
+  .sensor-placement-grid article > p {
+    display: block;
+    margin-right: 24px;
+    margin-left: 24px; }
+  .sensor-placement-grid article > span {
+    margin-top: 22px;
+    color: #1d6fa8;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .sensor-placement-grid article > h2 {
+    margin-top: 6px;
+    margin-bottom: 10px;
+    color: #272c30;
+    font-size: 19px;
+    font-weight: 700; }
+  .sensor-placement-grid article > p {
+    margin-bottom: 24px;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.6; }
+.sensor-place-visual {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #edf3f5; }
+.sensor-fixed-shell {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  width: 168px;
+  height: 168px;
+  border: 32px solid #64747b;
+  border-radius: 50%;
+  transform: translateX(-50%); }
+.sensor-fixed-shaft {
+  position: absolute;
+  top: 69px;
+  left: calc(50% - 7px);
+  width: 94px;
+  height: 94px;
+  border-radius: 50%;
+  background: #c5cdd1;
+  box-shadow: inset 0 0 0 4px #fff;
+  transform: translateX(-50%); }
+.sensor-place-dot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #d75c45;
+  box-shadow: 0 0 0 2px #d75c45; }
+.fixed-journal .sensor-place-dot.one {
+  top: 142px;
+  left: calc(50% - 54px); }
+.fixed-journal .sensor-place-dot.two {
+  top: 142px;
+  left: calc(50% + 40px); }
+.sensor-journal-pad {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 190px;
+  height: 145px;
+  border: 32px solid #a56531;
+  border-top-color: transparent;
+  border-radius: 0 0 100px 100px;
+  transform: translateX(-50%); }
+.sensor-journal-pivot {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  width: 42px;
+  height: 20px;
+  border-radius: 50% 50% 3px 3px;
+  background: #64747b;
+  transform: translateX(-50%); }
+.tilt-journal .sensor-place-dot {
+  right: calc(50% - 68px);
+  bottom: 60px; }
+.sensor-direction {
+  position: absolute;
+  top: 23px;
+  right: 34px;
+  color: #1d6fa8;
+  font-size: 23px; }
+.sensor-thrust-shape {
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  width: 180px;
+  height: 165px;
+  background: #a56531;
+  clip-path: polygon(22% 0, 78% 0, 100% 100%, 0 100%);
+  transform: translateX(-50%); }
+.sensor-thrust-pivot {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  width: 48px;
+  height: 17px;
+  border-radius: 50%;
+  background: #64747b;
+  transform: translateX(-50%); }
+.sensor-place-visual.thrust .sensor-place-dot {
+  top: 69px;
+  right: calc(50% - 58px); }
+.sensor-place-visual.thrust strong {
+  position: absolute;
+  top: 48px;
+  right: calc(50% - 98px);
+  color: #a74635;
+  font-size: 12px; }
+.sensor-placement-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px; }
+  .sensor-placement-notes > div {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 17px;
+    border-left: 3px solid #c8892f;
+    background: #fff7e8; }
+  .sensor-placement-notes i {
+    flex: 0 0 auto;
+    color: #a76612;
+    font-size: 20px; }
+  .sensor-placement-notes p {
+    margin: 0;
+    color: #4f5a60;
+    font-size: 12px;
+    line-height: 1.6; }
+
+.sensor-install-grid,
+.sensor-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px; }
+  .sensor-install-grid > div,
+  .sensor-spec-grid > div {
+    min-height: 230px;
+    padding: 25px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-install-grid > div > span {
+    color: #a56531;
+    font-size: 16px;
+    font-weight: 700; }
+  .sensor-install-grid h2,
+  .sensor-spec-grid h2 {
+    margin: 15px 0 9px;
+    color: #272c30;
+    font-size: 18px;
+    font-weight: 700; }
+  .sensor-install-grid p,
+  .sensor-spec-grid p {
+    margin: 0;
+    color: #566269;
+    font-size: 13px;
+    line-height: 1.6; }
+  .sensor-spec-grid i {
+    color: #1d6fa8;
+    font-size: 29px; }
+
+.sensor-test-warning {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  padding: 18px 20px;
+  border-left: 4px solid #bb4b3a;
+  background: #f9ece9; }
+  .sensor-test-warning i {
+    flex: 0 0 auto;
+    color: #b14333;
+    font-size: 22px; }
+  .sensor-test-warning p {
+    margin: 0;
+    color: #5c4d49;
+    font-size: 14px;
+    line-height: 1.6; }
+.sensor-test-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px; }
+  .sensor-test-grid article {
+    padding: 28px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-test-grid article.rtd {
+    border-top: 4px solid #1d6fa8; }
+  .sensor-test-grid article.tc {
+    border-top: 4px solid #b76d31; }
+  .sensor-test-grid article > span {
+    color: #758087;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .sensor-test-grid h2 {
+    margin: 5px 0 17px;
+    color: #272c30;
+    font-size: 22px;
+    font-weight: 700; }
+  .sensor-test-grid ol {
+    margin: 0;
+    padding-left: 21px; }
+  .sensor-test-grid li {
+    margin-bottom: 12px;
+    color: #536068;
+    font-size: 13px;
+    line-height: 1.6; }
+  .sensor-test-grid li::marker {
+    color: #1d6fa8;
+    font-weight: 700; }
+.sensor-test-levels {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px; }
+  .sensor-test-levels > div {
+    min-height: 215px;
+    padding: 22px;
+    border: 1px solid #dce3e7;
+    border-radius: 8px;
+    background: #fff; }
+  .sensor-test-levels span {
+    color: #a56531;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .sensor-test-levels h2 {
+    margin: 7px 0 9px;
+    color: #272c30;
+    font-size: 17px;
+    font-weight: 700; }
+  .sensor-test-levels p {
+    margin: 0;
+    color: #566269;
+    font-size: 12px;
+    line-height: 1.6; }
+
+@media (max-width: 1199px) {
+  .backing-support-grid,
+  .sensor-test-levels {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sensor-chain-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px; }
+  .sensor-chain-grid > i {
+    display: none; }
+  .sensor-placement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sensor-placement-grid article:last-child {
+    grid-column: 1 / -1; } }
+
+@media (max-width: 991px) {
+  .backing-material-grid,
+  .backing-selection-list,
+  .backing-repair-grid,
+  .sensor-type-grid,
+  .sensor-test-grid {
+    grid-template-columns: 1fr; }
+  .backing-material-grid article {
+    min-height: 0; }
+  .sensor-wire-grid,
+  .sensor-install-grid,
+  .sensor-spec-grid,
+  .sensor-placement-notes {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .sensor-placement-notes > div:last-child {
+    grid-column: 1 / -1; } }
+
+@media (max-width: 767px) {
+  .backing-answer,
+  .sensor-answer {
+    padding: 44px 0; }
+  .backing-answer h2,
+  .sensor-answer h2 {
+    font-size: 23px; }
+  .backing-anatomy,
+  .backing-materials,
+  .backing-comparison,
+  .backing-thermal,
+  .backing-supports,
+  .backing-selection,
+  .backing-repair,
+  .backing-faq,
+  .sensor-chain,
+  .sensor-types,
+  .sensor-rtd-wiring,
+  .sensor-placement,
+  .sensor-installation,
+  .sensor-specification,
+  .sensor-testing,
+  .sensor-diagnosis,
+  .sensor-faq {
+    padding: 54px 0; }
+  .backing-anatomy .row,
+  .backing-thermal .row {
+    margin-right: 0;
+    margin-left: 0; }
+  .backing-stack {
+    padding: 16px; }
+  .backing-material-grid article,
+  .backing-repair-grid article,
+  .sensor-type-grid article,
+  .sensor-test-grid article {
+    padding: 22px; }
+  .backing-support-grid,
+  .backing-selection-list,
+  .sensor-chain-grid,
+  .sensor-wire-grid,
+  .sensor-placement-grid,
+  .sensor-placement-notes,
+  .sensor-install-grid,
+  .sensor-spec-grid,
+  .sensor-test-levels {
+    grid-template-columns: 1fr; }
+  .sensor-placement-grid article:last-child,
+  .sensor-placement-notes > div:last-child {
+    grid-column: auto; }
+  .backing-support-grid > div,
+  .sensor-wire-grid article,
+  .sensor-install-grid > div,
+  .sensor-spec-grid > div,
+  .sensor-test-levels > div,
+  .sensor-chain-grid > div {
+    min-height: 0; }
+  .backing-selection-list li {
+    grid-template-columns: 40px minmax(0, 1fr);
+    min-height: 0;
+    padding: 20px; }
+  .backing-thermal h2 {
+    font-size: 24px; }
+  .backing-table th,
+  .backing-table td {
+    min-width: 185px; }
+  .sensor-reference {
+    grid-template-columns: 1fr;
+    gap: 8px; }
+  .sensor-placement-grid article {
+    min-height: 0; }
+  .sensor-table th,
+  .sensor-table td,
+  .sensor-fault-table th,
+  .sensor-fault-table td {
+    min-width: 230px; } }
+
 /*# sourceMappingURL=style.css.map */

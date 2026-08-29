@@ -1,0 +1,272 @@
+---
+layout: page
+title: "Bearing Temperature Sensors: RTDs and Thermocouples"
+description: "Guide to bearing RTDs and thermocouples: sensor types, journal and thrust pad positioning, installation, wiring, continuity checks and calibration."
+keywords: "bearing temperature sensor, bearing RTD, bearing thermocouple, bearing temperature sensor location, thrust bearing 75 75 sensor, journal bearing temperature detector, test RTD, test thermocouple"
+permalink: /technical-library/bearing-temperature-sensors/
+last_modified_at: 2026-08-29
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/tilt-pad-steam-turbine.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "bearing temperature sensors",
+    "bearing RTDs",
+    "bearing thermocouples",
+    "journal bearing sensor location",
+    "thrust bearing 75/75 sensor location",
+    "temperature sensor testing"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Should an RTD or thermocouple be used in a bearing?", "acceptedAnswer": { "@type": "Answer", "text": "Both are used. Platinum RTDs are commonly selected for stable, repeatable bearing-metal measurement over the normal machinery temperature range. Thermocouples can be compact, rugged and fast. The monitoring input, wiring, response, vibration, hazardous-area and redundancy requirements determine the choice." } },
+    { "@type": "Question", "name": "Where should a journal bearing temperature sensor be positioned?", "acceptedAnswer": { "@type": "Answer", "text": "Use the approved bearing drawing and thermal analysis. In a tilting-pad journal bearing, sensors are commonly installed in the loaded pad toward the downstream or trailing-edge high-temperature region, often around 75 percent of pad arc from the leading edge. Axial position and depth also affect the reading." } },
+    { "@type": "Question", "name": "What is the 75/75 position in a thrust bearing?", "acceptedAnswer": { "@type": "Answer", "text": "For a unidirectional thrust pad, 75/75 conventionally means 75 percent of the circumferential pad length from the leading edge in the direction of rotation and 75 percent of the radial pad width outward from the inner diameter. The drawing must define the convention." } },
+    { "@type": "Question", "name": "How is a Pt100 bearing RTD checked?", "acceptedAnswer": { "@type": "Answer", "text": "Isolate and disconnect it, identify the wiring, inspect the leads, measure element and lead resistance with a suitable meter and compare with the correct IEC 60751 or manufacturer table at the measured temperature. A true calibration uses a controlled temperature source and reference thermometer." } },
+    { "@type": "Question", "name": "How is a bearing thermocouple checked?", "acceptedAnswer": { "@type": "Answer", "text": "After isolation, inspect the leads, verify type and polarity, check continuity and, where applicable, insulation from the case. Verify temperature response with a controlled source or thermocouple calibrator using correct cold-junction compensation and matching thermocouple or extension cable." } },
+    { "@type": "Question", "name": "Does simulating an RTD or thermocouple prove the bearing sensor works?", "acceptedAnswer": { "@type": "Answer", "text": "No. Simulation checks the transmitter, monitor, wiring and protection logic from the test point onward. It does not test the sensing element, its thermal contact, installation depth or physical position in the bearing." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/tilt-pad-steam-turbine.webp' | relative_url }}" class="hero-bg" alt="Instrumented tilting-pad journal bearing installed in a steam turbine">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Bearing Temperature Sensors</h1>
+    <p>How to select, position, install and test RTDs and thermocouples in fluid-film journal and thrust bearings.</p>
+    <div class="hero-ctas">
+      <a href="#sensor-types" class="btn-hero-primary">Compare Sensor Types</a>
+      <a href="#testing" class="btn-hero-secondary">Testing Procedure</a>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>A Bearing Sensor Measures One Location, Not the Whole Oil Film</h2>
+        <p>An embedded RTD or thermocouple reports temperature at its sensing element. The value depends on circumferential or radial position, axial position, depth below the running surface, thermal contact, backing material and response time. A sensor can provide effective alarm and trend protection only when its exact installation and the associated limits are known.</p>
+        <div><i class="ri-map-pin-2-line"></i><span>Sensor type, location, depth, pad identity, rotation direction, wiring and alarm logic belong on the controlled bearing and instrumentation drawings.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-chain section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Measurement Chain</h2><h3><span>Every Link Can Change the Reading</span></h3></div>
+    <div class="sensor-chain-grid">
+      <div><i class="ri-temp-hot-line"></i><span>1</span><h2>Oil Film and Metal</h2><p>Local heat is generated and conducted into the lining and backing.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><i class="ri-focus-3-line"></i><span>2</span><h2>Sensing Element</h2><p>The RTD or thermocouple responds at one installed position.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><i class="ri-route-line"></i><span>3</span><h2>Leads and Junctions</h2><p>Wire resistance, polarity, shielding and terminations affect the signal.</p></div>
+      <i class="ri-arrow-right-line"></i>
+      <div><i class="ri-dashboard-3-line"></i><span>4</span><h2>Monitor and Logic</h2><p>The input converts, displays, trends, alarms and trips from the signal.</p></div>
+    </div>
+    <p class="sensor-chain-note"><i class="ri-information-line"></i>A loop simulation can prove stages 3 and 4 from the injection point onward. It does not prove element accuracy, installation contact or placement in stages 1 and 2.</p>
+  </div>
+</section>
+
+<section id="sensor-types" class="sensor-types">
+  <div class="container">
+    <div class="section-title"><h2>Sensor Types</h2><h3><span>RTD or Thermocouple?</span></h3><p>Both can protect bearings when the complete sensor and monitoring system is correctly specified.</p></div>
+    <div class="sensor-type-grid">
+      <article class="rtd">
+        <div class="sensor-type-icon"><i class="ri-pulse-line"></i></div>
+        <span>Resistance measurement</span>
+        <h2>RTD</h2>
+        <p>A resistance temperature detector changes electrical resistance with temperature. Platinum Pt100 elements are common in industrial bearing monitoring.</p>
+        <ul><li>Good stability and repeatability</li><li>Near-linear response over bearing temperatures</li><li>Two-, three- or four-wire measurement</li><li>Single or dual sensing elements</li></ul>
+      </article>
+      <article class="tc">
+        <div class="sensor-type-icon"><i class="ri-flashlight-line"></i></div>
+        <span>Thermoelectric voltage</span>
+        <h2>Thermocouple</h2>
+        <p>Two dissimilar conductors generate a small voltage related to the temperature difference between sensing and reference junctions.</p>
+        <ul><li>Small sensing junction and fast response</li><li>Rugged and simple element construction</li><li>Letter type, polarity and cable must match</li><li>Requires cold-junction compensation</li></ul>
+      </article>
+    </div>
+    <div class="table-responsive sensor-table-wrap">
+      <table class="table sensor-table">
+        <thead><tr><th>Factor</th><th>Platinum RTD</th><th>Thermocouple</th></tr></thead>
+        <tbody>
+          <tr><td>Primary signal</td><td>Resistance in ohms</td><td>Small EMF in millivolts</td></tr>
+          <tr><td>Common bearing forms</td><td>Pt100; two-, three- or four-wire; single or dual element</td><td>Specified letter type such as J, K or T; grounded or ungrounded junction</td></tr>
+          <tr><td>Useful characteristics</td><td>Stable, repeatable and well suited to normal bearing-metal temperature ranges</td><td>Compact, rugged, responsive and tolerant of a broad temperature range</td></tr>
+          <tr><td>Important errors</td><td>Lead resistance, wrong element curve, self-heating, damaged insulation or poor thermal contact</td><td>Wrong type, reversed polarity, incorrect extension cable, parasitic junctions, noise or cold-junction error</td></tr>
+          <tr><td>Basic electrical check</td><td>Element resistance, lead balance and insulation where applicable</td><td>Continuity, polarity and insulation only for an ungrounded junction</td></tr>
+          <tr><td>True sensor calibration</td><td>Controlled temperature source plus resistance measurement and reference thermometer</td><td>Controlled source plus EMF measurement with defined reference-junction compensation</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-rtd-wiring section-bg">
+  <div class="container">
+    <div class="section-title"><h2>RTD Wiring</h2><h3><span>Lead Compensation Changes the Measurement</span></h3></div>
+    <div class="sensor-wire-grid">
+      <article><span>2-wire</span><div class="sensor-wire-diagram two"><i></i><i></i></div><h2>Element Plus Lead Resistance</h2><p>Both lead resistances add directly to the indicated value unless compensated elsewhere. Suitable only where the specified error remains acceptable.</p></article>
+      <article><span>3-wire</span><div class="sensor-wire-diagram three"><i></i><i></i><i></i></div><h2>Instrument Compensation</h2><p>The monitor estimates lead resistance, normally assuming the matching leads have similar resistance. Unequal leads introduce residual error.</p></article>
+      <article><span>4-wire</span><div class="sensor-wire-diagram four"><i></i><i></i><i></i><i></i></div><h2>Separate Sense and Excitation</h2><p>Kelvin measurement largely removes lead resistance from the result when connected to a compatible four-wire input.</p></article>
+    </div>
+    <div class="sensor-reference"><strong>Pt100 reference</strong><p>A Pt100 has nominal resistance of 100&nbsp;&ohm; at 0&deg;C. An IEC 60751 element with the common 0.00385 coefficient is approximately 109.7&nbsp;&ohm; at 25&deg;C, before two-wire lead resistance. Confirm the actual element curve and measured temperature.</p></div>
+  </div>
+</section>
+
+<section class="sensor-placement">
+  <div class="container">
+    <div class="section-title"><h2>Sensor Placement</h2><h3><span>Position for the Failure Mode and Load Case</span></h3><p>The approved OEM or bearing drawing takes precedence. These locations explain common practice, not universal drilling dimensions.</p></div>
+    <div class="sensor-placement-grid">
+      <article>
+        <div class="sensor-place-visual fixed-journal"><div class="sensor-fixed-shell"></div><div class="sensor-fixed-shaft"></div><div class="sensor-place-dot one"></div><div class="sensor-place-dot two"></div></div>
+        <span>Fixed-profile journal</span><h2>Loaded Zone and Axial Spread</h2><p>Place the element in the predicted high-temperature loaded region. Where shaft or housing misalignment can cause edge loading, sensors near both axial ends can reveal a temperature split that one centreline sensor would miss.</p>
+      </article>
+      <article>
+        <div class="sensor-place-visual tilt-journal"><div class="sensor-journal-pad"></div><div class="sensor-journal-pivot"></div><div class="sensor-place-dot"></div><div class="sensor-direction"><i class="ri-arrow-right-line"></i></div></div>
+        <span>Tilting-pad journal</span><h2>Loaded Pad, Downstream Region</h2><p>A common location is in the loaded pad toward the trailing-edge high-temperature region, often around 75% of pad arc from its leading edge. Axial centreline suits some self-aligning pads; edge sensors may be required for non-aligning pads.</p>
+      </article>
+      <article>
+        <div class="sensor-place-visual thrust"><div class="sensor-thrust-shape"></div><div class="sensor-thrust-pivot"></div><div class="sensor-place-dot"></div><strong>75 / 75</strong></div>
+        <span>Tilting-pad thrust</span><h2>Define 75/75 From Rotation</h2><p>For unidirectional service, 75/75 commonly means 75% of circumferential length from the leading edge and 75% of radial width outward from the inner diameter. Bidirectional bearings require a different position defined by the drawing.</p>
+      </article>
+    </div>
+    <div class="sensor-placement-notes">
+      <div><i class="ri-ruler-2-line"></i><p><strong>Depth:</strong> a deeper sensor usually reads lower and responds more slowly. Field sensors are commonly fitted in the backing just beneath the lining; laboratory research may embed very small elements closer to the working surface.</p></div>
+      <div><i class="ri-layout-grid-line"></i><p><strong>Coverage:</strong> one sensor reports one location. Multiple pads, dual elements or axial pairs may be needed to detect unequal load sharing, reverse rotation or edge loading.</p></div>
+      <div><i class="ri-refresh-line"></i><p><strong>Rotation:</strong> leading and trailing edges reverse when shaft direction changes. Offset pivots, oil feeds and sensor positions must be reviewed for every permitted direction.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-installation section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Physical Installation</h2><h3><span>The Mounting Method Is Part of the Measurement</span></h3></div>
+    <div class="sensor-install-grid">
+      <div><span>01</span><h2>Controlled Hole and Contact</h2><p>Machine the diameter, depth and flat-bottom geometry specified for the sensor case. Spring loading, a retaining ring or qualified potting can maintain contact and permit replacement.</p></div>
+      <div><span>02</span><h2>Protect the Running Surface</h2><p>Do not distort or break through the finished lining. Remove burrs and swarf, then verify the remaining depth to the running surface against the drawing.</p></div>
+      <div><span>03</span><h2>Route and Retain Leads</h2><p>Use controlled grooves and bend radii. Keep leads clear of pads, pivots, split faces and rotating parts, and prevent fretting against sharp housing edges.</p></div>
+      <div><span>04</span><h2>Seal the Oil Path</h2><p>Prevent lubricant tracking along leads or braid through the housing feedthrough. The sealing method must suit oil, temperature, pressure and hazardous-area requirements.</p></div>
+      <div><span>05</span><h2>Control Grounding</h2><p>Specify grounded or isolated construction. Insulated bearings may require electrically isolated sensors so instrumentation does not create an uncontrolled shaft-current path.</p></div>
+      <div><span>06</span><h2>Identify Every Channel</h2><p>Mark bearing side, pad number, element A/B, sensor type, wire configuration, location and rotation reference at both bearing and panel terminations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-specification">
+  <div class="container">
+    <div class="section-title"><h2>Minimum Specification</h2><h3><span>Information Needed Before Manufacture</span></h3></div>
+    <div class="sensor-spec-grid">
+      <div><i class="ri-file-list-3-line"></i><h2>Element</h2><p>RTD material, nominal resistance, coefficient and accuracy class; or thermocouple type, tolerance and grounded/ungrounded junction.</p></div>
+      <div><i class="ri-node-tree"></i><h2>Circuit</h2><p>Two-, three- or four-wire RTD; single or dual element; thermocouple polarity; shield termination and isolation requirements.</p></div>
+      <div><i class="ri-map-pin-line"></i><h2>Location</h2><p>Pad or shell identity, circumferential/radial and axial coordinates, depth, rotation direction and drawing datum.</p></div>
+      <div><i class="ri-route-line"></i><h2>Lead System</h2><p>Insulation, braid, cable length, bend radius, oil blocking, extension cable, feedthrough, connector and terminal box.</p></div>
+      <div><i class="ri-shield-check-line"></i><h2>Environment</h2><p>Temperature, vibration, oil chemistry, ingress, EMC, electrical isolation and hazardous-area certification.</p></div>
+      <div><i class="ri-test-tube-line"></i><h2>Acceptance</h2><p>Continuity, insulation, calibration or response test, documentation, channel identification and as-built resistance values.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="testing" class="sensor-testing section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Testing RTDs and Thermocouples</h2><h3><span>Isolate First, Then Prove One Boundary at a Time</span></h3><p>Only trained personnel should test protection circuits. Follow the machine isolation procedure and prevent an unintended trip, start or loss of protection.</p></div>
+    <div class="sensor-test-warning"><i class="ri-error-warning-line"></i><p>Disconnect the sensor from monitoring electronics before resistance or insulation measurements. Do not apply a high-voltage insulation tester unless the sensor, cable, barriers and connected equipment are specifically approved for that test.</p></div>
+    <div class="sensor-test-grid">
+      <article class="rtd">
+        <span>RTD check</span><h2>Resistance Temperature Detector</h2>
+        <ol>
+          <li><strong>Identify:</strong> confirm Pt100 or other element, wire count, single/dual circuit and terminal diagram.</li>
+          <li><strong>Inspect:</strong> check crushed insulation, frayed braid, oil ingress, loose joints and sharp lead exits.</li>
+          <li><strong>Measure:</strong> record element resistance and lead-pair resistance with the sensor at a measured, stable temperature.</li>
+          <li><strong>Compare:</strong> use the correct IEC 60751 or manufacturer resistance-temperature table, including lead resistance for two-wire circuits.</li>
+          <li><strong>Insulation:</strong> where the construction permits, test each circuit to the case, braid or bearing using the manufacturer's method and limit.</li>
+          <li><strong>Calibrate if required:</strong> use a controlled bath or dry block and calibrated reference, recording several increasing and decreasing temperature points.</li>
+        </ol>
+      </article>
+      <article class="tc">
+        <span>Thermocouple check</span><h2>Thermocouple</h2>
+        <ol>
+          <li><strong>Identify:</strong> confirm letter type, polarity, junction grounding, cable type and cold-junction arrangement.</li>
+          <li><strong>Inspect:</strong> check lead and braid damage, oil wicking, connector alloy, terminal material and unintended junctions.</li>
+          <li><strong>Continuity:</strong> isolate the circuit and check for an open or abnormal resistance against the sensor manufacturer's data.</li>
+          <li><strong>Insulation:</strong> test only an ungrounded construction. A grounded junction is intentionally connected to its case.</li>
+          <li><strong>Response:</strong> apply a controlled temperature and verify millivolt polarity and magnitude using matching thermocouple connections and correct reference-junction compensation.</li>
+          <li><strong>Calibrate if required:</strong> compare the sensor with a calibrated reference through the required range and acceptance tolerance.</li>
+        </ol>
+      </article>
+    </div>
+    <div class="sensor-test-levels">
+      <div><span>Level 1</span><h2>Electrical Health</h2><p>Continuity, resistance balance, insulation and visual condition find opens, shorts and damaged leads. They do not prove temperature accuracy.</p></div>
+      <div><span>Level 2</span><h2>Sensor Response</h2><p>Controlled heating with a reference checks that the element responds correctly. An installed bearing may have gradients that limit calibration accuracy.</p></div>
+      <div><span>Level 3</span><h2>Loop Simulation</h2><p>A calibrated resistance or millivolt source checks transmitter scaling, display, alarms, trips and logic. It bypasses the physical sensor.</p></div>
+      <div><span>Level 4</span><h2>End-to-End Proof</h2><p>A documented test combines sensor evidence, wiring checks, channel identity, monitor response and alarm/trip action under controlled conditions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sensor-diagnosis">
+  <div class="container">
+    <div class="section-title"><h2>Fault Patterns</h2><h3><span>What an Abnormal Reading May Mean</span></h3></div>
+    <div class="table-responsive">
+      <table class="table sensor-fault-table">
+        <thead><tr><th>Observed symptom</th><th>Possible sensor or circuit cause</th><th>Mechanical condition to exclude</th></tr></thead>
+        <tbody>
+          <tr><td>Sudden open-circuit or upscale indication</td><td>Broken element, lead or terminal; input burnout direction</td><td>Confirm no actual rapid over-temperature event occurred first</td></tr>
+          <tr><td>Implausibly low or fixed reading</td><td>Shorted leads, wrong input type, failed transmitter or poor thermal contact</td><td>Low load, cold oil, unloaded pad or changed operating condition</td></tr>
+          <tr><td>One channel consistently offset</td><td>Wrong RTD curve, lead resistance, thermocouple type/polarity, junction or calibration error</td><td>Real pad load imbalance, misalignment, oil distribution or sensor-position difference</td></tr>
+          <tr><td>Noisy or intermittent trend</td><td>Loose terminal, damaged braid, ground loop, EMI, fretting lead or moisture ingress</td><td>Actual vibration, pad flutter, unstable oil supply or transient load</td></tr>
+          <tr><td>Axial pair diverges</td><td>Different depths, swapped channels or damaged element</td><td>Edge loading, shaft slope, housing distortion or uneven clearance</td></tr>
+          <tr><td>All pads rise together</td><td>Common reference, input or scaling fault</td><td>High inlet temperature, low flow, viscosity loss, speed or load change</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sensor-diagnosis-link">Use the <a href="{{ '/technical-library/bearing-temperature-limits' | relative_url }}">bearing temperature limits guide</a> to distinguish supply oil, drain oil, embedded metal and predicted film temperatures before changing alarm settings.</p>
+  </div>
+</section>
+
+<section class="terminology-faq sensor-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Bearing Sensor FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is an RTD better than a thermocouple?</h2><p>Not universally. Pt100 RTDs offer stable, repeatable measurement; thermocouples are compact and rugged. The input system, response, wiring, vibration, certification and redundancy requirements decide.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Where is the hottest point?</h2><p>It depends on bearing geometry, load, speed, oil supply and distortion. The maximum film or surface temperature may not occur at the embedded sensor. Use thermal analysis and approved drawing locations.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>What does 75/75 mean?</h2><p>For a unidirectional thrust pad it conventionally identifies 75% of pad length from the leading edge and 75% of radial width outward from the inner diameter. State the datums and rotation on the drawing.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can resistance prove an RTD is calibrated?</h2><p>A room-temperature resistance check can identify an open, short or gross error. Calibration requires known temperatures, a reference thermometer and comparison with the correct resistance curve.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can a grounded thermocouple be insulation tested?</h2><p>Not as an isolated element-to-case circuit: its junction is intentionally grounded. Confirm construction before interpreting continuity to the case.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does a loop test check sensor placement?</h2><p>No. It checks the circuit from the injection point onward. It cannot prove that the sensor is at the correct depth, on the correct pad or in good thermal contact.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note sensor-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>Sensor definitions and testing were cross-checked against <a href="https://webstore.iec.ch/en/publication/63753">IEC 60751:2022</a> for industrial platinum resistance sensors, <a href="https://webstore.iec.ch/en/publication/2521">IEC 60584-1:2013</a> for thermocouple EMF and tolerances, Minco's <a href="https://www.minco.com/wp-content/uploads/ei957.pdf">bearing temperature sensor replacement criteria</a> and <a href="https://www.minco.com/wp-content/uploads/Instructions-Temperature-Sensor-in-Thrust-Bearing-Using-the-Spring-and-Ring-Method-for-Case-Style-B-EI-181-665-2231023-1-G-1-1.pdf">spring-and-ring installation guidance</a>, and Fluke's <a href="https://www.fluke.com/en-ca/learn/blog/calibration/calibrating-and-testing-rtd-sensors">RTD calibration procedure</a>. Placement was cross-checked against Kingsbury guidance on <a href="https://www.kingsbury.com/temperature-measurement-in-fluid-film-bearings/">fluid-film bearing temperature measurement</a> and <a href="https://www.kingsbury.com/shoe-temperature-patterns/">tilting-pad temperature patterns</a>. The bearing drawing, sensor manufacturer and machinery protection specification govern each installation.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need Instrumented Journal or Thrust Bearings?</h3>
+    <p>Send the bearing drawing, rotation, load cases, sensor specification and monitoring-system details for an instrumentation review.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/bearing-design-analysis' | relative_url }}" class="cta-btn cta-btn-outline">Design and Analysis</a></div>
+  </div></div>
+</section>
