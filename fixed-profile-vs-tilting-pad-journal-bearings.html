@@ -1,0 +1,257 @@
+---
+layout: page
+title: "Fixed-Profile vs Tilting-Pad Journal Bearings"
+description: "Compare fixed-profile and tilting-pad journal bearings: construction, oil-film behaviour, stability, load response, trade-offs and selection inputs."
+keywords: "fixed profile bearing, fixed geometry journal bearing, tilting pad journal bearing, tilt pad bearing vs journal bearing, sleeve bearing vs tilt pad, oil whirl bearing, journal bearing selection"
+permalink: /technical-library/fixed-profile-vs-tilting-pad-journal-bearings/
+last_modified_at: 2026-08-29
+---
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  "image": "{{ '/assets/img/fixedprofile.webp' | absolute_url }}",
+  "author": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "publisher": { "@id": "{{ '/' | absolute_url }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ page.url | absolute_url }}" },
+  "about": [
+    "fixed-profile journal bearings",
+    "tilting-pad journal bearings",
+    "fixed geometry bearings",
+    "bearing rotordynamic stability",
+    "journal bearing selection"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is the main difference between a fixed-profile and a tilting-pad journal bearing?", "acceptedAnswer": { "@type": "Answer", "text": "A fixed-profile journal bearing has stationary running geometry machined into its bore. A tilting-pad journal bearing has several independently pivoted pads, each of which changes angle to form a hydrodynamic oil wedge around the rotating shaft." } },
+    { "@type": "Question", "name": "Is a sleeve bearing a fixed-profile bearing?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A cylindrical sleeve bearing is one type of fixed-profile journal bearing. Other fixed profiles include elliptical or lemon-bore, offset-half and multi-lobe geometries." } },
+    { "@type": "Question", "name": "Are tilting-pad journal bearings always better than fixed-profile bearings?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tilting-pad bearings are often selected when rotor stability and low cross-coupled stiffness are critical, but fixed-profile bearings can provide a simpler, compact and economical solution when the load, speed and rotor-dynamic requirements permit." } },
+    { "@type": "Question", "name": "Do tilting-pad bearings eliminate oil whirl?", "acceptedAnswer": { "@type": "Answer", "text": "Tilting pads generally reduce the destabilising cross-coupled stiffness associated with fixed geometry and are widely used to control oil-film instability. Actual machine stability still depends on the complete rotor, bearing, seal, support and operating system, and tilting-pad bearings can have other subsynchronous vibration mechanisms." } },
+    { "@type": "Question", "name": "Can a fixed-profile bearing be replaced by a tilting-pad bearing?", "acceptedAnswer": { "@type": "Answer", "text": "Sometimes, but it is an engineering redesign rather than a direct assumption. Housing space, shaft geometry, oil supply, clearance, load direction, temperature, power loss, stiffness and damping, critical speeds and installation details must all be checked." } }
+  ]
+}
+</script>
+
+<section id="hero" class="page-hero">
+  <img src="{{ '/assets/img/tilt-pad-steam-turbine.webp' | relative_url }}" class="hero-bg" alt="Tilting-pad journal bearing installed in a steam turbine">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Fixed-Profile vs Tilting-Pad Journal Bearings</h1>
+    <p>How stationary bore geometry and independently pivoted pads change oil-film behaviour, rotor stability and bearing selection.</p>
+    <div class="hero-ctas">
+      <a href="#construction" class="btn-hero-primary">Compare the Designs</a>
+      <a href="#selection" class="btn-hero-secondary">Review Selection Inputs</a>
+    </div>
+  </div>
+</section>
+
+<section class="profile-answer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>The Difference Is Whether the Load-Carrying Geometry Can Move</h2>
+        <p>A <strong>fixed-profile journal bearing</strong> has a stationary bore: the shaft runs eccentrically within a cylindrical, elliptical, offset or multi-lobe profile to create hydrodynamic pressure. A <strong>tilting-pad journal bearing</strong> divides the bore into separate pads. Each pad rotates by a small angle about its pivot until hydrodynamic and mechanical moments reach equilibrium, creating an individual converging oil wedge.</p>
+        <div><i class="ri-focus-3-line"></i><span>Both are hydrodynamic fluid-film bearings. The distinction is bearing geometry, not whether the running surface is whitemetal, Babbitt or another material.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="construction" class="profile-construction section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Construction</h2>
+      <h3><span>One Fixed Bore or Several Moving Pads</span></h3>
+      <p>The two designs use the same hydrodynamic principle but establish the converging film in different ways.</p>
+    </div>
+    <div class="profile-bearing-grid">
+      <article class="profile-bearing fixed">
+        <img src="{{ '/assets/img/fixedprofile.webp' | relative_url }}" alt="Oiltech fixed-profile whitemetal journal bearings" loading="lazy" width="640" height="480">
+        <div class="profile-bearing-content">
+          <span>Stationary geometry</span>
+          <h2>Fixed-Profile Journal Bearing</h2>
+          <p>The running surface is machined into a fixed shell or housing. Shaft eccentricity relative to that surface forms the converging clearance and pressure field.</p>
+          <ul>
+            <li>Plain cylindrical or sleeve bore</li>
+            <li>Elliptical or lemon-bore profile</li>
+            <li>Offset-half geometry</li>
+            <li>Multi-lobe or pressure-dam profile</li>
+          </ul>
+          <a href="{{ '/journal-bearings' | relative_url }}">View fixed-profile journal bearings <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </article>
+      <article class="profile-bearing tilting">
+        <img src="{{ '/assets/img/gallery/tilt-pad-journal.webp' | relative_url }}" alt="Oiltech tilting-pad journal bearing with individual copper-backed pads" loading="lazy" width="480" height="640">
+        <div class="profile-bearing-content">
+          <span>Adaptive geometry</span>
+          <h2>Tilting-Pad Journal Bearing</h2>
+          <p>Usually four or five pads are supported on pivots. Each pad finds its own operating angle and forms a separate oil wedge as the shaft rotates.</p>
+          <ul>
+            <li>Load-on-pad or load-between-pad orientation</li>
+            <li>Centre or offset pivots</li>
+            <li>Line, point, spherical or flexure supports</li>
+            <li>Flooded or directed lubrication</li>
+          </ul>
+          <a href="{{ '/t-series-tilt-pad-journal-bearings' | relative_url }}">View T-Series tilting-pad bearings <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="profile-common">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <span class="profile-label">Shared operating principle</span>
+        <h2>Both Depend on a Hydrodynamic Oil Film</h2>
+      </div>
+      <div class="col-lg-7">
+        <p>Rotation draws lubricant into a narrowing clearance. Pressure generated inside that converging film separates the shaft from the bearing and carries radial load. Speed, load, viscosity, clearance, temperature, surface condition and oil supply therefore matter to both designs.</p>
+        <a href="{{ '/technical-library/hydrodynamic-lubrication' | relative_url }}">Read how hydrodynamic lubrication works <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="profile-comparison section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Direct Comparison</h2>
+      <h3><span>Practical Design Differences</span></h3>
+      <p>These are general tendencies. Actual performance is set by the detailed geometry, materials, lubrication and operating point.</p>
+    </div>
+    <div class="table-responsive">
+      <table class="table profile-table">
+        <thead>
+          <tr><th>Design factor</th><th>Fixed-profile journal bearing</th><th>Tilting-pad journal bearing</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Running geometry</td><td>One stationary cylindrical or profiled bore.</td><td>Several pads rotate independently through small angles about their pivots.</td></tr>
+          <tr><td>Oil-wedge formation</td><td>Created mainly by shaft eccentricity inside the fixed clearance profile.</td><td>Each pad changes attitude to establish its own converging film.</td></tr>
+          <tr><td>Dynamic cross-coupling</td><td>Can produce significant cross-coupled stiffness, particularly in lightly loaded, high-speed service. Profile changes and grooves can improve stability.</td><td>Normally much lower because pad motion allows the film force to follow shaft position more directly. It should not be assumed to be exactly zero.</td></tr>
+          <tr><td>Rotor stability</td><td>Suitable where analysis confirms adequate stability margin; oil whirl or oil whip can limit some high-speed, lightly loaded applications.</td><td>Often selected for high-speed turbomachinery where control of oil-film instability is a primary requirement.</td></tr>
+          <tr><td>Load direction</td><td>Performance can be sensitive to load angle and to the position of grooves, lobes and reliefs.</td><td>Can accommodate varying load direction more readily, although load-on-pad and load-between-pad orientation still affect performance.</td></tr>
+          <tr><td>Alignment response</td><td>A continuous fixed bore requires shaft, housing and bearing geometry to be well aligned to avoid edge loading.</td><td>Independent pads and suitable pivots can accommodate limited local misalignment, but they do not correct machine alignment errors.</td></tr>
+          <tr><td>Mechanical complexity</td><td>Fewer components, no pad pivots and generally simpler manufacture, assembly and inspection.</td><td>More parts and controlled features, including pads, pivots, retainers, carrier geometry and instrumentation routes.</td></tr>
+          <tr><td>Direction of rotation</td><td>Symmetric profiles can support either direction; oil grooves and asymmetric features must still be checked.</td><td>Centre-pivot designs may be bidirectional. Offset pivots and directed lubrication are commonly rotation-specific.</td></tr>
+          <tr><td>Design variables</td><td>Clearance, L/D ratio, bore profile, groove location, material and lubrication method.</td><td>All relevant clearances plus pad count, arc, preload, pivot type, pivot offset, load orientation and pad flexibility.</td></tr>
+          <tr><td>Typical use</td><td>Pumps, motors, gearboxes, fans and turbines where load, speed and stability permit a fixed geometry.</td><td>Compressors, turbines and other high-speed or stability-critical rotating machinery.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="profile-dynamics">
+  <div class="container">
+    <div class="section-title">
+      <h2>Rotordynamic Behaviour</h2>
+      <h3><span>Why Pad Motion Changes Stability</span></h3>
+    </div>
+    <div class="profile-dynamics-grid">
+      <div class="profile-dynamic fixed">
+        <i class="ri-refresh-line"></i>
+        <span>Fixed geometry</span>
+        <h2>Fluid Rotation Can Couple the Axes</h2>
+        <p>In a fixed bore, displacement in one direction can generate a significant force component in the perpendicular direction. These cross-coupled forces can feed forward whirl and reduce stability margin. Elliptical, offset-half, multi-lobe and pressure-dam profiles are among the methods used to change this behaviour.</p>
+      </div>
+      <div class="profile-dynamic tilting">
+        <i class="ri-layout-grid-line"></i>
+        <span>Moving pads</span>
+        <h2>Each Pad Follows Its Local Film Force</h2>
+        <p>Pad rotation allows each segment to settle at an attitude governed by its local pressure field. This generally suppresses the large destabilising cross-coupled stiffness associated with a continuous fixed bore. Pad inertia, pivot flexibility, asymmetry and unloaded-pad vibration can still influence measured dynamics.</p>
+      </div>
+    </div>
+    <div class="profile-dynamics-note">
+      <i class="ri-pulse-line"></i>
+      <p>Bearing type alone does not prove machine stability. The assessment must include speed-dependent <a href="{{ '/technical-library/bearing-stiffness-damping-coefficients' | relative_url }}">stiffness and damping coefficients</a>, seals, supports, couplings, rotor modes and all required operating cases.</p>
+    </div>
+  </div>
+</section>
+
+<section id="selection" class="profile-selection section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>Initial Selection</h2>
+      <h3><span>Where Each Design Is Often a Strong Candidate</span></h3>
+      <p>This screening comparison does not replace bearing performance and rotor-dynamic analysis.</p>
+    </div>
+    <div class="profile-selection-grid">
+      <div class="profile-candidate fixed">
+        <span>Consider fixed profile when</span>
+        <ul>
+          <li>Operating speed and rotor dynamics provide adequate stability margin</li>
+          <li>Load magnitude and direction are well defined</li>
+          <li>A compact, simple bearing package is important</li>
+          <li>Existing housings and lubrication suit a sleeve or profiled bore</li>
+          <li>Manufacturing, assembly and maintenance simplicity have high value</li>
+        </ul>
+      </div>
+      <div class="profile-candidate tilting">
+        <span>Consider tilting pad when</span>
+        <ul>
+          <li>High speed or light load creates an oil-film stability concern</li>
+          <li>Low cross-coupled stiffness is required by the rotor model</li>
+          <li>Load direction varies or shaft attitude changes materially</li>
+          <li>Stiffness, damping, power loss and temperature require detailed optimisation</li>
+          <li>The machine is critical enough to justify the additional design complexity</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="profile-workflow">
+  <div class="container">
+    <div class="section-title">
+      <h2>Engineering Inputs</h2>
+      <h3><span>Information Needed Before Choosing</span></h3>
+    </div>
+    <ol class="profile-inputs">
+      <li><span>01</span><div><h2>Define Every Operating Case</h2><p>Minimum, normal, maximum and transient speed; radial load magnitude and direction; torque; start-stop duty; and any rotating or dynamic loads.</p></div></li>
+      <li><span>02</span><div><h2>Describe the Rotor and Supports</h2><p>Shaft geometry, bearing span, mass distribution, seals, couplings, casing and support stiffness are required for system-level stability and response calculations.</p></div></li>
+      <li><span>03</span><div><h2>Fix the Lubrication Boundary</h2><p>Oil grade and viscosity, supply temperature and pressure, available flow, drains, flooded or directed arrangement, filtration and emergency conditions.</p></div></li>
+      <li><span>04</span><div><h2>Confirm the Mechanical Envelope</h2><p>Housing dimensions, shaft diameter, available axial width, split arrangement, rotation direction, instrumentation and assembly access.</p></div></li>
+      <li><span>05</span><div><h2>Compare Calculated Performance</h2><p>Minimum film thickness, peak pressure, temperature, oil flow, power loss, pad or shell deformation, stiffness and damping over the full duty range.</p></div></li>
+      <li><span>06</span><div><h2>Review Risk and Lifecycle</h2><p>Machine criticality, failure consequence, inspection capability, replacement strategy, maintainability and total lifecycle cost.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="terminology-faq profile-faq section-bg">
+  <div class="container">
+    <div class="section-title"><h2>Common Questions</h2><h3><span>Fixed-Profile and Tilting-Pad FAQ</span></h3></div>
+    <div class="row g-4">
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is a sleeve bearing fixed profile?</h2><p>Yes. A cylindrical sleeve bearing is a fixed-profile journal bearing. Fixed-profile is the broader category and also includes elliptical, offset-half and multi-lobe bores.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Is a tilting-pad bearing always better?</h2><p>No. It offers important dynamic advantages, but also adds parts, tolerances and design variables. A well-selected fixed-profile bearing may be the more appropriate solution for a moderate-speed, well-loaded machine.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Does a tilting-pad bearing eliminate oil whirl?</h2><p>It normally reduces the cross-coupled oil-film forces that drive classical oil whirl. The complete machine still requires stability analysis, and pad or pivot dynamics can introduce other subsynchronous responses.</p></div></div>
+      <div class="col-lg-6"><div class="terminology-answer"><h2>Can the bearing types be interchanged?</h2><p>Sometimes, but not as a like-for-like substitution without analysis. Fit, oil supply, thermal performance, clearances, dynamic coefficients, critical speeds and installation details must all be reviewed.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="rules-source-note profile-source">
+  <div class="container">
+    <h2>Technical Basis</h2>
+    <p>The construction and selection comparison was cross-checked against Texas A&amp;M Turbomachinery Laboratory guidance on <a href="https://rotorlab.tamu.edu/me626/Notes_pdf/Notes07_primer_tiltpadB.pdf">tilting-pad journal bearings</a> and <a href="https://oaktrust.library.tamu.edu/items/67d57c09-9d65-4b3c-81c4-70a2b742e675">fluid-film journal bearing operation and modelling</a>; Waukesha Bearings guidance for <a href="https://www.waukbearing.com/en/products/fluid-film-bearings/journal-bearings/fixed-profile-journal.html">fixed-profile journal bearings</a> and <a href="https://www.waukbearing.com/en/products/fluid-film-bearings/journal-bearings/tilt-pad-journal.html">tilting-pad journal bearings</a>; and Kingsbury's <a href="https://www.kingsbury.com/pdf/KNG-Journal-Bearing-Brochure.pdf">tilting-pad journal bearing technical brochure</a>. Product-specific claims and limits must be confirmed for the bearing being assessed.</p>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container"><div class="text-center">
+    <h3>Need to Select or Upgrade a Journal Bearing?</h3>
+    <p>Send the bearing and housing drawings with shaft, load, speed, oil and vibration data for a fixed-profile or tilting-pad design review.</p>
+    <div class="cta-buttons"><a href="{{ '/contact' | relative_url }}" class="cta-btn">Ask an Engineer</a><a href="{{ '/bearing-design-analysis' | relative_url }}" class="cta-btn cta-btn-outline">Design and Analysis</a></div>
+  </div></div>
+</section>
