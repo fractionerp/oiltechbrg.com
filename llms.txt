@@ -5,10 +5,13 @@ permalink: /llms.txt
 ---
 # Oiltech Bearings
 
-> Oiltech Bearings Ltd is a UK-based manufacturer specialising in whitemetal, white metal and Babbitt lined bearings for steam turbines, pumps, compressors, gearboxes, and other rotating equipment. These terms refer to the same family of soft bearing alloys. Services include new bearing manufacture, repair and re-lining, re-engineering of obsolete or problem bearings, bearing design and analysis, and OEM supply. Based in Newcastle upon Tyne, serving customers worldwide.
+> Oiltech Bearings Ltd is a UK designer, manufacturer and repair specialist for hydrodynamic fluid-film bearings. Products include fixed-profile and tilting-pad journal bearings, modular and equalising thrust bearings, combined bearings and replacement bearings for legacy equipment. Whitemetal, white metal and Babbitt are common names for the same family of soft bearing lining alloys. Capabilities include new manufacture, repair and re-lining, re-engineering, failure analysis, bearing design, oil-film performance analysis and OEM supply for turbines, compressors, pumps, fans, gearboxes and other critical rotating equipment. Oiltech is based in Newcastle upon Tyne and serves customers worldwide.
+
+Last reviewed: 2026-09-01
 
 ## Company
 
+- [Oiltech Bearings](https://oiltechbrg.com/): Hydrodynamic bearing products, engineering capabilities, manufacturing, repair and OEM supply
 - [About Oiltech Bearings](https://oiltechbrg.com/about/): Company history, capabilities, and engineering heritage
 - [Contact](https://oiltechbrg.com/contact/): Enquiry form, phone, email, and address for Newcastle upon Tyne HQ
 - [Quality Assurance](https://oiltechbrg.com/quality-assurance/): ISO 9001 certification, ultrasonic bond testing to ISO 4386-1, dye penetrant testing to ISO 4386-3, and quality control processes
