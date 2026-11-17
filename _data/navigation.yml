@@ -2,112 +2,112 @@ main:
   - title: Home
     url: /
   - title: Products
-    url: /babbitt-bearing-product-ranges
+    url: /babbitt-bearing-product-ranges/
     dropdown:
       - title: Journal Bearings
-        url: /journal-bearings
+        url: /journal-bearings/
       - title: Tilt Pad Bearings
-        url: /t-series-tilt-pad-journal-bearings
+        url: /t-series-tilt-pad-journal-bearings/
       - title: Thrust Bearings
-        url: /j-series-equalising-thrust-bearings
+        url: /j-series-equalising-thrust-bearings/
       - title: Legacy OEM Replacements
-        url: /legacy-oem-bearing-replacements
+        url: /legacy-oem-bearing-replacements/
   - title: Services
-    url: /whitemetal-bearing-repair
+    url: /whitemetal-bearing-repair/
     dropdown:
       - title: Bearing Repair
-        url: /whitemetal-bearing-repair
+        url: /whitemetal-bearing-repair/
       - title: Emergency Repair
-        url: /contact
+        url: /contact/
       - title: Reverse Engineering
-        url: /re-engineering
+        url: /re-engineering/
   - title: Engineering
-    url: /bearing-design-analysis
+    url: /bearing-design-analysis/
     dropdown:
       - title: Design
-        url: /bearing-design-analysis
+        url: /bearing-design-analysis/
       - title: FEA
-        url: /technical-services
+        url: /technical-services/
       - title: Technical Library
-        url: /technical-library
+        url: /technical-library/
       - title: Bearing Rules of Thumb
-        url: /technical-library/bearing-rules-of-thumb
+        url: /technical-library/bearing-rules-of-thumb/
       - title: Hydrodynamic Lubrication
-        url: /technical-library/hydrodynamic-lubrication
+        url: /technical-library/hydrodynamic-lubrication/
       - title: Whitemetal Alloys
-        url: /technical-library/whitemetal-alloys
+        url: /technical-library/whitemetal-alloys/
       - title: Bearing Failure Analysis
-        url: /bearing-failure-modes
+        url: /bearing-failure-modes/
   - title: Regions
-    url: /oem-bearing-supply-usa
+    url: /oem-bearing-supply-usa/
     dropdown:
       - title: USA
-        url: /oem-bearing-supply-usa
+        url: /oem-bearing-supply-usa/
       - title: Germany & Europe
-        url: /oem-bearing-supply-germany-europe
+        url: /oem-bearing-supply-germany-europe/
       - title: Japan
-        url: /oem-bearing-supply-japan
+        url: /oem-bearing-supply-japan/
       - title: Middle East & Africa
-        url: /regions/middle-east-africa
+        url: /regions/middle-east-africa/
       - title: Asia
-        url: /regions/asia
+        url: /regions/asia/
   - title: Industries
-    url: /industries
+    url: /industries/
     dropdown:
       - title: Oil & Gas
-        url: /industries/oil-gas
+        url: /industries/oil-gas/
       - title: Power Generation
-        url: /industries/power-generation
+        url: /industries/power-generation/
       - title: Mining & Heavy Industry
-        url: /industries/mining-heavy-industry
+        url: /industries/mining-heavy-industry/
       - title: Petrochemical & Process
-        url: /industries/petrochemical
+        url: /industries/petrochemical/
       - title: Marine & Offshore
-        url: /industries/marine-offshore
+        url: /industries/marine-offshore/
       - title: General Industry
-        url: /industries/general-industry
+        url: /industries/general-industry/
   - title: Case Studies
-    url: /case-studies/howden-fan-bearing-upgrade
+    url: /case-studies/howden-fan-bearing-upgrade/
     dropdown:
       - title: Howden Fan Bearing Upgrade
-        url: /case-studies/howden-fan-bearing-upgrade
+        url: /case-studies/howden-fan-bearing-upgrade/
       - title: LEG Journal Bearing Re-Engineering
-        url: /case-studies/leg-journal-bearing
+        url: /case-studies/leg-journal-bearing/
       - title: Turbine Wreckage to Certified Rebuild
-        url: /case-studies/turbine-wreckage-to-certified-rebuild
+        url: /case-studies/turbine-wreckage-to-certified-rebuild/
       - title: High-Speed Fan Thrust Bearing Upgrade
-        url: /case-studies/high-speed-fan-thrust-bearing-upgrade
+        url: /case-studies/high-speed-fan-thrust-bearing-upgrade/
   - title: Quality
-    url: /quality-assurance
+    url: /quality-assurance/
   - title: About Us
-    url: /about
+    url: /about/
   - title: Contact
-    url: /contact
+    url: /contact/
 
 footer_services:
   - title: Bearing Repair
-    url: /whitemetal-bearing-repair
+    url: /whitemetal-bearing-repair/
   - title: Emergency Repair
-    url: /contact
+    url: /contact/
   - title: Reverse Engineering
-    url: /re-engineering
+    url: /re-engineering/
 
 footer_products:
   - title: Journal Bearings
-    url: /journal-bearings
+    url: /journal-bearings/
   - title: Tilt Pad Bearings
-    url: /t-series-tilt-pad-journal-bearings
+    url: /t-series-tilt-pad-journal-bearings/
   - title: Thrust Bearings
-    url: /j-series-equalising-thrust-bearings
+    url: /j-series-equalising-thrust-bearings/
 
 footer_company:
   - title: Contact
-    url: /contact
+    url: /contact/
   - title: About Us
-    url: /about
+    url: /about/
   - title: Industries
-    url: /industries
+    url: /industries/
   - title: FAQ
-    url: /faq
+    url: /faq/
   - title: Privacy Policy
-    url: /privacy
+    url: /privacy/

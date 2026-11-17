@@ -6,10 +6,11 @@ sitemap: false
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- assign pages = site.pages | where_exp: "p", "p.sitemap != false" | where_exp: "p", "p.url" -%}
 {%- for page in pages -%}
+{%- if page.redirect or page.redirect_to -%}{%- continue -%}{%- endif -%}
 {%- if page.noindex -%}{%- continue -%}{%- endif -%}
 {%- if page.robots contains "noindex" -%}{%- continue -%}{%- endif -%}
 {%- assign ext = page.path | split: "." | last | downcase -%}
-{%- unless ext == "html" or ext == "htm" or ext == "md" or ext == "pdf" -%}{%- continue -%}{%- endunless -%}
+{%- unless ext == "html" or ext == "htm" or ext == "md" -%}{%- continue -%}{%- endunless -%}
 {%- if page.url contains "/assets/" and ext != "pdf" -%}{%- continue -%}{%- endif -%}
 {%- assign url = page.url -%}
 {%- if url == "/" -%}
@@ -60,15 +61,4 @@ sitemap: false
     <priority>{{ priority }}</priority>
   </url>
 {%- endfor -%}
-{%- for file in site.static_files -%}
-{%- assign ext = file.extname | replace: ".", "" | downcase -%}
-{%- if ext == "pdf" -%}
-  <url>
-    <loc>{{ file.path | absolute_url | xml_escape }}</loc>
-    <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-{%- endif -%}
-{%- endfor %}
 </urlset>
