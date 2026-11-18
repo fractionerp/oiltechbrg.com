@@ -73,7 +73,7 @@
 .brand-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 5.5rem; }
 .brand-logo { flex: 0 0 auto; }
 .brand-logo img { width: 7.25rem; height: auto; }
-.brand-nav { font-size: .9375rem; font-weight: 500; }
+.brand-nav { font-size: .9375rem; }
 .brand-nav ul { margin: 0; padding: 0; list-style: none; }
 .brand-nav > ul { display: flex; align-items: center; gap: clamp(.65rem, 1.4vw, 1.65rem); }
 .brand-nav a, .brand-nav summary { display: block; padding-block: .6rem; text-decoration: none; }
@@ -109,7 +109,7 @@
   background: transparent;
   color: inherit;
   padding-inline: .85rem;
-  font: 500 .9375rem/1.2 "IBM Plex Sans", system-ui, sans-serif;
+  font: 400 .9375rem/1.2 "IBM Plex Sans", system-ui, sans-serif;
   cursor: pointer;
 }
 
