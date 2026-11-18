@@ -6,8 +6,10 @@
     <button class="brand-menu-toggle" type="button" aria-expanded="false" aria-controls="brand-navigation" hidden>Menu</button>
     <nav id="brand-navigation" class="brand-nav" aria-label="Main navigation">
       <ul>
+        {% assign primary_items = 'Products|Services|Engineering|Case Studies|Contact' | split: '|' %}
+        {% assign engineering_pages = '/bearing-design-analysis/|/technical-services/|/technical-library/' | split: '|' %}
         {% for item in site.data.navigation.main %}
-        {% unless item.url == '/' %}
+        {% if primary_items contains item.title %}
         <li>
           {% if item.dropdown %}
           <details name="brand-navigation-group">
@@ -18,15 +20,17 @@
               <li><a href="{{ item.url | relative_url }}">Overview</a></li>
               {% endunless %}
               {% for subitem in item.dropdown %}
+              {% if item.title != 'Engineering' or engineering_pages contains subitem.url %}
               <li><a href="{{ subitem.url | relative_url }}"{% if page.url == subitem.url %} aria-current="page"{% endif %}>{{ subitem.title | escape }}</a></li>
+              {% endif %}
               {% endfor %}
             </ul>
           </details>
           {% else %}
-          <a{% if item.url == '/contact/' %} class="brand-nav-contact"{% endif %} href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{% if item.url == '/about/' %}About{% else %}{{ item.title | escape }}{% endif %}</a>
+          <a class="brand-nav-contact" href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title | escape }}</a>
           {% endif %}
         </li>
-        {% endunless %}
+        {% endif %}
         {% endfor %}
       </ul>
     </nav>

@@ -10,12 +10,24 @@
       <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
     </div>
     <nav aria-label="Footer navigation">
-      <a href="{{ '/oem-bearing-supply-usa/' | relative_url }}">Regions</a>
-      <a href="{{ '/quality-assurance/' | relative_url }}">Quality</a>
-      <a href="{{ '/technical-library/' | relative_url }}">Technical library</a>
-      <a href="{{ '/documentation/' | relative_url }}">Documentation</a>
-      <a href="{{ '/sustainability/' | relative_url }}">Sustainability</a>
-      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+      <div class="brand-footer-links">
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/quality-assurance/' | relative_url }}">Quality</a>
+        <a href="{{ '/industries/' | relative_url }}">Industries</a>
+        <a href="{{ '/technical-library/' | relative_url }}">Technical library</a>
+        <a href="{{ '/documentation/' | relative_url }}">Documentation</a>
+        <a href="{{ '/sustainability/' | relative_url }}">Sustainability</a>
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+      </div>
+      {% assign regions = site.data.navigation.main | where: 'title', 'Regions' | first %}
+      <details class="brand-footer-regions">
+        <summary>Regions</summary>
+        <div class="brand-footer-links">
+          {% for region in regions.dropdown %}
+          <a href="{{ region.url | relative_url }}">{{ region.title | escape }}</a>
+          {% endfor %}
+        </div>
+      </details>
     </nav>
   </div>
 </footer>
