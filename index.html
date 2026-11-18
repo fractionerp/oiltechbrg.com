@@ -1,5 +1,6 @@
 ---
 layout: home
+brand_preview: true
 title: "Precision Hydrodynamic Bearings for OEM Turbomachinery"
 description: "UK manufacturer of hydrodynamic, whitemetal and white metal bearings for OEM turbomachinery, engineered for reliability and long-term supply."
 keywords: "hydrodynamic bearings, OEM bearing supply, journal bearings, tilt pad bearings, thrust bearings, bearing manufacturer, whitemetal bearings, white metal bearings, babbitt bearings, turbomachinery bearings"
@@ -10,6 +11,9 @@ redirect_from:
   - /index.php
 ---
 
+{% if site.brand_preview %}
+{% include redesign/home.html %}
+{% else %}
 <!-- ======= Hero Section ======= -->
 <section id="hero">
   <img src="{{ '/assets/img/slide/steam-turbine.jpg' | relative_url }}" class="hero-bg" alt="Precision Bearings for OEM Turbomachinery">
@@ -259,3 +263,4 @@ redirect_from:
   </section><!-- End Final CTA -->
 
 </main><!-- End #main -->
+{% endif %}

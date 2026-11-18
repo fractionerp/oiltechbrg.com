@@ -1,0 +1,21 @@
+<footer class="brand-footer">
+  <div class="brand-shell brand-footer-inner">
+    <address>
+      <strong>{{ site.company.name }}</strong><br>
+      Unit 3 Browns Park, Brunswick Industrial Estate<br>
+      Newcastle upon Tyne, NE13 7GD, United Kingdom
+    </address>
+    <div class="brand-footer-contact">
+      <a href="tel:{{ site.company.phone | remove: ' ' | remove: '(0)' }}">{{ site.company.phone }}</a>
+      <a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="{{ '/oem-bearing-supply-usa/' | relative_url }}">Regions</a>
+      <a href="{{ '/quality-assurance/' | relative_url }}">Quality</a>
+      <a href="{{ '/technical-library/' | relative_url }}">Technical library</a>
+      <a href="{{ '/documentation/' | relative_url }}">Documentation</a>
+      <a href="{{ '/sustainability/' | relative_url }}">Sustainability</a>
+      <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+    </nav>
+  </div>
+</footer>

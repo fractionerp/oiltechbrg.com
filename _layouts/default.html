@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% assign redesign = false %}
+{% if site.brand_preview and page.brand_preview %}
+  {% assign redesign = true %}
+{% endif %}
+
 <head>
-{% include head.html %}
+{% include head.html redesign=redesign %}
 </head>
 
+{% if redesign %}
+<body class="brand">
+<a class="brand-skip" href="#main">Skip to content</a>
+{% include redesign/header.html %}
+{{ content }}
+{% include redesign/footer.html %}
+<script src="{{ '/assets/js/brand-preview.js' | relative_url }}" defer></script>
+{% else %}
 <body>
 
 {% include header.html %}
@@ -14,6 +27,7 @@
 {% include footer.html %}
 
 {% include scripts.html %}
+{% endif %}
 
 </body>
 

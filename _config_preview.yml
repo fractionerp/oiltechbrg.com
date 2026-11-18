@@ -1,0 +1,6 @@
+# From /srv/oiltechbrg.com in the development container:
+# jekyll build --config _config.yml,_config_dev.yml,_config_preview.yml
+baseurl: "/oiltechbrg.com/newsite"
+destination: "_site/newsite"
+keep_files: []
+brand_preview: true

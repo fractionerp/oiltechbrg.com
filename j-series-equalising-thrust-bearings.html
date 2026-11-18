@@ -1,5 +1,6 @@
 ---
 layout: page
+brand_preview: true
 title: "J Series Equalising Thrust Bearings"
 description: "J Series equalising, self-levelling thrust pad bearing assemblies with hardened spherical pivots. Steel, bronze or CCZ backing options."
 keywords: "equalising thrust bearings, j-series bearings, sector thrust bearings, self-levelling thrust pad bearings"
@@ -7,6 +8,9 @@ redirect_from:
   - /j-series-equalising-thrust-bearings.php
 ---
 
+{% if site.brand_preview %}
+{% include redesign/j-series.html %}
+{% else %}
 <!-- ======= Services Section ======= -->
 <section id="services" class="services">
   <div class="container-fluid">
@@ -75,3 +79,4 @@ redirect_from:
     </div>
   </div>
 </section><!-- End Legacy Glacier References -->
+{% endif %}

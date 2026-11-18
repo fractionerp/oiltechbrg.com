@@ -22,7 +22,7 @@
 <meta name="title" content="{{ meta_title | escape }}">
 <meta name="description" content="{{ meta_description | escape }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
-{% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% elsif page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
+{% if site.brand_preview %}<meta name="robots" content="noindex, nofollow">{% elsif page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% elsif page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow">{% endif %}
 <meta name="author" content="{{ site.company.name }}">
 
 <!-- Canonical URL -->
@@ -64,8 +64,14 @@
 <!-- Preconnect to external resources for faster loading -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% if include.redesign %}
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=IBM+Plex+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link href="{{ '/assets/css/brand-preview.css' | relative_url }}" rel="stylesheet">
+{% else %}
 <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+{% unless site.brand_preview %}
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+{% endunless %}
 
 <!-- DNS Prefetch -->
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -105,6 +111,7 @@
 
 <!-- Template Main CSS File -->
 <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+{% endif %}
 
 <!-- Structured Data - Local Business Schema -->
 <script type="application/ld+json">
@@ -235,6 +242,7 @@
 }
 </script>
 
+{% unless site.brand_preview %}
 <!-- Google Tag Manager - moved after critical content -->
 <script>
 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -252,3 +260,4 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '{{ site.google_analytics }}');
 </script>
+{% endunless %}

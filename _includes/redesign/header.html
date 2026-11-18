@@ -1,0 +1,34 @@
+<header class="brand-header">
+  <div class="brand-shell brand-header-inner">
+    <a class="brand-logo" href="{{ '/' | relative_url }}" aria-label="Oiltech Bearings home">
+      <img src="{{ '/assets/img/logo.png' | relative_url }}" width="180" height="80" alt="Oiltech Bearings">
+    </a>
+    <button class="brand-menu-toggle" type="button" aria-expanded="false" aria-controls="brand-navigation" hidden>Menu</button>
+    <nav id="brand-navigation" class="brand-nav" aria-label="Main navigation">
+      <ul>
+        {% for item in site.data.navigation.main %}
+        {% unless item.url == '/' %}
+        <li>
+          {% if item.dropdown %}
+          <details name="brand-navigation-group">
+            <summary>{{ item.title | capitalize }}</summary>
+            <ul>
+              {% assign item_destination = item.dropdown | where: 'url', item.url | first %}
+              {% unless item_destination %}
+              <li><a href="{{ item.url | relative_url }}">Overview</a></li>
+              {% endunless %}
+              {% for subitem in item.dropdown %}
+              <li><a href="{{ subitem.url | relative_url }}"{% if page.url == subitem.url %} aria-current="page"{% endif %}>{{ subitem.title | escape }}</a></li>
+              {% endfor %}
+            </ul>
+          </details>
+          {% else %}
+          <a{% if item.url == '/contact/' %} class="brand-nav-contact"{% endif %} href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{% if item.url == '/about/' %}About{% else %}{{ item.title | escape }}{% endif %}</a>
+          {% endif %}
+        </li>
+        {% endunless %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,12 @@
+<section class="brand-section brand-dark">
+  <div class="brand-shell">
+    <h2>{{ include.heading }}</h2>
+    <p class="brand-intro">{{ include.description }}</p>
+    <div class="brand-actions">
+      <a class="brand-button brand-button-primary" href="{{ '/contact/' | relative_url }}">{{ include.action | default: 'Speak to an engineer' }}</a>
+      {% if include.secondary_url %}
+      <a class="brand-button" href="{{ include.secondary_url | relative_url }}">{{ include.secondary }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
